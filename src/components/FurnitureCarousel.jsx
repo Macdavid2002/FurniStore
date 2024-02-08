@@ -48,7 +48,7 @@ const FurnitureCarousel = () => {
       </button>
 
       {/* Image carousel */}
-      <div className="overflow-hidden relative">
+      <div className="overflow-hidden ">
         {images.map((image, index) => (
           <div
             key={index}

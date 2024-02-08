@@ -1,31 +1,21 @@
 // Navbar.js
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import {
-  Bars3BottomLeftIcon,
-  XMarkIcon,
-  SunIcon,
-  MoonIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Dropdown from "./Dropdown";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
   return (
-    <nav className={`bg-${isDarkMode ? "gray-800" : "black"} p-4`}>
+    <nav className={"bg-gray-800 p-4"}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="text-white">
           <Link to="/">
-            <h1 className="text-white  font-bold text-lg ">
+            <h1 className="text-white  font-bold text-2xl ">
               <span className="text-black bg-gray-200 border-none rounded-md p-2 pl-3 pr-3 mr-0">
                 F
               </span>
@@ -38,10 +28,11 @@ const Navbar = () => {
           {/* Your nav links go here */}
           <Link
             to="/"
-            className="text-white hover:text-gray-200 hover:underline "
+            className="text-white text-xl font-bold hover:text-gray-200 hover:underline "
           >
             Home
           </Link>
+
           <Dropdown
             title="Products"
             items={[
@@ -49,6 +40,7 @@ const Navbar = () => {
               { label: "Category 2", link: "/category2" },
               { label: "Category 3", link: "/category3" },
             ]}
+            className="m-5 text-red-500"
           />
           <Dropdown
             title="Services"
@@ -59,13 +51,13 @@ const Navbar = () => {
           />
           <Link
             to="/"
-            className="text-white  hover:text-gray-100 hover:underline"
+            className="text-white text-xl font-bold  hover:underline"
           >
             About
           </Link>
           <Link
             to="/"
-            className="text-white hover:text-primary hover:underline"
+            className="text-white text-xl font-bold  hover:underline"
           >
             Contact
           </Link>
@@ -85,27 +77,11 @@ const Navbar = () => {
             )}
           </button>
         </div>
-
-        <div className="ml-2">
-          {/* Sun icon for dark/light mode toggle */}
-          <button
-            onClick={toggleDarkMode}
-            className="text-white focus:outline-none"
-          >
-            {isDarkMode ? (
-              <SunIcon className="w-10" />
-            ) : (
-              <MoonIcon className="w-10" />
-            )}
-          </button>
-        </div>
       </div>
 
       {/* Responsive menu */}
       {isOpen && (
-        <div
-          className={`md:hidden bg-${isDarkMode ? "gray-800" : "black"} mt-2`}
-        >
+        <div className={"md:hidden bg-gray-800 mt-2"}>
           {/* Your responsive nav links go here */}
           <a href="#" className="block text-white py-2 px-4">
             Home

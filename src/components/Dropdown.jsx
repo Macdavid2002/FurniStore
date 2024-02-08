@@ -13,7 +13,7 @@ const Dropdown = ({ title, items }) => {
     <div className="relative inline-block text-white">
       <button
         onClick={toggleDropdown}
-        className="hover:text-gray-300 focus:outline-none"
+        className="hover:underline text-xl font-bold focus:text-blue-400 "
       >
         {title}
       </button>
