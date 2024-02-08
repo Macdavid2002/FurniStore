@@ -1,7 +1,13 @@
 // Navbar.js
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3BottomLeftIcon,
+  XMarkIcon,
+  HeartIcon,
+  UserCircleIcon,
+  ShoppingCartIcon,
+} from "@heroicons/react/24/outline";
 import Dropdown from "./Dropdown";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +22,7 @@ const Navbar = () => {
         <div className="text-white">
           <Link to="/">
             <h1 className="text-white  font-bold text-2xl ">
-              <span className="text-black bg-gray-200 border-none rounded-md p-2 pl-3 pr-3 mr-0">
+              <span className="text-black bg-blue-400  border-none rounded-md p-1 pl-3 pr-3 mr-0 text-3xl ">
                 F
               </span>
               urniStore
@@ -28,7 +34,7 @@ const Navbar = () => {
           {/* Your nav links go here */}
           <Link
             to="/"
-            className="text-white text-xl font-bold hover:text-gray-200 hover:underline "
+            className="text-white hover:text-blue-400 focus:underline text-xl font-bold focus:text-blue-400"
           >
             Home
           </Link>
@@ -40,7 +46,6 @@ const Navbar = () => {
               { label: "Category 2", link: "/category2" },
               { label: "Category 3", link: "/category3" },
             ]}
-            className="m-5 text-red-500"
           />
           <Dropdown
             title="Services"
@@ -51,15 +56,24 @@ const Navbar = () => {
           />
           <Link
             to="/"
-            className="text-white text-xl font-bold  hover:underline"
+            className="text-white hover:text-blue-400 focus:underline text-xl font-bold focus:text-blue-400"
           >
             About
           </Link>
           <Link
             to="/"
-            className="text-white text-xl font-bold  hover:underline"
+            className="text-white hover:text-blue-400 focus:underline text-xl font-bold focus:text-blue-400"
           >
             Contact
+          </Link>
+          <Link to="/">
+            <UserCircleIcon className="w-6 text-white hover:text-blue-400 focus:underline text-xl font-bold focus:text-blue-400" />
+          </Link>
+          <Link to="/">
+            <HeartIcon className="w-6 text-white hover:text-blue-400 focus:underline text-xl font-bold focus:text-blue-400" />
+          </Link>
+          <Link to="/">
+            <ShoppingCartIcon className="w-6 text-white hover:text-blue-400 focus:underline text-xl font-bold focus:text-blue-400" />
           </Link>
         </div>
 

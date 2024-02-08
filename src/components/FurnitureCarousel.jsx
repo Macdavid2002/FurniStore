@@ -1,8 +1,12 @@
 // FurnitureCarousel.js
 import React, { useState } from "react";
-import image from "../assets/support.jpg";
+import image from "../assets/about.jpg";
 import imag from "../assets/cyber-bg.png";
-import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowRightIcon,
+  ArrowLeftIcon,
+  ShoppingCartIcon,
+} from "@heroicons/react/24/outline";
 const images = [image, imag];
 {
   /*
@@ -30,7 +34,7 @@ const FurnitureCarousel = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="">
       {/* Previous button */}
       <button
         onClick={prevSlide}
@@ -56,6 +60,21 @@ const FurnitureCarousel = () => {
               index === currentIndex ? "" : "hidden"
             }`}
           >
+            <div className=" absolute top-40 left-1/3   ">
+              <h1 className="text-white font-bold text-5xl pb-5 ">
+                Nothing but the best
+              </h1>
+              <h1 className="text-white font-light text-3xl pb-5 ml-5 ">
+                Keep things simple but exquisite{" "}
+              </h1>
+              <button
+                className="p-3  bg-blue-500 rounded-md text-white text-lg font-bold uppercase  \
+              hover:bg-blue-400 hover:text-white flex gap-2 items-center text-center ml-32  "
+              >
+                Shop Here Now
+                <ShoppingCartIcon className="w-5  font-extra-bold" />
+              </button>
+            </div>
             <img
               src={image}
               alt={`Furniture ${index + 1}`}

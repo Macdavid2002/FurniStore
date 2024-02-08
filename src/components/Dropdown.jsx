@@ -13,12 +13,12 @@ const Dropdown = ({ title, items }) => {
     <div className="relative inline-block text-white">
       <button
         onClick={toggleDropdown}
-        className="hover:underline text-xl font-bold focus:text-blue-400 "
+        className="hover:text-blue-400 focus:underline text-xl font-bold focus:text-blue-400 "
       >
         {title}
       </button>
       {isOpen && (
-        <div className="absolute mt-2 bg-black rounded-md shadow-lg">
+        <div className="absolute mt-2 bg-blue-500 rounded-md shadow-lg w-32 ">
           <ul className="py-2 px-4">
             {items.map((item, index) => (
               <li key={index} className="text-white">
