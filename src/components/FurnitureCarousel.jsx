@@ -1,12 +1,18 @@
 // FurnitureCarousel.js
-import React, { useState } from 'react';
-
-const images = [
+import React, { useState } from "react";
+import image from "../assets/support.jpg";
+import imag from "../assets/cyber-bg.png";
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
+const images = [image, imag];
+{
+  /*
+[
   'https://via.placeholder.com/300',
   'https://via.placeholder.com/300',
   'https://via.placeholder.com/300',
   'https://via.placeholder.com/300',
-];
+]; */
+}
 
 const FurnitureCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,7 +36,7 @@ const FurnitureCarousel = () => {
         onClick={prevSlide}
         className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md z-10"
       >
-        Prev
+        <ArrowLeftIcon className="w-5" />
       </button>
 
       {/* Next button */}
@@ -38,7 +44,7 @@ const FurnitureCarousel = () => {
         onClick={nextSlide}
         className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md z-10"
       >
-        Next
+        <ArrowRightIcon className="w-5" />
       </button>
 
       {/* Image carousel */}
@@ -47,7 +53,7 @@ const FurnitureCarousel = () => {
           <div
             key={index}
             className={`w-full h-64 md:h-96 lg:h-120 ${
-              index === currentIndex ? '' : 'hidden'
+              index === currentIndex ? "" : "hidden"
             }`}
           >
             <img
