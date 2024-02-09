@@ -1,5 +1,5 @@
 // FurnitureCarousel.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import image from "../assets/about.jpg";
 import imag from "../assets/cyber-bg.png";
 import {
@@ -7,13 +7,17 @@ import {
   ArrowLeftIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
-const images = [image, imag];
+const images = [
+  "https://cdn-cms-assets.article.com/7mgZ9Lj0rGVFQ4srAhNwpk-a9c13b52f62ff56dcc69a43788ec63d6?w=640&q=40&fit=max",
+  "https://cdn-cms-assets.article.com/11RyX4qSVHbPEUqGILbp6v-deadc4d481cf9f8b659faeb2e912b740?w=320&q=80&fit=max",
+  "https://cdn-cms-assets.article.com/6NyqebH0efywAER9lYFTFj-ec29944d0718c6911c364329a3765346?w=320&q=80&fit=max",
+];
 {
   /*
 [
-  'https://via.placeholder.com/300',
-  'https://via.placeholder.com/300',
-  'https://via.placeholder.com/300',
+  "https://cdn-cms-assets.article.com/7mgZ9Lj0rGVFQ4srAhNwpk-a9c13b52f62ff56dcc69a43788ec63d6?w=640&q=40&fit=max"
+  '"https://cdn-cms-assets.article.com/11RyX4qSVHbPEUqGILbp6v-deadc4d481cf9f8b659faeb2e912b740?w=320&q=80&fit=max"
+"https://cdn-cms-assets.article.com/6NyqebH0efywAER9lYFTFj-ec29944d0718c6911c364329a3765346?w=320&q=80&fit=max",
   'https://via.placeholder.com/300',
 ]; */
 }
@@ -32,7 +36,15 @@ const FurnitureCarousel = () => {
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
+  useEffect(() => {
+    // Automatic slider effect every 3 seconds
+    const intervalId = setInterval(() => {
+      nextSlide();
+    }, 3000);
 
+    // Clear the interval when the component unmounts or when the currentIndex changes
+    return () => clearInterval(intervalId);
+  }, [currentIndex]);
   return (
     <div className="">
       {/* Previous button */}
@@ -52,7 +64,7 @@ const FurnitureCarousel = () => {
       </button>
 
       {/* Image carousel */}
-      <div className="overflow-hidden ">
+      <div className=" ">
         {images.map((image, index) => (
           <div
             key={index}
@@ -78,7 +90,7 @@ const FurnitureCarousel = () => {
             <img
               src={image}
               alt={`Furniture ${index + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-screen object-cover"
             />
           </div>
         ))}

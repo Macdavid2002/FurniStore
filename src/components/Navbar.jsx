@@ -7,6 +7,7 @@ import {
   HeartIcon,
   UserCircleIcon,
   ShoppingCartIcon,
+  MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
 import Dropdown from "./Dropdown";
 const Navbar = () => {
@@ -45,6 +46,9 @@ const Navbar = () => {
               { label: "Category 1", link: "/category1" },
               { label: "Category 2", link: "/category2" },
               { label: "Category 3", link: "/category3" },
+              { label: "Category 3", link: "/category3" },
+              { label: "Category 3", link: "/category3" },
+              { label: "Category 3", link: "/category3" },
             ]}
           />
           <Dropdown
@@ -75,6 +79,9 @@ const Navbar = () => {
           <Link to="/">
             <ShoppingCartIcon className="w-6 text-white hover:text-blue-400 focus:underline text-xl font-bold focus:text-blue-400" />
           </Link>
+          <Link to="/">
+            <MagnifyingGlassIcon className="w-5 text-white hover:text-blue-400 focus:underline text-xl font-bold focus:text-blue-400" />
+          </Link>
         </div>
 
         <div className="md:hidden">
@@ -97,15 +104,15 @@ const Navbar = () => {
       {isOpen && (
         <div className={"md:hidden bg-gray-800 mt-2"}>
           {/* Your responsive nav links go here */}
-          <a href="#" className="block text-white py-2 px-4">
+          <Link to="/" className="block text-white py-2 px-4">
             Home
-          </a>
-          <a href="#" className="block text-white py-2 px-4">
+          </Link>
+          <Link to="/" className="block text-white py-2 px-4">
             About
-          </a>
-          <a href="#" className="block text-white py-2 px-4">
+          </Link>
+          <Link to="/" className="block text-white py-2 px-4">
             Contact
-          </a>
+          </Link>
         </div>
       )}
     </nav>
