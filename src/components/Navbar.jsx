@@ -32,7 +32,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center space-x-4">
-          {/* Your nav links go here */}
+          {/* Nav Links */}
           <Link
             to="/"
             className="text-white hover:text-blue-400 focus:underline text-xl font-bold focus:text-blue-400"
@@ -50,13 +50,13 @@ const Navbar = () => {
               { label: "Tables", link: "/table" },
             ]}
           />
-          <Dropdown
+          {/* <Dropdown
             title="Services"
             items={[
               { label: "Service 1", link: "/service1" },
               { label: "Service 2", link: "/service2" },
             ]}
-          />
+          /> */}
           <Link
             to="/"
             className="text-white hover:text-blue-400 focus:underline text-xl font-bold focus:text-blue-400"
@@ -69,7 +69,7 @@ const Navbar = () => {
           >
             Contact
           </Link>
-          <Link to="/">
+          <Link to="/login">
             <UserCircleIcon className="w-6 text-white hover:text-blue-400 focus:underline text-xl font-bold focus:text-blue-400" />
           </Link>
           <Link to="/">
