@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={"bg-gray-800 p-4"}>
+    <nav className={"bg-gray-800 p-4 "}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="text-white">
           <Link to="/">
@@ -43,12 +43,11 @@ const Navbar = () => {
           <Dropdown
             title="Products"
             items={[
-              { label: "Category 1", link: "/category1" },
-              { label: "Category 2", link: "/category2" },
-              { label: "Category 3", link: "/category3" },
-              { label: "Category 3", link: "/category3" },
-              { label: "Category 3", link: "/category3" },
-              { label: "Category 3", link: "/category3" },
+              { label: "Dressers", link: "/dressers" },
+              { label: "Cupboards", link: "/cupboards" },
+              { label: "Sofas", link: "/sofa" },
+              { label: "Chairs", link: "/chair" },
+              { label: "Tables", link: "/table" },
             ]}
           />
           <Dropdown

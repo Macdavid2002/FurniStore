@@ -1,7 +1,5 @@
 // FurnitureCarousel.js
 import React, { useState, useEffect } from "react";
-import image from "../assets/about.jpg";
-import imag from "../assets/cyber-bg.png";
 import {
   ArrowRightIcon,
   ArrowLeftIcon,
@@ -11,16 +9,8 @@ const images = [
   "https://cdn-cms-assets.article.com/7mgZ9Lj0rGVFQ4srAhNwpk-a9c13b52f62ff56dcc69a43788ec63d6?w=640&q=40&fit=max",
   "https://cdn-cms-assets.article.com/11RyX4qSVHbPEUqGILbp6v-deadc4d481cf9f8b659faeb2e912b740?w=320&q=80&fit=max",
   "https://cdn-cms-assets.article.com/6NyqebH0efywAER9lYFTFj-ec29944d0718c6911c364329a3765346?w=320&q=80&fit=max",
+  // "https://cdn-cms-assets.article.com/4zcf9xLmBXLifzHgXP6MMc-47d48f354b26d05ff618eb14a0f4a546?w=1300&q=80&fm=webp&fit=max",
 ];
-{
-  /*
-[
-  "https://cdn-cms-assets.article.com/7mgZ9Lj0rGVFQ4srAhNwpk-a9c13b52f62ff56dcc69a43788ec63d6?w=640&q=40&fit=max"
-  '"https://cdn-cms-assets.article.com/11RyX4qSVHbPEUqGILbp6v-deadc4d481cf9f8b659faeb2e912b740?w=320&q=80&fit=max"
-"https://cdn-cms-assets.article.com/6NyqebH0efywAER9lYFTFj-ec29944d0718c6911c364329a3765346?w=320&q=80&fit=max",
-  'https://via.placeholder.com/300',
-]; */
-}
 
 const FurnitureCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -72,7 +62,7 @@ const FurnitureCarousel = () => {
               index === currentIndex ? "" : "hidden"
             }`}
           >
-            <div className=" absolute top-40 left-1/3   ">
+            <div className=" absolute top-60 left-1/3   ">
               <h1 className="text-white font-bold text-5xl pb-5 ">
                 Nothing but the best
               </h1>
