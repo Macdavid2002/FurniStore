@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        sm: "640px",
-        // => @media (min-width: 640px) {  ...  }
+        sm: "360px",
+        // => @media (min-width: 360px) {  ...  }
 
         md: "768px",
         // => @media (min-width: 768px) {  ...  }
@@ -20,7 +20,19 @@ module.exports = {
         // => @media (min-width: 1536px) {  ...  }
       },
       colors: {
-        primary: "#ffcc00",
+        gold: "gold",
+      },
+      fontSize: {
+        big: "20px",
+      },
+      margin: {
+        35: "35%",
+        98: "35rem",
+      },
+      height: {
+      },
+      width: {
+        98:"35rem",
       },
     },
   },
