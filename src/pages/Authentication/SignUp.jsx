@@ -4,13 +4,11 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { auth, mail } from "../../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
-import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
+import { AppContext } from "../../App";
+import { useState,useContext } from "react";
 export default function Signup() {
-  const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
+  const navigate = useNavigate();
   const schema = yup.object().shape({
     username: yup
       .string()
@@ -48,11 +46,14 @@ export default function Signup() {
         data.password
       );
       navigate("/account");
+      setNewUsername(setUsername(newUsername))
     } catch (error) {
       console.error("Error signing up:", error.message);
     }
   };
-
+  const {username,setUsername} = useContext(AppContext);
+  const [newUsername,setNewUsername] = useState("");
+  
   return (
     <div className="my-20 ">
       <div className="items-center flex flex-col">
@@ -65,8 +66,9 @@ export default function Signup() {
             type="text"
             placeholder="Username"
             className="border-2  text-sm placeholder:text-sm p-2 border-gray-400 h-12 w-72 m-2 focus:outline-none"
-            {...register("username")}
+            {...register("username")} onChange={(e)=>{setNewUsername(e.target.value)}}
           />
+          
           <p className="text-red-500 px-3 text-sm">
             {errors.username?.message}
           </p>
@@ -82,7 +84,7 @@ export default function Signup() {
           {/* Password Input */}
           <div className="relative">
             <input
-              type={showPassword ? "text" : "password"}
+              type="password"
               placeholder="Password"
               className="border-2  text-sm placeholder:text-sm p-2 border-gray-400 h-12 w-72 m-2 focus:outline-none"
               {...register("password")}
@@ -98,7 +100,7 @@ export default function Signup() {
           <div className="relative">
             {/* Confirm Password Input */}
             <input
-              type={showConfirmPassword ? "text" : "password"}
+              type= "password"
               placeholder="Confirm Password"
               className="border-2  text-sm placeholder:text-sm p-2 border-gray-400 h-12 w-72  m-2 focus:outline-none"
               {...register("confirmPassword")}

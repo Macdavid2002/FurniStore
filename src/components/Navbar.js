@@ -260,6 +260,7 @@ const Navbar = () => {
             className="rounded-md outline-none p-2 w-full placeholder:p-2 text-sm"
             placeholder="Search Products..."
           />
+          
           <MagnifyingGlassIcon className="w-6 text-gray-500 relative -left-11 cursor-pointer" />
         </div>
         <div className="flex space-x-4">
