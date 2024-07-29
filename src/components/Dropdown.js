@@ -7,12 +7,15 @@ const Dropdown = ({ title, items }) => {
   const dropdownRef = useRef(null);
 
   // Dropdown Toggle Function
+
+
+
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <div className="relative inline-block text-white" ref={dropdownRef}>
+    <div className="relative inline-block text-white" ref={dropdownRef} >
       {/* Toggle Dropdown Button */}
       <div className="flex items-center " onClick={toggleDropdown}>
         <button className="hover:text-black  text-lg font-medium focus:text-black ">

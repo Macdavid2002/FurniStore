@@ -32,7 +32,7 @@ export const Account = () => {
       </div>
       <div className="flex">
         <ul className="p-4">
-          <li className="p-4"> Account Details</li>
+          <li className="p-4">Favorites </li>
           <li className="p-4">Wishlist</li>
           <li className="p-4"> Cart </li>
           <li> </li>

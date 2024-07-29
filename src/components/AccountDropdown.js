@@ -4,7 +4,6 @@ import { UserCircleIcon } from "@heroicons/react/24/outline";
 
 const AccountDropdown = ({ user }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };

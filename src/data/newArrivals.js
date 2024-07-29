@@ -1,0 +1,58 @@
+export const Arrival = [
+  {
+    id: 1,
+    img: "https://cdn-images.article.com/products/SKU24279/2890x1500/image146053.jpg?w=320&q=80&fit=max",
+    name: "White Sofa",
+    price: "$500.00",
+    formerPrice: "$700.00",
+  },
+  {
+    id: 2,
+    img: "https://cdn-images.article.com/products/SKU24537/2890x1500/image148479.jpg?w=640&q=40&fit=max",
+    name: "Swivel Chair",
+    price: "$500.00",
+    formerPrice: "$700.00",
+  },
+  {
+    id: 3,
+    img: "https://cdn-images.article.com/products/SKU23031/2890x1500/image141949.jpg?w=640&q=40&fit=max",
+    name: "Lubek Slate Low left Sectional",
+    price: "$1500.00",
+    formerPrice: "$1599.00",
+  },
+  {
+    id: 4,
+    img: "https://cdn-images.article.com/products/SKU24657/2890x1500/image153060.jpg?w=320&q=80&fit=max",
+    name: "Rust Left Sectional Sofa",
+    price: "$2000.00",
+    formerPrice: "$2300.00",
+  },
+  {
+    id: 5,
+    img: "https://cdn-images.article.com/products/SKU24893/2890x1500/image151577.jpg?w=320&q=80&fit=max",
+    name: "Crimson Table Lamp",
+    price: "$150.00",
+    formerPrice: "$180.00",
+  },
+  {
+    id: 6,
+    img: "https://cdn-images.article.com/products/SKU23370/2890x1500/image140127.jpg?w=640&q=40&fit=max",
+    name: "Tan Office Chair",
+    price: "$150.00",
+    formerPrice: "$180.00",
+  },
+  {
+    id: 7,
+    img: "https://cdn-images.article.com/products/SKU24310/2890x1500/image149133.jpg?w=640&q=40&fit=max",
+    name: "Green Oak Dining Chair",
+    price: "$150.00",
+    formerPrice: "$180.00",
+  },
+  {
+    id: 8,
+    img: "https://cdn-images.article.com/products/SKU23370/2890x1500/image140127.jpg?w=640&q=40&fit=max",
+    name: "Crimson Table Lamp",
+    price: "$150.00",
+    formerPrice: "$180.00",
+  },
+];

@@ -1,3 +1,4 @@
+import { NewArrivals } from "../../components/Newarrivals";
 import { Hero } from "../../pages/Hero";
 import { Search } from "../search";
 import { BestSeller } from "./BestSeller";
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <Rooms />
       <BestSeller />
+      <NewArrivals />
       <Search />
     </div>
   );
