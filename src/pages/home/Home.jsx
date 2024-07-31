@@ -1,6 +1,6 @@
 import { Hero } from "../../pages/Hero";
 import { Search } from "../search";
-import { BestSeller } from "./BestSeller";
+import { Category } from "./Category";
 import { Rooms } from "./Room";
 import { Services } from "./Services";
 import { SalesDeals } from "./SalesDeals";
@@ -13,7 +13,7 @@ export default function Home() {
       <Services />
       <Rooms />
       <Collection />
-      <BestSeller />
+      <Category />
       <SalesDeals />
       <Search />
     </div>

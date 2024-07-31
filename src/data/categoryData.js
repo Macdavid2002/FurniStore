@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-export const BestSellerData = [
+export const CategoryData = [
   {
     name: <Link>Chairs</Link>,
     imgUrl:
