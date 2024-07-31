@@ -21,6 +21,7 @@ module.exports = {
       },
       colors: {
         gold: "gold",
+        grey: "#F3F4F6",
       },
       fontSize: {
         big: "20px",
@@ -29,12 +30,19 @@ module.exports = {
         35: "35%",
         98: "35rem",
       },
-      height: {
-      },
+      height: {},
       width: {
-        98:"35rem",
+        98: "35rem",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".clip-ribbon": {
+          clipPath: "polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%)",
+        },
+      });
+    },
+  ],
 };

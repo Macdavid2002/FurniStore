@@ -3,6 +3,7 @@ import { auth } from "../config/firebase";
 import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useState } from "react";
+import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/outline";
 
 export const Account = () => {
   const [user] = useAuthState(auth);
@@ -27,18 +28,16 @@ export const Account = () => {
             onClick={signOutFunction}
           >
             Logout
+            <ArrowRightOnRectangleIcon className="w-4 h-4" />
           </button>
         </div>
       </div>
       <div className="flex">
         <ul className="p-4">
-          <li className="p-4">Favorites </li>
+          <li className="p-4">Account Information</li>
+          <li className="p-4">Orders </li>
           <li className="p-4">Wishlist</li>
           <li className="p-4"> Cart </li>
-          <li> </li>
-          <li></li>
-          <li></li>
-          <li></li>
         </ul>
       </div>
     </div>

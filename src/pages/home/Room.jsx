@@ -1,4 +1,4 @@
-import { RoomCard } from "./RoomCard";
+import { RoomCard } from "../../cards/RoomCard";
 import { RoomList } from "../../data/roomsData";
 import { useState } from "react";
 export const Rooms = () => {

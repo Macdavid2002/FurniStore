@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
 
 const AccountDropdown = ({ user }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const accountDropdownRef = useRef(null);
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
-
+  useEffect(() => {
+    window.onscroll = () => setDropdownOpen(false);
+  }, []);
   return (
-    <div className="relative">
+    <div className="relative" ref={accountDropdownRef}>
       <button
         onClick={toggleDropdown}
         className="text-white focus:outline-none"

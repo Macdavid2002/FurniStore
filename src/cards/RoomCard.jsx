@@ -1,7 +1,7 @@
 export const RoomCard = ({ roomArray }) => {
   return (
-    <div className="mt-48">
-      <h1 className="p-8 text-3xl font-bold">View Rooms</h1>
+    <div className="mt-20">
+      <h1 className="p-8 text-3xl font-bold">Shop Room Collection</h1>
       <div className="  p-8 grid grid-cols-3 gap-12 ">
         {roomArray.map((roomItem, index) => (
           <div key={index}>

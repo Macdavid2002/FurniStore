@@ -31,9 +31,9 @@ export const BestSellerData = [
     id: 5,
   },
   {
-    name: <Link>Cupboards</Link>,
+    name: <Link>Benches</Link>,
     imgUrl:
-      "https://cdn-cms-assets.article.com/1x361fBwaWFrQCTxwiEUJx-fba7431421173a012072f55f100f929f?w=640&q=40&fit=max",
+      "https://cdn-images.article.com/products/SKU13263/2890x1500/image120879.jpg?w=320&q=80&fit=max",
     id: 6,
   },
   {
@@ -45,13 +45,13 @@ export const BestSellerData = [
   {
     name: <Link>Rugs</Link>,
     imgUrl:
-      "https://cdn-cms-assets.article.com/1x361fBwaWFrQCTxwiEUJx-fba7431421173a012072f55f100f929f?w=640&q=40&fit=max",
+      "https://cdn-images.article.com/products/SKU22972/2890x1500/image120065.jpg?w=640&q=40&fit=max",
     id: 7,
   },
   {
     name: <Link>Lighting</Link>,
     imgUrl:
-      "https://cdn-cms-assets.article.com/1x361fBwaWFrQCTxwiEUJx-fba7431421173a012072f55f100f929f?w=640&q=40&fit=max",
+      "https://cdn-images.article.com/products/SKU2168/2890x1500/image132349.jpg?w=640&q=40&fit=max",
     id: 7,
   },
 ];

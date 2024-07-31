@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
@@ -7,19 +7,22 @@ export const RoomDropdown = ({ title, items }) => {
   const dropdownRef = useRef(null);
 
   // Dropdown toggle functions
-  const toggleDropdown = () =>{
+  const toggleDropdown = () => {
     setIsOpen(!isOpen);
-  }
-
+  };
+  useEffect(() => {
+    window.onscroll = () => {
+      setIsOpen(false);
+    };
+  }, []);
 
   return (
-    <div
-      className="relative inline-block text-white"
-      ref={dropdownRef}
-
-    >
+    <div className="relative inline-block text-white" ref={dropdownRef}>
       {/* Toggle Dropdown Button */}
-      <div className="flex items-center cursor-pointer" onClick={toggleDropdown} >
+      <div
+        className="flex items-center cursor-pointer"
+        onClick={toggleDropdown}
+      >
         <button className="hover:text-black text-lg font-medium focus:text-black">
           {title}
         </button>

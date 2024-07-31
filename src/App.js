@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Sales } from "./components/Sales";
 import Navbar from "./components/Navbar";
 import Home from "./pages/home/Home";
 import TopScrollButton from "./components/TopScrollButton";
@@ -11,11 +12,12 @@ import { createContext, useState } from "react";
 // import { Cart } from "./pages/Cart";
 export const AppContext = createContext();
 function App() {
-  const [username,setUsername] = useState("");
+  const [username, setUsername] = useState("");
   return (
-    <AppContext.Provider value={{username,setUsername}} >
+    <AppContext.Provider value={{ username, setUsername }}>
       <div className="App">
         <Router>
+          <Sales />
           <Navbar />
           <TopScrollButton />
           <Routes>

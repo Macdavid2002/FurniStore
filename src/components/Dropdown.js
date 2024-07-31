@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Dropdown = ({ title, items }) => {
@@ -7,15 +7,14 @@ const Dropdown = ({ title, items }) => {
   const dropdownRef = useRef(null);
 
   // Dropdown Toggle Function
-
-
-
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-
+  useEffect(() => {
+    window.onscroll = () => setIsOpen(false);
+  }, []);
   return (
-    <div className="relative inline-block text-white" ref={dropdownRef} >
+    <div className="relative inline-block text-white" ref={dropdownRef}>
       {/* Toggle Dropdown Button */}
       <div className="flex items-center " onClick={toggleDropdown}>
         <button className="hover:text-black  text-lg font-medium focus:text-black ">
@@ -25,15 +24,12 @@ const Dropdown = ({ title, items }) => {
       </div>
       {isOpen && (
         <div
-          className="absolute left-1  mt-1 w-[22rem] bg-white shadow-md shadow-gray-600 rounded-md "
+          className="absolute left-1  mt-1 w-[400px]  bg-white shadow-md"
           onClick={toggleDropdown}
         >
-          <ul className="grid grid-cols-2 py-5  px-4">
+          <ul className="grid grid-cols-2 p-6 ">
             {items.map((item, index) => (
-              <li
-                key={index}
-                className="flex px-4 py-2 text-black hover:text-white hover:bg-gray-500 rounded-md "
-              >
+              <li key={index} className="  text-black  hover:text-gray-500">
                 <Link to={item.link}>{item.label}</Link>
               </li>
             ))}

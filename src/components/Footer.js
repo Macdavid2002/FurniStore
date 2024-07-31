@@ -10,7 +10,7 @@ export const Footer = () => {
         <div className="text-white">
           <Link to="/">
             <h1 className="text-white font-medium text-3xl flex py-4">
-              Furni <span className="text-black">Store</span>
+              Furni <span className="text-black">Stor3</span>
             </h1>
           </Link>
           <div className="flex p-2 gap-20 text-black ">
