@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Dropdown from "./Dropdown";
 import { RoomDropdown } from "./RoomDropdown";
-import AccountDropdown from "../components/AccountDropdown"; // Import the new AccountDropdown component
+import AccountDropdown from "../components/AccountDropdown";
 import { auth } from "../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
@@ -55,23 +55,23 @@ const Navbar = () => {
           <RoomDropdown
             title="Rooms"
             items={[
-              { label: "Living Room", link: "/beds" },
-              { label: "Bedroom", link: "/dressers" },
-              { label: "Dining Room", link: "/cupboards" },
-              { label: "Office", link: "/sofa" },
-              { label: "Outdoor", link: "/chair" },
-              { label: "Entryway", link: "/chair" },
+              { label: "Living Room", link: "/living-room" },
+              { label: "Bedroom", link: "/bedroom" },
+              { label: "Dining Room", link: "/dining-room" },
+              { label: "Office", link: "/office" },
+              { label: "Outdoor", link: "/outdoor" },
+              { label: "Entryway", link: "/entryway" },
             ]}
           />
 
           <Link
-            to="/"
+            to="/about"
             className="text-white hover:text-black text-lg font-medium focus:text-black"
           >
             About
           </Link>
           <Link
-            to="/"
+            to="/contact"
             className="text-white hover:text-black text-lg font-medium focus:text-black"
           >
             Contact
@@ -92,17 +92,20 @@ const Navbar = () => {
           </button>
         </div>
         {/* Search Bar */}
-        <div className="flex w-2/5">
-          <input
-            className="rounded-md outline-none p-2 w-full placeholder:p-2 text-sm"
-            placeholder="Search Products..."
-          />
-          
-          <MagnifyingGlassIcon className="w-6 text-gray-500 relative -left-11 cursor-pointer" />
+        <div className="hidden md:relative">
+          <div className="w-96 bg-white shadow-lg p-2">
+            <div className="flex">
+              <input
+                className=" outline-none  w-full placeholder:p-2 text-sm"
+                placeholder="Search Products..."
+              />
+              <MagnifyingGlassIcon className="w-6 text-gray-500 cursor-pointer" />
+            </div>
+          </div>
         </div>
         <div className="flex space-x-4">
           <Link
-            to="/"
+            to="/wishlist"
             className="text-white hover:text-black text-lg font-medium focus:text-black"
           >
             <HeartIcon
@@ -110,10 +113,13 @@ const Navbar = () => {
               title="Wishlist"
             />
           </Link>
-          <AccountDropdown user={user}   />
+          <AccountDropdown user={user} />
           {/* Conditionally render Account Dropdown */}
           <Link to="/cart">
-            <ShoppingBagIcon className="w-6 text-white hover:text-black text-xl font-medium focus:text-black" title="Cart" />
+            <ShoppingBagIcon
+              className="w-6 text-white hover:text-black text-xl font-medium focus:text-black"
+              title="Cart"
+            />
           </Link>
         </div>
       </div>
@@ -130,24 +136,39 @@ const Navbar = () => {
           <Dropdown
             title="Products"
             items={[
+              { label: "Beds", link: "/beds" },
               { label: "Dressers", link: "/dressers" },
               { label: "Cupboards", link: "/cupboards" },
               { label: "Sofas", link: "/sofa" },
               { label: "Chairs", link: "/chair" },
               { label: "Tables", link: "/table" },
+              { label: "Rugs", link: "/rugs" },
+              { label: "Lighting", link: "/lighting" },
+            ]}
+          />
+          <RoomDropdown
+            title="Rooms"
+            items={[
+              { label: "Living Room", link: "/living-room" },
+              { label: "Bedroom", link: "/bedroom" },
+              { label: "Dining Room", link: "/dining-room" },
+              { label: "Office", link: "/office" },
+              { label: "Outdoor", link: "/outdoor" },
+              { label: "Entryway", link: "/entryway" },
             ]}
           />
           <Link
-            to="/"
+            to="/contact"
             className="block text-white hover:text-black text-xl font-medium focus:text-black py-2"
           >
             Contact
           </Link>
           <Link
-            to="/"
-            className="flex text-white hover:text-black text-xl font-medium focus:text-black py-2 gap-2"
+            to="/cart"
+            className="flex items-center text-white hover:text-black text-xl font-medium focus:text-black py-2 gap-2"
           >
             <ShoppingBagIcon className="w-6 text-white hover:text-black text-xl font-medium focus:text-black" />
+            Cart
           </Link>
         </div>
       )}

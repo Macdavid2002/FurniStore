@@ -1,5 +1,3 @@
-
-import { useState } from "react";
 import {
   ShoppingBagIcon,
   ChevronLeftIcon,
@@ -9,7 +7,8 @@ import {
   StarIcon,
 } from "@heroicons/react/24/outline";
 import { StarIcon as SolidStarIcon } from "@heroicons/react/24/solid";
-import { Sales } from "../data/salesDealsData";
+import { Sales } from "../data/salesDealsData"
+import { useState } from "react";
 
 export const SalesDealsCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,7 +58,7 @@ export const SalesDealsCard = () => {
           Show More <ArrowRightIcon className="w-6 h-3" />
         </p>
       </div>
-      <div className="p-8">
+      <div className="p-1 md:p-8">
         <div className="relative grid grid-cols-4 gap-8">
           {visibleItems.map((salesItem, index) => (
             <ul
@@ -79,15 +78,17 @@ export const SalesDealsCard = () => {
                   <HeartIcon className="w-9 h-9 text-white cursor-pointer bg-gray-400 p-2 rounded-full" />
                 </span>
               </div>
-              <span className="flex gap-1 py-2">{renderStars(salesItem.rating)}</span>
+              <span className="flex gap-1 py-2">
+                {renderStars(salesItem.rating)}
+              </span>
               <li className="text-[16px] font-bold">{salesItem.name}</li>
               <li>
-                <div className="flex justify-between py-2">
+                <ul className="flex justify-between py-2">
                   <li className="">{salesItem.price}</li>
                   <li className="line-through text-gray-400">
                     {salesItem.formerPrice}
                   </li>
-                </div>
+                </ul>
                 {/* Add to cart button */}
                 <button className="w-[100%] p-2 bg-gray-400 rounded-md flex justify-center gap-4 font-bold">
                   <ShoppingBagIcon className="w-6 text-black text-xl" />
