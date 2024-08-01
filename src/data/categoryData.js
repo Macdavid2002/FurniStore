@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 export const CategoryData = [
   {
     name: <Link>Chairs</Link>,
+    id: 1,
     imgUrl:
       "https://cdn-images.article.com/products/SKU16277/2890x1500/image134719.jpg?w=320&q=80&fit=max",
-    id: 1,
   },
   {
     name: <Link>Sofa</Link>,
@@ -25,7 +25,7 @@ export const CategoryData = [
     id: 4,
   },
   {
-    name: <Link>Dressers</Link>,
+    name: <Link>Storage</Link>,
     imgUrl:
       "https://cdn-images.article.com/products/SKU14674/2890x1500/image119194.jpg?w=320&q=80&fit=max",
     id: 5,
