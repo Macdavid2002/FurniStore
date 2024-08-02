@@ -12,15 +12,20 @@ export const Category = () => {
   function chairToggle() {
     setShowChair(true);
     setShowBed(false);
+    setShowBench(false);
+    setShowLighting(false);
   }
   function bedToggle() {
     setShowBed(true);
     setShowChair(false);
+    setShowBench(false);
+    setShowLighting(false);
   }
   function benchToggle() {
     setShowBench(true);
     setShowBed(false);
     setShowChair(false);
+    setShowLighting(false);
   }
   function lightingToggle() {
     setShowLighting(true);

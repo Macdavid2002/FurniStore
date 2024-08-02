@@ -43,8 +43,7 @@ const Navbar = () => {
             title="Products"
             items={[
               { label: "Beds", link: "/beds" },
-              { label: "Dressers", link: "/dressers" },
-              { label: "Cupboards", link: "/cupboards" },
+              { label: "Storage", link: "storage" },
               { label: "Sofas", link: "/sofa" },
               { label: "Chairs", link: "/chair" },
               { label: "Tables", link: "/table" },

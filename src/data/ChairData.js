@@ -2,7 +2,7 @@ export const ChairData = [
   {
     id: 1,
     name: "Aloe Green Dining Chair",
-    price: "$59",
+    price: "$89",
     imgUrl:
       "https://cdn-images.article.com/products/SKU3061/2890x1500/image130142.jpg?w=425&q=80&fm=webp&fit=max",
   },

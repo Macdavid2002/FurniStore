@@ -10,14 +10,19 @@ export const RoomDropdown = ({ title, items }) => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  useEffect(() => {
-    window.onscroll = () => {
-      setIsOpen(false);
-    };
-  }, []);
-
+  const handleMouseOver = () => {
+    setIsOpen(true);
+  };
+  const handleMouseLeave = () => {
+    setIsOpen(false);
+  };
   return (
-    <div className="relative inline-block text-white" ref={dropdownRef}>
+    <div
+      className="relative inline-block text-white"
+      ref={dropdownRef}
+      onMouseOver={handleMouseOver}
+      onMouseLeave={handleMouseLeave}
+    >
       {/* Toggle Dropdown Button */}
       <div
         className="flex items-center cursor-pointer"
@@ -29,12 +34,12 @@ export const RoomDropdown = ({ title, items }) => {
         <ChevronDownIcon className="w-6 h-8 text-white hover:text-black" />
       </div>
       {isOpen && (
-        <div className="absolute left-1 mt-1 w-[22rem] bg-white shadow-md shadow-gray-600 rounded-md">
-          <ul className="grid grid-cols-2 py-6 px-4">
+        <div className="absolute left-1  w-[200px] bg-white shadow-md shadow-gray-600 ">
+          <ul className="p-6">
             {items.map((item, index) => (
               <li
                 key={index}
-                className="flex px-4 py-3 text-black hover:text-white hover:bg-gray-500 rounded-md"
+                className="flex p-2 text-black hover:text-gray-500 "
               >
                 <Link to={item.link}>{item.label}</Link>
               </li>

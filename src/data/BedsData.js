@@ -30,7 +30,7 @@ export const BedsData = [
   {
     id: 5,
     name: "Tessu Clay Queen Bed",
-    price: "899",
+    price: "$899",
     imgUrl:
       "https://cdn-images.article.com/products/SKU11576/2890x1500/image151247.jpg?w=425&q=80&fm=webp&fit=max",
   },
