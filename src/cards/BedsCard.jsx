@@ -8,7 +8,7 @@ export const BedCard = ({ bedList }) => {
           <div key={id}>
             <div className="relative p-10 border border-gray-400">
               <HeartIcon className="absolute w-8 h-8 right-7 cursor-pointer hover:bg-gray-200 rounded-full p-1" />
-              <img src={bedList.imgUrl} className="" alt="Room pic" />
+              <img src={bedList.imgUrl} className="" alt="Bed pic" />
               <span className="flex justify-between items-center">
                 <h1 className="py-4 text-xl ">{bedList.name} </h1>
                 <ShoppingBagIcon className="w-6 h-6 cursor-pointer hover:animate-bounce" />
