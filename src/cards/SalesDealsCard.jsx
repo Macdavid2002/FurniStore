@@ -51,7 +51,7 @@ export const SalesDealsCard = ({ salesDealsList }) => {
 
   return (
     <div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center z-10">
         <h1 className="p-8 text-3xl font-bold">Sales Deals</h1>
         <p className="flex items-center justify-center text-md px-4 cursor-pointer">
           Show More <ArrowRightIcon className="w-6 h-3" />
