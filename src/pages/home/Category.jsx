@@ -3,10 +3,12 @@ import { Beds } from "../Categories/Beds";
 import { useState } from "react";
 import { Benches } from "./../Categories/Benches";
 import { Lighting } from "../Categories/Lighting";
+import { Dining } from "../Categories/Dining";
 export const Category = () => {
   const [showChair, setShowChair] = useState(true);
   const [showBed, setShowBed] = useState(false);
   const [showBench, setShowBench] = useState(false);
+  const [showDining, setShowDining] = useState(false);
   const [showLighting, setShowLighting] = useState(false);
 
   function chairToggle() {
@@ -27,11 +29,19 @@ export const Category = () => {
     setShowChair(false);
     setShowLighting(false);
   }
-  function lightingToggle() {
-    setShowLighting(true);
+  function diningToggle() {
+    setShowDining(true);
     setShowBench(false);
     setShowBed(false);
     setShowChair(false);
+    setShowLighting(false);
+  }
+  function lightingToggle() {
+    setShowLighting(true);
+    setShowChair(false);
+    setShowBed(false);
+    setShowBench(false);
+    setShowDining(false);
   }
   return (
     <div className="mt-24">
@@ -62,7 +72,10 @@ export const Category = () => {
           >
             Benches
           </li>
-          <li className="active:bg-gray-200 rounded-full px-3 cursor-pointer">
+          <li
+            className="active:bg-gray-200 rounded-full px-3 cursor-pointer"
+            onClick={diningToggle}
+          >
             Dining
           </li>
           <li
@@ -88,6 +101,7 @@ export const Category = () => {
       {showChair && <Chairs />}
       {showBed && <Beds />}
       {showBench && <Benches />}
+      {showDining && <Dining />}
       {showLighting && <Lighting />}
     </div>
   );

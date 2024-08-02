@@ -67,7 +67,7 @@ export const SalesDealsCard = ({ salesDealsList }) => {
               <div className="relative">
                 <img
                   src={salesItem.img}
-                  className="rounded-md"
+                  className="relative rounded-md"
                   alt={salesItem.alt}
                 />
                 <span className="absolute top-2 left-0 bg-gray-400 w-24 h-9 text-white font-bold p-2 clip-ribbon">

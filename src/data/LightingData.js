@@ -43,16 +43,16 @@ export const LightingData = [
   },
   {
     id: 7,
-    name: "Pink Counter Stool",
+    name: "White Pendant Lamp",
     imgUrl:
-      "https://cdn-images.article.com/products/SKU17575/2890x1500/image133705.jpg?w=425&q=80&fm=webp&fit=max",
-    price: "$99",
+      "https://cdn-images.article.com/products/SKU20018/2890x1500/image135460.jpg?w=425&q=80&fm=webp&fit=max",
+    price: "$159",
   },
   {
     id: 8,
-    name: "Bowery Table Lamp",
+    name: "Park White Lantern",
     imgUrl:
-      "https://cdn-images.article.com/products/SKU21829/2890x1500/image127669.jpg?w=425&q=80&fm=webp&fit=max",
-    price: "$139",
+      "https://cdn-images.article.com/products/SKU18937/2890x1500/image127452.jpg?w=425&q=80&fm=webp&fit=max",
+    price: "$119",
   },
 ];
