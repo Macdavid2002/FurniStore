@@ -1,9 +1,9 @@
 import { StarIcon } from "@heroicons/react/24/outline";
-export const Sales = [
+export const SalesData = [
   {
     id: 1,
     img: "https://cdn-images.article.com/products/SKU23031/2890x1500/image141949.jpg?w=640&q=40&fit=max",
-    name: "Lubek Slate Low left Sectional",
+    name: "Low left Sectional Sofa",
     price: "$1500.00",
     formerPrice: "$3000.00",
     alt: "Lubek Sofa",

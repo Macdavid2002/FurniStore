@@ -1,4 +1,3 @@
-
 export const ChairData = [
   {
     id: 1,
@@ -9,9 +8,9 @@ export const ChairData = [
   },
   {
     id: 2,
-    name: "Gray Dining Chair",
+    name: "Tan Swivel Chair",
     imgUrl:
-      "https://cdn-images.article.com/products/SKU12840/2890x1500/image120821.jpg?w=425&q=80&fm=webp&fit=max",
+      "https://cdn-images.article.com/products/SKU17614/2890x1500/image118348.jpg?w=425&q=80&fm=webp&fit=max",
     price: "$349",
   },
   {

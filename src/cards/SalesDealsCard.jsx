@@ -7,22 +7,21 @@ import {
   StarIcon,
 } from "@heroicons/react/24/outline";
 import { StarIcon as SolidStarIcon } from "@heroicons/react/24/solid";
-import { Sales } from "../data/salesDealsData"
 import { useState } from "react";
 
-export const SalesDealsCard = () => {
+export const SalesDealsCard = ({ salesDealsList }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Card Carousel
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex + 1 >= Sales.length ? 0 : prevIndex + 1
+      prevIndex + 1 >= salesDealsList.length ? 0 : prevIndex + 1
     );
   };
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? Sales.length - 1 : prevIndex - 1
+      prevIndex === 0 ? salesDealsList.length - 1 : prevIndex - 1
     );
   };
 
@@ -30,7 +29,7 @@ export const SalesDealsCard = () => {
   const getVisibleItems = () => {
     const items = [];
     for (let i = 0; i < 4; i++) {
-      items.push(Sales[(currentIndex + i) % Sales.length]);
+      items.push(salesDealsList[(currentIndex + i) % salesDealsList.length]);
     }
     return items;
   };

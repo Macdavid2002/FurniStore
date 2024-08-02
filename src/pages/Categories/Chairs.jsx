@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { ChairData } from "../../components/ChairData";
+import { ChairData } from "../../data/ChairData";
+import { ChairCard } from "./../../cards/ChairCard";
 export const Chairs = () => {
   const [chairList, setChairList] = useState(ChairData);
-  return <Chairs chairList={chairList} setChairList={setChairList} />;
+  return <ChairCard chairList={chairList} setChairList={setChairList} />;
 };
