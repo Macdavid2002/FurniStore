@@ -4,12 +4,14 @@ import { useState } from "react";
 import { Benches } from "./../Categories/Benches";
 import { Lighting } from "../Categories/Lighting";
 import { Dining } from "../Categories/Dining";
+import { Rugs } from "./../Categories/Rugs";
 export const Category = () => {
   const [showChair, setShowChair] = useState(true);
   const [showBed, setShowBed] = useState(false);
   const [showBench, setShowBench] = useState(false);
   const [showDining, setShowDining] = useState(false);
   const [showLighting, setShowLighting] = useState(false);
+  const [showRug, setShowRug] = useState(false);
 
   function chairToggle() {
     setShowChair(true);
@@ -43,6 +45,14 @@ export const Category = () => {
     setShowBench(false);
     setShowDining(false);
   }
+  function rugToggle() {
+    setShowRug(true);
+    setShowLighting(false);
+    setShowChair(false);
+    setShowBed(false);
+    setShowBench(false);
+    setShowDining(false);
+  }
   return (
     <div className="mt-24">
       <div className="px-4 md:px-8 flex justify-between items-center">
@@ -55,45 +65,48 @@ export const Category = () => {
       <div className="mt-8 flex justify-center items-center">
         <ul className="p-1 w-[52%] flex gap-1 justify-center items-center bg-gray-400 rounded-full">
           <li
-            className="active:bg-gray-200 rounded-full px-3 cursor-pointer"
+            className="focus:bg-gray-200 rounded-full px-3 cursor-pointer"
             onClick={chairToggle}
           >
             Chairs
           </li>
           <li
-            className="active:bg-gray-200 rounded-full px-3 cursor-pointer"
+            className="focus:bg-gray-200 rounded-full px-3 cursor-pointer"
             onClick={bedToggle}
           >
             Beds
           </li>
           <li
-            className="active:bg-gray-200 rounded-full px-3 cursor-pointer"
+            className="focus:bg-gray-200 rounded-full px-3 cursor-pointer"
             onClick={benchToggle}
           >
             Benches
           </li>
           <li
-            className="active:bg-gray-200 rounded-full px-3 cursor-pointer"
+            className="focus:bg-gray-200 rounded-full px-3 cursor-pointer"
             onClick={diningToggle}
           >
             Dining
           </li>
           <li
-            className="active:bg-gray-200 rounded-full px-3 cursor-pointer"
+            className="focus:bg-gray-200 rounded-full px-3 cursor-pointer"
             onClick={lightingToggle}
           >
             Lighting
           </li>
-          <li className="active:bg-gray-200 rounded-full px-3 cursor-pointer">
+          <li
+            className="focus:bg-gray-200 rounded-full px-3 cursor-pointer"
+            onClick={rugToggle}
+          >
             Rugs
           </li>
-          <li className="active:bg-gray-200 rounded-full px-3 cursor-pointer">
+          <li className="focus:bg-gray-200 rounded-full px-3 cursor-pointer">
             Sofas
           </li>
-          <li className="active:bg-gray-200 rounded-full px-3 cursor-pointer">
+          <li className="focus:bg-gray-200 rounded-full px-3 cursor-pointer">
             Storage
           </li>
-          <li className="active:bg-gray-200 rounded-full px-3 cursor-pointer">
+          <li className="focus:bg-gray-200 rounded-full px-3 cursor-pointer">
             Tables
           </li>
         </ul>
@@ -103,6 +116,7 @@ export const Category = () => {
       {showBench && <Benches />}
       {showDining && <Dining />}
       {showLighting && <Lighting />}
+      {showRug && <Rugs />}
     </div>
   );
 };

@@ -7,9 +7,7 @@ export const RoomDropdown = ({ title, items }) => {
   const dropdownRef = useRef(null);
 
   // Dropdown toggle functions
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+
   const handleMouseOver = () => {
     setIsOpen(true);
   };
@@ -24,10 +22,7 @@ export const RoomDropdown = ({ title, items }) => {
       onMouseLeave={handleMouseLeave}
     >
       {/* Toggle Dropdown Button */}
-      <div
-        className="flex items-center cursor-pointer"
-        onClick={toggleDropdown}
-      >
+      <div className="flex items-center cursor-pointer">
         <button className="hover:text-black text-lg font-medium focus:text-black">
           {title}
         </button>
