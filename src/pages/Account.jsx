@@ -1,14 +1,13 @@
-import { useState,useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import { auth,database } from "../config/firebase";
+import { auth } from "../config/firebase";
 import { signOut } from "firebase/auth";
-import { doc, getDoc } from "firebase/firestore";
+
 import { useAuthState } from "react-firebase-hooks/auth";
 import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/outline";
 
 export const Account = () => {
   const [user] = useAuthState(auth);
-  const [userData, setUserData] = useState(null);
+
   const navigate = useNavigate();
   const signOutFunction = async () => {
     try {
@@ -18,21 +17,6 @@ export const Account = () => {
       console.error("Error signing out:", error.message);
     }
   };
-  useEffect(() => {
-    const fetchUserData = async () => {
-      if (auth.currentUser) {
-        const userDoc = await getDoc(doc(database, "users", auth.currentUser.uid));
-        if (userDoc.exists()) {
-          setUserData(userDoc.data());
-        }
-      }
-    };
-
-    fetchUserData();
-  }, []);
-  if (!userData) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div className="bg-gray-300">
@@ -50,12 +34,9 @@ export const Account = () => {
         <div>
           <img src={user?.photoURL} alt="" className="h-10 w-10 rounded-full" />
           <h1>{user?.displayName} </h1>
-          <p>Full Name: {userData.fullName}</p>
-          <h1> {user?.email} </h1>
-          <p>Username: {userData.username}</p>
+          <p>{user?.email} </p>
         </div>
       </div>
     </div>
   );
 };
-

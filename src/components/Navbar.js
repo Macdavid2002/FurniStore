@@ -105,23 +105,19 @@ const Navbar = () => {
         <div className="flex space-x-4">
           <AccountDropdown user={user} />
 
-          <div className="relative">
-            <Link
-              to="/wishlist"
-              className="text-white hover:text-black text-lg font-medium focus:text-black"
-            >
-              <HeartIcon
-                className="w-7 text-white hover:text-black text-xl font-medium focus:text-black"
-                title="Wishlist"
-              />
-            </Link>
-            <span className="absolute text-white -top-1 left-4 ">
-              <p className="px-2 rounded-full bg-black">0</p>
-            </span>
-          </div>
+          <Link
+            to="/wishlist"
+            className="text-white hover:text-black text-lg font-medium focus:text-black"
+          >
+            <HeartIcon
+              className="w-6 text-white hover:text-black text-xl font-medium focus:text-black"
+              title="Wishlist"
+            />
+          </Link>
+
           <Link to="/cart">
             <ShoppingBagIcon
-              className="w-7 text-white hover:text-black text-xl font-medium focus:text-black"
+              className="w-6 text-white hover:text-black text-xl font-medium focus:text-black"
               title="Cart"
             />
           </Link>

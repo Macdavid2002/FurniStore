@@ -28,7 +28,7 @@ const AccountDropdown = ({ user }) => {
         onClick={toggleDropdown}
         className="text-white focus:outline-none"
       >
-        <UserCircleIcon className="w-7 text-white hover:text-black text-xl font-medium focus:text-black" />
+        <UserCircleIcon className="w-6 text-white hover:text-black text-xl font-medium focus:text-black" />
       </button>
       {dropdownOpen && (
         <div className="absolute -left-4 w-36 bg-white shadow-md  ">
