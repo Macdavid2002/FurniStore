@@ -29,7 +29,7 @@ export const RoomDropdown = ({ title, items }) => {
         <ChevronDownIcon className="w-6 h-8 text-white hover:text-black" />
       </div>
       {isOpen && (
-        <div className="absolute left-1  w-[200px] bg-white shadow-md shadow-gray-600 ">
+        <div className="absolute left-1  w-[200px] bg-white shadow-md z-50">
           <ul className="p-6">
             {items.map((item, index) => (
               <li

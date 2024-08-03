@@ -64,10 +64,10 @@ const Navbar = () => {
           />
 
           <Link
-            to="/about"
+            to="/Articles"
             className="text-white hover:text-black text-lg font-medium focus:text-black"
           >
-            About
+            Articles
           </Link>
           <Link
             to="/contact"
@@ -91,7 +91,7 @@ const Navbar = () => {
           </button>
         </div>
         {/* Search Bar */}
-        <div className="hidden md:relative">
+        <div className="relative">
           <div className="w-96 bg-white shadow-lg p-2">
             <div className="flex">
               <input
@@ -103,20 +103,25 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex space-x-4">
-          <Link
-            to="/wishlist"
-            className="text-white hover:text-black text-lg font-medium focus:text-black"
-          >
-            <HeartIcon
-              className="w-6 text-white hover:text-black text-xl font-medium focus:text-black"
-              title="Wishlist"
-            />
-          </Link>
           <AccountDropdown user={user} />
-          {/* Conditionally render Account Dropdown */}
+
+          <div className="relative">
+            <Link
+              to="/wishlist"
+              className="text-white hover:text-black text-lg font-medium focus:text-black"
+            >
+              <HeartIcon
+                className="w-7 text-white hover:text-black text-xl font-medium focus:text-black"
+                title="Wishlist"
+              />
+            </Link>
+            <span className="absolute text-white -top-1 left-4 ">
+              <p className="px-2 rounded-full bg-black">0</p>
+            </span>
+          </div>
           <Link to="/cart">
             <ShoppingBagIcon
-              className="w-6 text-white hover:text-black text-xl font-medium focus:text-black"
+              className="w-7 text-white hover:text-black text-xl font-medium focus:text-black"
               title="Cart"
             />
           </Link>

@@ -8,30 +8,41 @@ const AccountDropdown = ({ user }) => {
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
+  const handleMouseEnter = () => {
+    setDropdownOpen(true);
+  };
+  const handleMouseLeave = () => {
+    setDropdownOpen(false);
+  };
   useEffect(() => {
     window.onscroll = () => setDropdownOpen(false);
   }, []);
   return (
-    <div className="relative" ref={accountDropdownRef}>
+    <div
+      className="relative"
+      ref={accountDropdownRef}
+      onMouseOver={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <button
         onClick={toggleDropdown}
         className="text-white focus:outline-none"
       >
-        <UserCircleIcon className="w-6 text-white hover:text-black text-xl font-medium focus:text-black" />
+        <UserCircleIcon className="w-7 text-white hover:text-black text-xl font-medium focus:text-black" />
       </button>
       {dropdownOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-md py-2 px-2">
+        <div className="absolute -left-4 w-36 bg-white shadow-md  ">
           {user ? (
             <Link
               to="/account"
-              className="block px-4 py-2 text-gray-800 rounded-md hover:bg-gray-500 hover:text-white"
+              className="block p-4 text-gray-800   hover:text-gray-500"
             >
               My Account
             </Link>
           ) : (
             <Link
               to="/login"
-              className="block px-4 py-2 text-gray-800 rounded-md hover:bg-gray-500 hover:text-white"
+              className="block p-4 text-gray-800   hover:text-gray-500"
             >
               Sign In
             </Link>

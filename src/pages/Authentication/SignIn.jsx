@@ -6,12 +6,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { auth, provider } from "../../config/firebase";
 import { signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
 import googleIcon from "../../assets/google_logo.png";
-import { XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function SignIn() {
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
-  const [showClearButton, setShowClearButton] = useState(false);
 
   // React Hook Form Validation
   const schema = yup.object().shape({
@@ -34,15 +32,10 @@ export default function SignIn() {
     try {
       await signInWithEmailAndPassword(auth, data.email, data.password);
       navigate("/account");
-      console.log(data)
+      console.log(data);
     } catch (error) {
       console.error("Error signing in:", error.message);
     }
-  };
-
-  const clearEmailFunction = () => {
-    setEmailInput("");
-    setShowClearButton(false);
   };
 
   // Google Sign In Authentication
@@ -65,7 +58,7 @@ export default function SignIn() {
           onSubmit={handleSubmit(handleLoginEvent)}
         >
           {/* Email Address Input */}
-          <div className="relative">
+          <div className="relative z-10">
             <input
               type="email"
               placeholder="E-mail address"
@@ -73,19 +66,10 @@ export default function SignIn() {
               {...register("email")}
               onChange={(e) => {
                 setEmailInput(e.target.value);
-                setShowClearButton(e.target.value.length > 0);
               }}
               value={emailInput}
             />
             <p className="text-red-500 text-sm px-2">{errors.email?.message}</p>
-            {showClearButton && (
-              <span className="absolute top-3 right-3 cursor-pointer">
-                <XMarkIcon
-                  className="w-5 text-gray-500"
-                  onClick={clearEmailFunction}
-                />
-              </span>
-            )}
           </div>
           {/* Password Input */}
           <div className="relative">
@@ -97,7 +81,9 @@ export default function SignIn() {
               value={passwordInput}
               onChange={(e) => setPasswordInput(e.target.value)}
             />
-            <p className="text-red-500 text-sm px-2">{errors.password?.message}</p>
+            <p className="text-red-500 text-sm px-2">
+              {errors.password?.message}
+            </p>
           </div>
           {/* Sign In button */}
           <button
