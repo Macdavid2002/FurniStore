@@ -9,9 +9,10 @@ export const Footer = () => {
       <div className="flex p-4 bg-gray-400">
         <div className="text-white">
           <Link to="/">
-            <h1 className="text-white font-medium text-3xl flex py-4">
-              Furni <span className="text-black">Stor3</span>
+            <h1 className="text-white font-medium text-3xl flex py-2">
+              Meubles
             </h1>
+            <div className="border-t-[2px] w-[9%] border-black"></div>
           </Link>
           <div className="flex p-2 gap-20 text-black ">
             {/* Help Links */}
@@ -28,7 +29,7 @@ export const Footer = () => {
             <div>
               <h2 className="text-lg font-medium py-2">RESOURCES</h2>
               <ul className="text-xs">
-                <li className="py-1">BLOGS</li>
+                <li className="py-1">ARTICLE</li>
                 <li className="py-1">GIFT CARDS</li>
                 <li className="py-1">TRADE PROGRAMS</li>
                 <li className="py-1">REVIEWS</li>

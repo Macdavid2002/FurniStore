@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
@@ -22,13 +22,18 @@ const Dropdown = ({ title, items }) => {
       ref={dropdownRef}
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseLeave}
+      
     >
       {/* Toggle Dropdown Button */}
-        <button className="flex items-center   text-lg font-medium focus:text-black ">
-          {title}
-        <ChevronDownIcon className="w-6 h-8 text-white  cursor-pointer" />
-        </button>
-      
+      <button className="flex items-center   text-lg font-medium focus:text-black ">
+        {title}
+        {isOpen ? (
+          <ChevronUpIcon className="w-6 h-8 text-white  cursor-pointer" />
+        ) : (
+          <ChevronDownIcon className="w-6 h-8 text-white  cursor-pointer" />
+        )}
+      </button>
+
       {isOpen && (
         <div className="absolute left-1 w-[200px]  bg-white shadow-md">
           <ul className="p-6 ">

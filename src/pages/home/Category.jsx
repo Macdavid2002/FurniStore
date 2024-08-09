@@ -5,6 +5,9 @@ import { Benches } from "../Categories/Benches";
 import { Lighting } from "../Categories/Lighting";
 import { Dining } from "../Categories/Dining";
 import { Rugs } from "../Categories/Rugs";
+import { Sofas } from "../Categories/Sofas";
+import { Storage } from "../Categories/Storage";
+import { Tables } from "./../Categories/Tables";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 const categories = {
   Chairs: <Chairs />,
@@ -13,7 +16,9 @@ const categories = {
   Dining: <Dining />,
   Lighting: <Lighting />,
   Rugs: <Rugs />,
-  // Add other categories here
+  Sofas: <Sofas />,
+  Storage: <Storage />,
+  Table: <Tables />,
 };
 
 export const Category = () => {
@@ -41,20 +46,11 @@ export const Category = () => {
               className={`text-md font-bold rounded-full px-3 py-[3px] cursor-pointer ${
                 selectedCategory === category ? "bg-gray-400 text-white" : ""
               }`}
-              onClick={() => setSelectedCategory(category)} 
+              onClick={() => setSelectedCategory(category)}
             >
               {category}
             </li>
           ))}
-          <li className="focus:bg-gray-600 rounded-full p-3 cursor-pointer">
-            Sofas
-          </li>
-          <li className="focus:bg-gray-200 rounded-full p-3 cursor-pointer">
-            Storage
-          </li>
-          <li className="focus:bg-gray-200 rounded-full p-3 cursor-pointer">
-            Tables
-          </li>
         </ul>
       </div>
       <div className="md:hidden">
@@ -69,14 +65,14 @@ export const Category = () => {
         <ul
           className={`${
             categoryNav
-              ? "fixed top-40 left-4 p-1 w-[52%] bg-gray-400 z-50 "
+              ? "fixed top-40 left-4 shadow-sm shadow-black w-[52%] bg-white z-50 "
               : "hidden"
           }`}
         >
           {Object.keys(categories).map((category) => (
             <li
               key={category}
-              className={`focus:text-gray-400 border border-b-gray-400 cursor-pointer ${
+              className={`border border-b-gray-400 cursor-pointer ${
                 selectedCategory === category ? "bg-gray-200" : ""
               }`}
               onClick={() => setSelectedCategory(category)}
@@ -84,8 +80,7 @@ export const Category = () => {
               {category}
             </li>
           ))}
-          <li className="focus:text-gray-400 cursor-pointer">Sofas</li>
-          <li className="focus:text-gray-400 cursor-pointer">Storage</li>
+
           <li className="focus:text-gray-400 cursor-pointer">Tables</li>
         </ul>
       </div>

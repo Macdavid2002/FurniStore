@@ -13,7 +13,9 @@ export const BenchesCard = ({ benchList }) => {
                 <h1 className="py-4 text-xl ">{bench.name} </h1>
                 <ShoppingBagIcon className="w-6 h-6 cursor-pointer hover:animate-bounce" />
               </span>
-              <h2 className="font-bold text-gray-500">{bench.price} </h2>
+              <h2 className="font-medium text-lg text-gray-500">
+                $ {bench.price}{" "}
+              </h2>
             </div>
           </div>
         ))}
