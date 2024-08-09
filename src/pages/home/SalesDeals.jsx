@@ -4,5 +4,10 @@ import { useState } from "react";
 
 export const SalesDeals = () => {
   const [salesDealsList, setDealsList] = useState(SalesData);
-  return <SalesDealsCard salesDealsList={salesDealsList} />;
+  return (
+    <SalesDealsCard
+      salesDealsList={salesDealsList}
+      setDealsList={setDealsList}
+    />
+  );
 };

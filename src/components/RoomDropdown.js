@@ -34,7 +34,7 @@ export const RoomDropdown = ({ title, items }) => {
             {items.map((item, index) => (
               <li
                 key={index}
-                className="flex p-2 text-black hover:text-gray-500 "
+                className="flex p-2 text-black border-b border-b-gray-400 hover:border-l-4 hover:border-l-gray-400 "
               >
                 <Link to={item.link}>{item.label}</Link>
               </li>

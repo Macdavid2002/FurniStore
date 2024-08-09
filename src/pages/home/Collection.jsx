@@ -1,19 +1,19 @@
 export const Collection = () => {
   return (
-    <div className="flex justify-center items-center ">
+    <div className="relative block text-left">
       <img
         src="https://cdn-cms-assets.article.com/7wvGa6xhkAjvtxnAvh3127-f8d5da377ca1a3b5ae2218a10bd73b6d?w=1300&q=80&fm=webp&fit=max"
         alt=""
-        className="w-full"
+        className="w-full h-[400px] object-cover"
       />
-      <div className="absolute block text-center">
-        <h1 className="text-4xl text-white font-bold">
-          Your furniture says a lot about you{" "}
+      <div className="absolute block top-14 md:top-14 p-2 md:p-8">
+        <h1 className="text-3xl  mt-10 md:text-[50px] text-white text-left  ">
+          Your Furniture Says A Lot About You{" "}
         </h1>
-        <p className="m-2 text-2xl text-white font-semibold text-center">
+        <p className="my-4 md:my-8 text-2xl md:text-4xl text-white text-left">
           Pick from our variety of collections
         </p>
-        <button className="m-2 p-3 rounded-md bg-gray-300 font-semibold ">
+        <button className="my-4 p-3 rounded-md border border-gray-300 text-white block text-left text-xl">
           Explore Our Collection
         </button>
       </div>

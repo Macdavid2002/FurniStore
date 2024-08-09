@@ -20,24 +20,48 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+  const [showBar, setShowBar] = useState(false);
+  const showBarFunction = () => {
+    setShowBar(true);
+  };
+  const hideBarFunction = () => {
+    setShowBar(false);
+  };
+  const [showBarTwo, setShowBarTwo] = useState(false);
+  const showBarTwoFunction = () => {
+    setShowBarTwo(true);
+  };
+  const hideBarTwoFunction = () => {
+    setShowBarTwo(false);
+  };
+  const [showBarThree, setShowBarThree] = useState(false);
+  const showBarThreeFunction = () => {
+    setShowBarThree(true);
+  };
+  const hideBarThreeFunction = () => {
+    setShowBarThree(false);
+  };
   return (
     <nav className="bg-gray-400 p-4 w-full top-0">
       <div className="container mx-auto flex items-center justify-between gap-4 sm:flex">
         <div className="text-white">
           <Link to="/">
-            <h1 className="text-white font-medium text-3xl flex">
-              Furni <span className="text-black">Stor3</span>
-            </h1>
+            <h1 className="text-black font-medium text-3xl flex">Meubles</h1>
           </Link>
+          <div className="border-t-[2px]  border-white"></div>
         </div>
         <div className="hidden md:flex items-center space-x-4">
           {/* Nav Links */}
           <Link
             to="/"
-            className="text-white hover:text-black text-lg font-medium focus:text-black"
+            className="text-white text-lg font-medium focus:text-black"
+            onMouseEnter={showBarFunction}
+            onMouseLeave={hideBarFunction}
           >
             Home
+            {showBar && (
+              <div className="border-t-[3px] border-black "></div>
+            )}
           </Link>
           <Dropdown
             title="Products"
@@ -65,15 +89,25 @@ const Navbar = () => {
 
           <Link
             to="/Articles"
-            className="text-white hover:text-black text-lg font-medium focus:text-black"
+            className="text-white text-lg font-medium focus:text-black"
+            onMouseEnter={showBarTwoFunction}
+            onMouseLeave={hideBarTwoFunction}
           >
             Articles
+            {showBarTwo && (
+              <div className="border-t-[3px] border-black "></div>
+            )}
           </Link>
           <Link
             to="/contact"
-            className="text-white hover:text-black text-lg font-medium focus:text-black"
+            className="text-white text-lg font-medium focus:text-black"
+            onMouseEnter={showBarThreeFunction}
+            onMouseLeave={hideBarThreeFunction}
           >
             Contact
+            {showBarThree && (
+              <div className="border-t-[3px] border-black "></div>
+            )}
           </Link>
         </div>
         <div className="md:hidden">
@@ -91,17 +125,19 @@ const Navbar = () => {
           </button>
         </div>
         {/* Search Bar */}
-        <div className="relative">
-          <div className="w-96 bg-white shadow-lg p-2">
+
+        <div className="hidden md:block">
+          <div className="w-96 bg-white p-2">
             <div className="flex">
               <input
                 className=" outline-none  w-full placeholder:p-2 text-sm"
                 placeholder="Search Products..."
               />
-              <MagnifyingGlassIcon className="w-6 text-gray-500 cursor-pointer" />
+              <MagnifyingGlassIcon className="w-6 text-black cursor-pointer" />
             </div>
           </div>
         </div>
+
         <div className="flex space-x-4">
           <AccountDropdown user={user} />
 

@@ -24,19 +24,23 @@ const Dropdown = ({ title, items }) => {
       onMouseLeave={handleMouseLeave}
     >
       {/* Toggle Dropdown Button */}
-      <div className="flex items-center">
-        <button className="hover:text-black  text-lg font-medium focus:text-black ">
+        <button className="flex items-center   text-lg font-medium focus:text-black ">
           {title}
+        <ChevronDownIcon className="w-6 h-8 text-white  cursor-pointer" />
         </button>
-        <ChevronDownIcon className="w-6 h-8 text-white hover:text-black cursor-pointer" />
-      </div>
+      
       {isOpen && (
         <div className="absolute left-1 w-[200px]  bg-white shadow-md">
           <ul className="p-6 ">
             {items.map((item, index) => (
-              <li key={index} className=" p-2 text-black  hover:text-gray-500">
-                <Link to={item.link}>{item.label}</Link>
-              </li>
+              <Link to={item.link}>
+                <li
+                  key={index}
+                  className="p-2 text-black border-b  border-b-gray-400 hover:border-l-4 hover:border-l-gray-400 "
+                >
+                  {item.label}
+                </li>
+              </Link>
             ))}
           </ul>
         </div>

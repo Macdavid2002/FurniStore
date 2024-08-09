@@ -32,7 +32,7 @@ const TopScrollButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className=" bg-white p-2  text-black shadow-md rounded-md "
+          className=" bg-white p-2  text-black shadow-black shadow-sm rounded-full "
         >
           <ChevronUpIcon className="w-5 " />
         </button>
