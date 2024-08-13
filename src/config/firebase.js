@@ -1,6 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, EmailAuthProvider } from "firebase/auth";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  TwitterAuthProvider,
+} from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -8,18 +12,18 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDYRP-glaTTSwcluc9_U2-haNVwgaNvTtA",
-  authDomain: "furnistore-b319f.firebaseapp.com",
-  projectId: "furnistore-b319f",
-  storageBucket: "furnistore-b319f.appspot.com",
-  messagingSenderId: "105317307046",
-  appId: "1:105317307046:web:0a7bc0420dbe58b0c71a67",
-  measurementId: "G-DLS7KMBZ3S",
+  apiKey: "AIzaSyBt6Lc4Nn2Bc7NeGuoN4EN4MQHCNzytJzw",
+  authDomain: "meubles-63663.firebaseapp.com",
+  projectId: "meubles-63663",
+  storageBucket: "meubles-63663.appspot.com",
+  messagingSenderId: "506924615770",
+  appId: "1:506924615770:web:7afb00420517bf0a583063",
+  measurementId: "G-1FEJ44XJPK",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-export const provider = new GoogleAuthProvider();
-export const mail = new EmailAuthProvider();
-export const database = getFirestore(app);
+export const db = getFirestore(app);
+export const googleProvider = new GoogleAuthProvider();
+export const twitterProvider = new TwitterAuthProvider();

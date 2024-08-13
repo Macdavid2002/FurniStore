@@ -1,11 +1,7 @@
-import { useState } from "react";
-import { BenchesData } from "../../data/BenchesData";
-import { BenchesCard } from "../../cards/BenchesCard";
 export const Benches = () => {
-  const [benchList, setBenchList] = useState( BenchesData );
   return (
     <div>
-      <BenchesCard benchList={benchList} setBenchList={setBenchList} />
+      <h1>Bench</h1>
     </div>
   );
 };

@@ -1,8 +1,10 @@
+import { useState } from "react";
+import { SofasData } from "../data/SofasData";
 import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
-
-export const SofasCard = ({ sofasList }) => {
+export const SofasCard = () => {
+  const [sofasList, setSofasList] = useState(SofasData);
   return (
-    <div className="mt-8">
+    <div className="md:mt-8">
       <div className=" relative p-8 grid grid-cols-1 md:grid-cols-2 gap-12">
         {sofasList.map((sofasList, id) => (
           <div key={id}>

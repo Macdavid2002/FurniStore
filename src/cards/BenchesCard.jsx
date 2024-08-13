@@ -1,9 +1,12 @@
 import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
 
-export const BenchesCard = ({ benchList }) => {
+import { BenchesData } from "./../data/BenchesData";
+import { useState } from "react";
+export const BenchesCard = () => {
+  const [benchList, setBenchList] = useState(BenchesData);
   return (
-    <div className="mt-8">
-      <div className=" relative p-8 grid grid-cols-4 md:grid-cols-2 gap-12">
+    <div className="md:mt-8">
+      <div className=" relative p-8 grid grid-cols-1 md:grid-cols-2 gap-12">
         {benchList.map((bench) => (
           <div key={bench.id}>
             <div className="relative p-10 border border-gray-400">
@@ -14,7 +17,7 @@ export const BenchesCard = ({ benchList }) => {
                 <ShoppingBagIcon className="w-6 h-6 cursor-pointer hover:animate-bounce" />
               </span>
               <h2 className="font-medium text-lg text-gray-500">
-                $ {bench.price}{" "}
+                $ {bench.price}
               </h2>
             </div>
           </div>

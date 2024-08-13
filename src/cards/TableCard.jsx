@@ -1,6 +1,8 @@
+import { useState } from "react";
+import { TableData } from "../data/TableData";
 import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
-
-export const TableCard = ({ tableList }) => {
+export const TableCard = () => {
+  const [tableList, setTableList] = useState(TableData);
   return (
     <div className="mt-8">
       <div className=" relative p-8 grid grid-cols-1 md:grid-cols-2 gap-12">

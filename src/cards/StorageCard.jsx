@@ -1,6 +1,8 @@
+import { useState } from "react";
+import { StorageData } from "../data/StorageData";
 import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
-
-export const StorageCard = ({ storageList }) => {
+export const StorageCard = () => {
+  const [storageList, setStorageList] = useState(StorageData);
   return (
     <div className="mt-8">
       <div className=" relative p-8 grid grid-cols-1 md:grid-cols-2 gap-12">

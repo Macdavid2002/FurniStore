@@ -16,7 +16,7 @@ export default function Home() {
       <Rooms />
       <Collection />
       <Category />
-      <SalesDeals />
+      {/* <SalesDeals /> */}
       {/* <Sponsors /> */}
     </div>
   );

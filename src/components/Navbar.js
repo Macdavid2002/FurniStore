@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  Bars3BottomLeftIcon,
+  Bars3Icon,
   XMarkIcon,
   ShoppingBagIcon,
   HeartIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
-import Dropdown from "./Dropdown";
+import ProductDropdown from "./ProductDropdown";
 import { RoomDropdown } from "./RoomDropdown";
 import AccountDropdown from "../components/AccountDropdown";
 import { auth } from "../config/firebase";
@@ -16,54 +16,30 @@ import { useAuthState } from "react-firebase-hooks/auth";
 const Navbar = () => {
   const [user] = useAuthState(auth);
   const [isOpen, setIsOpen] = useState(false);
+  const [searchBar, setSearchBar] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
-  const [showBar, setShowBar] = useState(false);
-  const showBarFunction = () => {
-    setShowBar(true);
+  const toggleSearchBar = () => {
+    if (window.scrollY > 400) {
+      setSearchBar(false);
+    }
   };
-  const hideBarFunction = () => {
-    setShowBar(false);
-  };
-  const [showBarTwo, setShowBarTwo] = useState(false);
-  const showBarTwoFunction = () => {
-    setShowBarTwo(true);
-  };
-  const hideBarTwoFunction = () => {
-    setShowBarTwo(false);
-  };
-  const [showBarThree, setShowBarThree] = useState(false);
-  const showBarThreeFunction = () => {
-    setShowBarThree(true);
-  };
-  const hideBarThreeFunction = () => {
-    setShowBarThree(false);
-  };
+  window.addEventListener("scroll", toggleSearchBar);
+
   return (
-    <nav className="bg-gray-400 p-4 w-full top-0">
-      <div className="container mx-auto flex items-center justify-between gap-4 sm:flex">
-        <div className="text-white">
-          <Link to="/">
-            <h1 className="text-black font-medium text-3xl flex">Meubles</h1>
-          </Link>
-          <div className="border-t-[2px]  border-white"></div>
-        </div>
-        <div className="hidden md:flex items-center space-x-4">
-          {/* Nav Links */}
-          <Link
-            to="/"
-            className="text-white text-lg font-medium focus:text-black"
-            onMouseEnter={showBarFunction}
-            onMouseLeave={hideBarFunction}
-          >
-            Home
-            {showBar && (
-              <div className="border-t-[3px] border-black "></div>
-            )}
-          </Link>
-          <Dropdown
+    <div className="bg-gray-400 p-4 flex items-center justify-between h-14 sticky top-0 z-50">
+      <h1 className="font-medium uppercase text-2xl">
+        <Link to="/">Meubles</Link>
+      </h1>
+
+      <ul className="hidden lg:flex items-center justify-center gap-4">
+        <li className="text-lg">
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <ProductDropdown
             title="Products"
             items={[
               { label: "Beds", link: "/beds" },
@@ -74,7 +50,10 @@ const Navbar = () => {
               { label: "Rugs", link: "/rugs" },
               { label: "Lighting", link: "/lighting" },
             ]}
+            isMobile={isOpen}
           />
+        </li>
+        <li className="text-lg">
           <RoomDropdown
             title="Rooms"
             items={[
@@ -85,130 +64,130 @@ const Navbar = () => {
               { label: "Outdoor", link: "/outdoor" },
               { label: "Entryway", link: "/entryway" },
             ]}
+            isMobile={isOpen}
           />
+        </li>
+        <li className="text-lg">
+          <Link to="/">Articles</Link>
+        </li>
+        <li className="text-lg">
+          <Link to="/">Contact</Link>
+        </li>
+      </ul>
 
-          <Link
-            to="/Articles"
-            className="text-white text-lg font-medium focus:text-black"
-            onMouseEnter={showBarTwoFunction}
-            onMouseLeave={hideBarTwoFunction}
-          >
-            Articles
-            {showBarTwo && (
-              <div className="border-t-[3px] border-black "></div>
-            )}
-          </Link>
-          <Link
-            to="/contact"
-            className="text-white text-lg font-medium focus:text-black"
-            onMouseEnter={showBarThreeFunction}
-            onMouseLeave={hideBarThreeFunction}
-          >
-            Contact
-            {showBarThree && (
-              <div className="border-t-[3px] border-black "></div>
-            )}
-          </Link>
-        </div>
-        <div className="md:hidden">
-          <button
-            onClick={toggleMenu}
-            className="text-white focus:outline-none"
-          >
-            {isOpen ? (
-              // X icon to close navbar
-              <XMarkIcon className="w-5" />
-            ) : (
-              // Hamburger icon to open navbar
-              <Bars3BottomLeftIcon className="w-5" />
-            )}
-          </button>
-        </div>
-        {/* Search Bar */}
-
-        <div className="hidden md:block">
-          <div className="w-96 bg-white p-2">
-            <div className="flex">
-              <input
-                className=" outline-none  w-full placeholder:p-2 text-sm"
-                placeholder="Search Products..."
-              />
-              <MagnifyingGlassIcon className="w-6 text-black cursor-pointer" />
-            </div>
-          </div>
-        </div>
-
-        <div className="flex space-x-4">
-          <AccountDropdown user={user} />
-
-          <Link
-            to="/wishlist"
-            className="text-white hover:text-black text-lg font-medium focus:text-black"
-          >
-            <HeartIcon
-              className="w-6 text-white hover:text-black text-xl font-medium focus:text-black"
-              title="Wishlist"
-            />
-          </Link>
-
-          <Link to="/cart">
-            <ShoppingBagIcon
-              className="w-6 text-white hover:text-black text-xl font-medium focus:text-black"
-              title="Cart"
-            />
-          </Link>
-        </div>
+      {/* Account, Cart, Wishlist  and Search Icons */}
+      <div className="hidden lg:flex space-x-4">
+        <span className="text-white hover:text-black text-lg font-medium">
+          <MagnifyingGlassIcon
+            className="hidden lg:block w-6 text-white hover:text-black text-xl cursor-pointer"
+            onClick={() => {
+              setSearchBar(!searchBar);
+            }}
+          />
+        </span>
+        <AccountDropdown user={user} />
+        <Link
+          to="/wishlist"
+          className="text-white hover:text-black text-lg font-medium"
+        >
+          <HeartIcon
+            className="w-6 text-white hover:text-black text-xl"
+            title="Wishlist"
+          />
+        </Link>
+        <Link to="/cart">
+          <ShoppingBagIcon
+            className="w-6 text-white hover:text-black text-xl"
+            title="Cart"
+          />
+        </Link>
       </div>
 
-      {/* Responsive Navbar */}
-      {isOpen && (
-        <div className="md:hidden bg-gray-400 mt-2">
-          <Link
-            to="/"
-            className="block text-white hover:text-black text-xl font-medium focus:text-black py-2"
-          >
-            Home
-          </Link>
-          <Dropdown
-            title="Products"
-            items={[
-              { label: "Beds", link: "/beds" },
-              { label: "Dressers", link: "/dressers" },
-              { label: "Cupboards", link: "/cupboards" },
-              { label: "Sofas", link: "/sofa" },
-              { label: "Chairs", link: "/chair" },
-              { label: "Tables", link: "/table" },
-              { label: "Rugs", link: "/rugs" },
-              { label: "Lighting", link: "/lighting" },
-            ]}
-          />
-          <RoomDropdown
-            title="Rooms"
-            items={[
-              { label: "Living Room", link: "/living-room" },
-              { label: "Bedroom", link: "/bedroom" },
-              { label: "Dining Room", link: "/dining-room" },
-              { label: "Office", link: "/office" },
-              { label: "Outdoor", link: "/outdoor" },
-              { label: "Entryway", link: "/entryway" },
-            ]}
-          />
-          <Link
-            to="/contact"
-            className="block text-white hover:text-black text-xl font-medium focus:text-black py-2"
-          >
-            Contact
-          </Link>
-          <Link
-            to="/cart"
-            className="flex items-center text-white hover:text-black text-xl font-medium focus:text-black py-2 gap-2"
-          >
-            <ShoppingBagIcon className="w-6 text-white hover:text-black text-xl font-medium focus:text-black" />
-            Cart
-          </Link>
-        </div>
+      {/* Toggle Button for Mobile Menu */}
+      <div
+        className="lg:hidden fixed right-4 top-4 z-50"
+        onClick={toggleNavbar}
+      >
+        {isOpen ? (
+          <XMarkIcon className="w-10" />
+        ) : (
+          <Bars3Icon className="w-10" />
+        )}
+      </div>
+      {/* <div> */}
+      {searchBar && (
+        <input
+          type="text "
+          className="absolute top-16 p-3 rounded-md bg-transparent border border-black outline-none right-1 placeholder:text-black 
+  "
+          placeholder="search items"
+        />
       )}
-    </nav>
+      {/* </div> */}
+      {/* Responsive Navbar */}
+      <div
+        className={
+          isOpen
+            ? "fixed top-0 left-0 w-[60%] bg-gray-400 h-full ease-in-out duration-500"
+            : "fixed left-[-100%]  h-full ease-in-out duration-500"
+        }
+      >
+        <h1 className="font-medium uppercase text-2xl m-4">
+          <Link to="/">Meubles</Link>
+        </h1>
+        <span className="relative">
+          <input
+            type="text"
+            className="mx-2 p-4 w-[90%] rounded-md mt-4 placeholder:p-6 placeholder:text-black"
+            placeholder="Search Items"
+          />
+          <MagnifyingGlassIcon className="w-6 absolute top-0 left-4" />
+        </span>
+        <ul className="pt-4 text-md">
+          <li className="p-4 border-b border-b-white font-medium">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="p-4 border-b border-b-white">
+            <ProductDropdown
+              title="Products"
+              items={[
+                { label: "Beds", link: "/beds" },
+                { label: "Storage", link: "storage" },
+                { label: "Sofas", link: "/sofa" },
+                { label: "Chairs", link: "/chair" },
+                { label: "Tables", link: "/table" },
+                { label: "Rugs", link: "/rugs" },
+                { label: "Lighting", link: "/lighting" },
+              ]}
+              isMobile={isOpen}
+            />
+          </li>
+          <li className="p-4 border-b border-b-white font-medium">
+            <RoomDropdown
+              title="Rooms"
+              items={[
+                { label: "Living Room", link: "/living-room" },
+                { label: "Bedroom", link: "/bedroom" },
+                { label: "Dining Room", link: "/dining-room" },
+                { label: "Office", link: "/office" },
+                { label: "Outdoor", link: "/outdoor" },
+                { label: "Entryway", link: "/entryway" },
+              ]}
+              isMobile={isOpen}
+            />
+          </li>
+          <li className="p-4 border-b border-b-white font-medium">About</li>
+          <li className="p-4 border-b border-b-white font-medium">
+            <Link to="/">Contact</Link>
+          </li>
+          <li className="p-4 border-b border-b-white font-medium">Cart</li>
+          <li className="p-4 border-b border-b-white font-medium">Wishlist</li>
+          <li className="p-4-border-b border-b-white font-medium">
+            <AccountDropdown user={user} isMobile={isOpen} />
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 };
 

@@ -1,22 +1,21 @@
 import fbIcon from "../svg/icons8-facebook.svg";
-import xIcon from "../svg/icons8-twitterx.svg";
+import xIcon from "../svg/icons8-twitter.svg";
 import pinterestIcon from "../svg/icons8-pinterest.svg";
 import instaIcon from "../svg/icons8-instagram.svg";
 import { Link } from "react-router-dom";
 export const Footer = () => {
   return (
     <div>
-      <div className="flex p-4 bg-gray-400">
-        <div className="text-white">
+      <div className="md:flex p-4 bg-gray-400 ">
+        <div className="">
           <Link to="/">
-            <h1 className="text-white font-medium text-3xl flex py-2">
+            <h1 className="text-black font-medium text-3xl flex py-2 uppercase">
               Meubles
             </h1>
-            <div className="border-t-[2px] w-[9%] border-black"></div>
           </Link>
-          <div className="flex p-2 gap-20 text-black ">
+          <div className="mt-4 grid grid-cols-2 lg:flex md:grid-cols-3 pb-8 gap-20 text-black ">
             {/* Help Links */}
-            <div>
+            <span>
               <p className="text-lg  font-medium py-2">HELP</p>
               <ul className="text-xs ">
                 <li className="py-1">SHIPPING</li>
@@ -24,18 +23,19 @@ export const Footer = () => {
                 <li className="py-1">EMAIL AND TEXT REFERENCES</li>
                 <li className="py-1">PRODUCT RECALLS</li>
               </ul>
-            </div>
-            {/* Useful Link */}
-            <div>
-              <h2 className="text-lg font-medium py-2">RESOURCES</h2>
+            </span>
+            {/* Resources */}
+            <span>
               <ul className="text-xs">
+                <h2 className="text-lg font-medium py-2">RESOURCES</h2>
                 <li className="py-1">ARTICLE</li>
                 <li className="py-1">GIFT CARDS</li>
                 <li className="py-1">TRADE PROGRAMS</li>
                 <li className="py-1">REVIEWS</li>
               </ul>
-            </div>
-            <div>
+            </span>
+            {/* Contact Us links */}
+            <span>
               <h2 className="text-lg font-medium py-2">CONTACT US</h2>
               <ul className="text-xs">
                 <li className="py-1">FAQ</li>
@@ -43,8 +43,9 @@ export const Footer = () => {
                 <li className="py-1">TERMS OF USE</li>
                 <li className="py-1">DO NOT SELL MY INFORMATION</li>
               </ul>
-            </div>
-            <div>
+            </span>
+            {/* Account Links */}
+            <span>
               <h2 className="text-lg font-medium py-2 ">ACCOUNT</h2>
               <ul className="text-xs">
                 <Link to="/login">
@@ -54,35 +55,43 @@ export const Footer = () => {
                   <li className="py-1">WISHLIST</li>
                 </Link>
               </ul>
-            </div>
-            <div>
-              <input
-                type="text"
-                placeholder="Email address..."
-                className="p-2 mx-2 placeholder:text-xs"
-              />
-              <button className="bg-black text-white p-2 hover:bg-[rgba(0,0,0,0.8)]">
-                Subscribe
-              </button>
-              <p className="text-xs p-2">
+            </span>
+            {/* newsletter */}
+            <span className="grid grid-row-1 md:block ">
+              <p className="text-sm md:text-sm pb-4 md:p-2">
                 Receive updates to new arrivals and sales on our exquisite
                 collection
               </p>
-            </div>
+
+              <span className="md:py-4 md:mx-2 flex items-center gap-2">
+                <input
+                  type="text"
+                  placeholder="Email address..."
+                  className="p-2  placeholder:text-xs"
+                />
+                <button className="bg-black text-white p-2 hover:bg-[rgba(0,0,0,0.8)]">
+                  Subscribe
+                </button>
+              </span>
+            </span>
           </div>
-          <div>
-            <ul className="flex p-2 py-4 gap-3">
+          <div className="border-t-[2px] border-black py-4"></div>
+          <div className="block md:flex items-center justify-between px-1">
+            <h2 className="text-md md:text-lg font-medium">
+              Copyright © 2024 Meubles. All rights reserved
+            </h2>
+            <ul className="flex items-center justify-center py-2 gap-6">
               <li>
-                <img src={fbIcon} alt="" />
+                <img src={fbIcon} className="h-8 md:h-6" alt="" />
               </li>
               <li>
-                <img src={xIcon} alt="" />
+                <img src={xIcon} className="h-8 md:h-6" alt="" />
               </li>
               <li>
-                <img src={pinterestIcon} alt="" />
+                <img src={pinterestIcon} className="h-8 md:h-6" alt="" />
               </li>
               <li>
-                <img src={instaIcon} alt="" />
+                <img src={instaIcon} className="h-8 md:h-6" alt="" />
               </li>
             </ul>
           </div>

@@ -1,8 +1,12 @@
+import { useState } from "react";
+
+import { RugsData } from "../data/RugsData";
 import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
-export const RugsCard = ({ rugList }) => {
+export const RugsCard = () => {
+  const [rugList, setRugList] = useState(RugsData);
   return (
-    <div className="mt-8">
-      <div className=" relative p-8 grid grid-cols-4 md:grid-cols-2 gap-12">
+    <div className="md:mt-8">
+      <div className=" relative p-8 grid grid-cols-1 md:grid-cols-2 gap-12">
         {rugList.map((rug) => (
           <div key={rug.id}>
             <div className="relative p-10 border border-gray-400">
@@ -12,7 +16,9 @@ export const RugsCard = ({ rugList }) => {
                 <h1 className="py-4 text-xl ">{rug.name} </h1>
                 <ShoppingBagIcon className="w-6 h-6 cursor-pointer hover:animate-bounce" />
               </span>
-              <h2 className="font-medium text-lg text-gray-500">$ {rug.price} </h2>
+              <h2 className="font-medium text-lg text-gray-500">
+                $ {rug.price}{" "}
+              </h2>
             </div>
           </div>
         ))}

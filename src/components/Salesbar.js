@@ -5,13 +5,11 @@ export const Sales = () => {
   const [showSales, setShowSales] = useState(true);
   return (
     <div>
-      {/* {showSales && ( */}
       <div
         className={`${
           showSales
-            
             ? "flex justify-between items-center bg-white text-center p-2 ml-8 md:mx-auto md:w-4/5"
-        :    "hidden"
+            : "hidden"
         }`}
       >
         <p className="flex items-center gap-4 md:ml-80 md:text-xl font-semibold">
@@ -23,11 +21,10 @@ export const Sales = () => {
           </Link>
         </p>
         <XMarkIcon
-          className="h-5 w-5 text-gray-600"
+          className="h-5 w-5 text-gray-600 cursor-pointer"
           onClick={() => setShowSales(!showSales)}
         />
       </div>
-      {/* )} */}
     </div>
   );
 };

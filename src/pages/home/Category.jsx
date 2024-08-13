@@ -1,24 +1,25 @@
 import { useState } from "react";
-import { Chairs } from "../Categories/Chairs";
-import { Beds } from "../Categories/Beds";
-import { Benches } from "../Categories/Benches";
-import { Lighting } from "../Categories/Lighting";
-import { Dining } from "../Categories/Dining";
-import { Rugs } from "../Categories/Rugs";
-import { Sofas } from "../Categories/Sofas";
-import { Storage } from "../Categories/Storage";
-import { Tables } from "./../Categories/Tables";
+import { ChairCard } from "./../../cards/ChairCard";
+import { BedCard } from "../../cards/BedsCard";
+import { BenchesCard } from "../../cards/BenchesCard";
+import { LightingCard } from "../../cards/LightingCard";
+import { DiningCard } from "../../cards/DiningCard";
+import { RugsCard } from "../../cards/RugsCard";
+import { SofasCard } from "../../cards/SofasCard";
+import { StorageCard } from "../../cards/StorageCard";
+import { TableCard } from "../../cards/TableCard";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
+
 const categories = {
-  Chairs: <Chairs />,
-  Beds: <Beds />,
-  Benches: <Benches />,
-  Dining: <Dining />,
-  Lighting: <Lighting />,
-  Rugs: <Rugs />,
-  Sofas: <Sofas />,
-  Storage: <Storage />,
-  Table: <Tables />,
+  Chairs: <ChairCard />,
+  Beds: <BedCard />,
+  Benches: <BenchesCard />,
+  Dining: <DiningCard />,
+  Lighting: <LightingCard />,
+  Rugs: <RugsCard />,
+  Sofas: <SofasCard />,
+  Storage: <StorageCard />,
+  Tables: <TableCard />,
 };
 
 export const Category = () => {
@@ -28,18 +29,18 @@ export const Category = () => {
   const toggleCategoryNav = () => {
     setCategoryNav(!categoryNav);
   };
+
   return (
     <div className="mt-24">
-      <div className="hidden px-4 md:px-8 md:flex justify-between items-center">
-        <span className="border border-gray-400 rounded-full border-t-2 border-b-2 w-14 md:w-80"></span>
-        <h1 className="text-xl md:text-3xl font-bold text-gray-500">
+      <div className="hidden px-4 md:px-8 md:block text-center">
+        <h1 className="text-xl md:text-3xl font-bold  text-gray-500">
           Shop By Category
-          {/* <XMarkIcon className="w-6" /> */}
+          <div className="border border-gray-400 rounded-full border-t-2 border-b-2 w-14 md:w-80 my-4 mx-auto"></div>
         </h1>
-        <span className="border border-gray-400 rounded-full border-t-2 border-b-2 w-14 md:w-80"></span>
       </div>
+
       <div className="hidden mt-8 md:flex justify-center items-center">
-        <ul className="px-4 max-md:w-[90%] flex gap-1 justify-center items-center shadow-sm shadow-black rounded-full">
+        <ul className="px-4  py-2 max-md:w-[90%] flex gap-1 justify-center items-center shadow-sm shadow-black rounded-full">
           {Object.keys(categories).map((category) => (
             <li
               key={category}
@@ -54,7 +55,7 @@ export const Category = () => {
         </ul>
       </div>
       <div className="md:hidden">
-        <div className="flex justify-between items-center px-4">
+        <div className="flex justify-between items-center px-3">
           <h1 className="text-black text-xl font-bold">Shop By Category</h1>
           {categoryNav ? (
             <XMarkIcon className="h-6 w-6" onClick={toggleCategoryNav} />
@@ -64,24 +65,20 @@ export const Category = () => {
         </div>
         <ul
           className={`${
-            categoryNav
-              ? "fixed top-40 left-4 shadow-sm shadow-black w-[52%] bg-white z-50 "
-              : "hidden"
+            categoryNav ? "mx-3 w-[90%] bg-white z-50 " : "hidden"
           }`}
         >
           {Object.keys(categories).map((category) => (
             <li
               key={category}
-              className={`border border-b-gray-400 cursor-pointer ${
-                selectedCategory === category ? "bg-gray-200" : ""
+              className={`border-b border-b-gray-400 cursor-pointer ${
+                selectedCategory === category ? "" : ""
               }`}
               onClick={() => setSelectedCategory(category)}
             >
               {category}
             </li>
           ))}
-
-          <li className="focus:text-gray-400 cursor-pointer">Tables</li>
         </ul>
       </div>
       <div>{categories[selectedCategory]}</div>

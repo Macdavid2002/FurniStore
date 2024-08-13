@@ -1,43 +1,59 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
 
-export const RoomDropdown = ({ title, items }) => {
+export const RoomDropdown = ({ title, items, isMobile }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
 
   // Dropdown toggle functions
-
-  const handleMouseOver = () => {
-    setIsOpen(true);
-  };
-  const handleMouseLeave = () => {
-    setIsOpen(false);
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
   };
   return (
     <div
-      className="relative inline-block text-white"
-      ref={dropdownRef}
-      onMouseOver={handleMouseOver}
-      onMouseLeave={handleMouseLeave}
+      className={`relative inline-block text-black ${
+        isMobile ? "w-full}" : ""
+      }`}
+      onClick={isMobile ? toggleDropdown : undefined}
+      onMouseOver={
+        !isMobile
+          ? () => {
+              setIsOpen(true);
+            }
+          : undefined
+      }
+      onMouseLeave={
+        !isMobile
+          ? () => {
+              setIsOpen(false);
+            }
+          : undefined
+      }
     >
       {/* Toggle Dropdown Button */}
       <div className="flex items-center cursor-pointer">
-        <button className="hover:text-black text-lg font-medium focus:text-black">
+        <button className="flex items-center text-md font-medium focus:text-black w-full">
           {title}
+          {isOpen ? (
+            <ChevronUpIcon className="w-6 h-8 text-black  cursor-pointer" />
+          ) : (
+            <ChevronDownIcon className="w-6 h-8 text-black  cursor-pointer" />
+          )}
         </button>
-        <ChevronDownIcon className="w-6 h-8 text-white hover:text-black" />
       </div>
       {isOpen && (
-        <div className="absolute left-1  w-[200px] bg-white shadow-md z-50">
-          <ul className="p-6">
+        <div
+          className={`lg:bg-white lg:shadow-md ${
+            isMobile ? "w-full mt-2" : "absolute left-0 w-[200px]"
+          }`}
+        >
+          <ul className="lg:p-4">
             {items.map((item, index) => (
-              <li
-                key={index}
-                className="flex p-2 text-black border-b border-b-gray-400 hover:border-l-4 hover:border-l-gray-400 "
-              >
-                <Link to={item.link}>{item.label}</Link>
-              </li>
+              <Link to={item.link} key={index}>
+                <li className="p-2 text-black border-b border-b-gray-400 lg:hover:border-l-4 hover:border-l-gray-400">
+                  {item.label}
+                </li>
+              </Link>
             ))}
           </ul>
         </div>

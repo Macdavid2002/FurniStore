@@ -7,17 +7,11 @@ import { signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/outline";
-const AccountDropdown = () => {
+const AccountDropdown = ({ isMobile }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const accountDropdownRef = useRef(null);
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
-  };
-  const handleMouseEnter = () => {
-    setDropdownOpen(true);
-  };
-  const handleMouseLeave = () => {
-    setDropdownOpen(false);
   };
   useEffect(() => {
     window.onscroll = () => setDropdownOpen(false);
@@ -37,19 +31,24 @@ const AccountDropdown = () => {
 
   return (
     <div
-      className="relative"
+      className={`relative inline-block text-black ${isMobile ? "w-full" : ""}`}
       ref={accountDropdownRef}
-      onMouseOver={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onClick={isMobile ? () => setDropdownOpen(true) : undefined}
+      onMouseOver={!isMobile ? () => setDropdownOpen(true) : undefined}
+      onMouseLeave={!isMobile ? () => setDropdownOpen(false) : undefined}
     >
       <button
         onClick={toggleDropdown}
         className="text-white focus:outline-none"
       >
-        <UserCircleIcon className="w-6 text-white hover:text-black text-xl font-medium focus:text-black" />
+        {isMobile ? (
+          <p className="text-md font-medium p-4 text-black">Account</p>
+        ) : (
+          <UserCircleIcon className="w-6 text-white hover:text-black text-xl font-medium focus:text-black" />
+        )}
       </button>
       {dropdownOpen && (
-        <div className="absolute -left-14 w-48 bg-white shadow-md  p-2">
+        <div className={`${isMobile ? "w-full mt-2":"absolute -left-20 w-48 bg-white shadow-md  p-2"}`}>
           {user ? (
             <div>
               <Link
