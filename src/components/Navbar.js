@@ -71,7 +71,7 @@ const Navbar = () => {
           />
         </li>
         <li className="text-lg">
-          <Link to="/">Articles</Link>
+          <Link to="/">Bulletin</Link>
         </li>
         <li className="text-lg">
           <Link to="/">Contact</Link>
@@ -183,6 +183,9 @@ const Navbar = () => {
             />
           </li>
           <li className="p-4 border-b border-b-white font-medium">About</li>
+          <li className="p-4 border-b border-b-white font-medium">
+            <Link to="/">Bulletin</Link>
+          </li>
           <li className="p-4 border-b border-b-white font-medium">
             <Link to="/">Contact</Link>
           </li>

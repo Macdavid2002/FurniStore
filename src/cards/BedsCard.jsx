@@ -6,12 +6,11 @@ export const BedCard = () => {
   return (
     <div className="md:mt-8">
       <div className=" relative p-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-        {data.data[1].map((beds, id) => (
+        {data.data[1].slice(0, 4).map((beds, id) => (
           <div key={id}>
             <div className="relative p-10 border border-gray-400">
               <HeartIcon className="absolute w-8 h-8 right-7 cursor-pointer hover:bg-gray-200 rounded-full p-1" />
               <Link to={`/bed/${beds.id}`}>
-               
                 <img src={beds.imgUrl} className="" alt="Bed pic" />
               </Link>
               <span className="flex justify-between items-center">
@@ -26,7 +25,7 @@ export const BedCard = () => {
         ))}
       </div>
       <span className="flex justify-center">
-        <button className="py-4 px-8 bg-gray-400 font-bold rounded-md text-white text-center">
+        <button className="py-4 px-8 bg-gray-400 rounded-md text-white text-center">
           Show More
         </button>
       </span>

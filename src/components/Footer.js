@@ -58,19 +58,19 @@ export const Footer = () => {
               </ul>
             </span>
             {/* newsletter */}
-            <span className="grid grid-row-1 md:block ">
-              <p className="text-sm md:text-sm pb-4 md:p-2">
+            <span className="grid grid-row-1 lg:block">
+              <p className="max-[320px]:text-[12px] md:text-sm pb-4 md:p-2">
                 Receive updates to new arrivals and sales on our exquisite
                 collection
               </p>
 
-              <span className="md:py-4 md:mx-2 flex items-center gap-2">
+              <span className="md:py-4 md:mx-2 flex items-center justify-center gap-2">
                 <input
                   type="text"
                   placeholder="Email address..."
-                  className="p-2  placeholder:text-xs"
+                  className="max-[320px]:p-1 p-2 placeholder:text-xs"
                 />
-                <button className="bg-black text-white p-2 hover:bg-[rgba(0,0,0,0.8)]">
+                <button className="bg-black max-[320px]:text-xs text-white p-2 hover:bg-[rgba(0,0,0,0.8)]">
                   Subscribe
                 </button>
               </span>
@@ -100,7 +100,6 @@ export const Footer = () => {
               <li className="cursor-pointer">
                 <img src={instaIcon} className="h-8 md:h-6" alt="" />
               </li>
-     
             </ul>
           </div>
         </div>

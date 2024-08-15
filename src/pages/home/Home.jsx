@@ -5,6 +5,7 @@ import { Rooms } from "./Room";
 import { Services } from "./Services";
 import { SalesDeals } from "./SalesDeals";
 import { Collection } from "./Collection";
+import { Newsletter } from "./Newsletter";
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
       <Rooms />
       <Collection />
       <Category />
-
       <SalesDeals />
+      <Newsletter />
     </div>
   );
 }
