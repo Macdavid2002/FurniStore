@@ -30,13 +30,16 @@ const Navbar = () => {
 
   return (
     <div className="bg-gray-400 p-4 flex items-center justify-between h-14 sticky top-0 z-50">
-      <h1 className="font-medium uppercase text-2xl">
+      <h1 className=" uppercase text-2xl">
         <Link to="/">Meubles</Link>
       </h1>
 
       <ul className="hidden lg:flex items-center justify-center gap-4">
         <li className="text-lg">
           <Link to="/">Home</Link>
+        </li>
+        <li className="text-lg">
+          <Link to="/">About</Link>
         </li>
         <li>
           <ProductDropdown
@@ -77,9 +80,9 @@ const Navbar = () => {
 
       {/* Account, Cart, Wishlist  and Search Icons */}
       <div className="hidden lg:flex space-x-4">
-        <span className="text-white hover:text-black text-lg font-medium">
+        <span className="text-black hover:text-black text-lg font-medium">
           <MagnifyingGlassIcon
-            className="hidden lg:block w-6 text-white hover:text-black text-xl cursor-pointer"
+            className="hidden lg:block w-6 text-black hover:text-black text-xl cursor-pointer"
             onClick={() => {
               setSearchBar(!searchBar);
             }}
@@ -88,16 +91,16 @@ const Navbar = () => {
         <AccountDropdown user={user} />
         <Link
           to="/wishlist"
-          className="text-white hover:text-black text-lg font-medium"
+          className="text-black hover:text-black text-lg font-medium"
         >
           <HeartIcon
-            className="w-6 text-white hover:text-black text-xl"
+            className="w-6 text-black hover:text-black text-xl"
             title="Wishlist"
           />
         </Link>
         <Link to="/cart">
           <ShoppingBagIcon
-            className="w-6 text-white hover:text-black text-xl"
+            className="w-6 text-black hover:text-black text-xl"
             title="Cart"
           />
         </Link>
@@ -138,7 +141,7 @@ const Navbar = () => {
         <span className="relative">
           <input
             type="text"
-            className="mx-2 p-4 w-[90%] rounded-md mt-4 placeholder:p-6 placeholder:text-black"
+            className="mx-2 p-4 w-[90%] rounded-md mt-4 placeholder:p-6 placeholder:text-black z-10"
             placeholder="Search Items"
           />
           <MagnifyingGlassIcon className="w-6 absolute top-0 left-4" />
@@ -146,6 +149,9 @@ const Navbar = () => {
         <ul className="pt-4 text-md">
           <li className="p-4 border-b border-b-white font-medium">
             <Link to="/">Home</Link>
+          </li>
+          <li className="p-4 border-b border-b-white font-medium">
+            <Link to="/">About</Link>
           </li>
           <li className="p-4 border-b border-b-white">
             <ProductDropdown

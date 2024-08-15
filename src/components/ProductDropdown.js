@@ -18,7 +18,7 @@ const ProductDropdown = ({ title, items, isMobile }) => {
       onMouseLeave={!isMobile ? () => setIsOpen(false) : undefined}
     >
       {/* Toggle Dropdown Button */}
-      <button className="flex items-center text-md font-medium focus:text-black w-full">
+      <button className="flex items-center text-[18px]  focus:text-black w-full">
         {title}
         {isOpen ? (
           <ChevronUpIcon className="w-6 h-8 text-black cursor-pointer ml-2" />

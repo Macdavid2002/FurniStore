@@ -2,6 +2,7 @@ import fbIcon from "../svg/icons8-facebook.svg";
 import xIcon from "../svg/icons8-twitter.svg";
 import pinterestIcon from "../svg/icons8-pinterest.svg";
 import instaIcon from "../svg/icons8-instagram.svg";
+import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 export const Footer = () => {
   return (
@@ -81,18 +82,25 @@ export const Footer = () => {
               Copyright © 2024 Meubles. All rights reserved
             </h2>
             <ul className="flex items-center justify-center py-2 gap-6">
-              <li>
+              <li className="cursor-pointer">
+                <PhoneIcon className="w-6" />
+              </li>
+              <li className="cursor-pointer">
+                <EnvelopeIcon className="w-6" />
+              </li>
+              <li className="cursor-pointer">
                 <img src={fbIcon} className="h-8 md:h-6" alt="" />
               </li>
-              <li>
+              <li className="cursor-pointer">
                 <img src={xIcon} className="h-8 md:h-6" alt="" />
               </li>
-              <li>
+              <li className="cursor-pointer">
                 <img src={pinterestIcon} className="h-8 md:h-6" alt="" />
               </li>
-              <li>
+              <li className="cursor-pointer">
                 <img src={instaIcon} className="h-8 md:h-6" alt="" />
               </li>
+     
             </ul>
           </div>
         </div>

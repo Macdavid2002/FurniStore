@@ -1,17 +1,18 @@
-import { useState } from 'react';
 import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
-import { DiningData } from "./../data/DiningData";
+import data from "../api/data.json";
+import { Link } from "react-router-dom";
 
 export const DiningCard = () => {
-  const [diningList, setDiningList] = useState(DiningData);
   return (
     <div className="md:mt-8">
       <div className=" relative p-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-        {diningList.map((dining) => (
+        {data.data[3].map((dining) => (
           <div key={dining.id}>
             <div className="relative p-10 border border-gray-400">
               <HeartIcon className="absolute w-8 h-8 right-7 cursor-pointer hover:bg-gray-200 rounded-full p-1" />
-              <img src={dining.imgUrl} className="" alt="Dining pic" />
+              <Link to={`dining/${dining.id}`}>
+                <img src={dining.imgUrl} className="" alt="Dining pic" />
+              </Link>
               <span className="flex justify-between items-center">
                 <h1 className="py-4 text-xl ">{dining.name} </h1>
                 <ShoppingBagIcon className="w-6 h-6 cursor-pointer hover:animate-bounce" />

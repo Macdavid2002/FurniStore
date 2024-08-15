@@ -5,7 +5,6 @@ import { Rooms } from "./Room";
 import { Services } from "./Services";
 import { SalesDeals } from "./SalesDeals";
 import { Collection } from "./Collection";
-// import { Sponsors } from "../../components/Sponsors";
 
 export default function Home() {
   return (
@@ -16,8 +15,8 @@ export default function Home() {
       <Rooms />
       <Collection />
       <Category />
-      {/* <SalesDeals /> */}
-      {/* <Sponsors /> */}
+
+      <SalesDeals />
     </div>
   );
 }

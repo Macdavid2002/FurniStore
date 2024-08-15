@@ -1,28 +1,26 @@
-import { useState } from "react";
-import { StorageData } from "../data/StorageData";
+import { Link } from "react-router-dom";
+import data from "../api/data.json";
 import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
 export const StorageCard = () => {
-  const [storageList, setStorageList] = useState(StorageData);
   return (
     <div className="mt-8">
       <div className=" relative p-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-        {storageList.map((storageList, id) => (
-          <div key={id}>
+        {data.data[7].map((storage) => (
+          <div key={storage.id}>
             <div className="relative p-10 border border-gray-400">
               <HeartIcon className="absolute w-8 h-8 right-7 cursor-pointer hover:bg-gray-200 rounded-full p-1" />
-              <img
-                src={storageList.imgUrl}
-                className="z-10"
-                alt="Storage pic"
-              />
+              <Link to={`storage/${storage.id}`}>
+                <img src={storage.imgUrl} className="z-10" alt={storage.name} />
+              </Link>
+
               <span className="flex justify-between items-center">
                 <h1 className="py-4 text-md font-medium md:text-xl ">
-                  {storageList.name}{" "}
+                  {storage.name}{" "}
                 </h1>
                 <ShoppingBagIcon className="w-6 h-6 cursor-pointer hover:animate-bounce" />
               </span>
               <h2 className="font-medium text-md text-gray-500">
-                $ {storageList.price}{" "}
+                $ {storage.price}{" "}
               </h2>
             </div>
           </div>

@@ -48,7 +48,7 @@ const AccountDropdown = ({ isMobile }) => {
         )}
       </button>
       {dropdownOpen && (
-        <div className={`${isMobile ? "w-full mt-2":"absolute -left-20 w-48 bg-white shadow-md  p-2"}`}>
+        <div className={`${isMobile ? "w-full mt-2":"absolute -left-28 w-56 bg-white shadow-md  p-2 z-50"}`}>
           {user ? (
             <div>
               <Link

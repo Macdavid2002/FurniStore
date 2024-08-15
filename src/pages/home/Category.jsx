@@ -29,13 +29,18 @@ export const Category = () => {
   const toggleCategoryNav = () => {
     setCategoryNav(!categoryNav);
   };
-
+  const handleToggleCategoryNavOnScroll = () => {
+    if (window.scroll < 100) {
+      setCategoryNav(!categoryNav);
+    }
+  };
+  window.addEventListener("scroll", handleToggleCategoryNavOnScroll);
   return (
     <div className="mt-24">
       <div className="hidden px-4 md:px-8 md:block text-center">
-        <h1 className="text-xl md:text-3xl font-bold  text-gray-500">
+        <h1 className="text-xl md:text-3xl font-medium  text-gray-500">
           Shop By Category
-          <div className="border border-gray-400 rounded-full border-t-2 border-b-2 w-14 md:w-80 my-4 mx-auto"></div>
+          <div className="border border-black rounded-full border-t-1 w-14 md:w-60 my-4 mx-auto"></div>
         </h1>
       </div>
 
@@ -44,7 +49,7 @@ export const Category = () => {
           {Object.keys(categories).map((category) => (
             <li
               key={category}
-              className={`text-md font-bold rounded-full px-3 py-[3px] cursor-pointer ${
+              className={`text-md rounded-full px-3 py-[3px] cursor-pointer ${
                 selectedCategory === category ? "bg-gray-400 text-white" : ""
               }`}
               onClick={() => setSelectedCategory(category)}
@@ -56,7 +61,9 @@ export const Category = () => {
       </div>
       <div className="md:hidden">
         <div className="flex justify-between items-center px-3">
-          <h1 className="text-black text-xl font-bold">Shop By Category</h1>
+          <h1 className="text-black text-xl font-bold italic">
+            Shop By Category
+          </h1>
           {categoryNav ? (
             <XMarkIcon className="h-6 w-6" onClick={toggleCategoryNav} />
           ) : (
@@ -71,7 +78,7 @@ export const Category = () => {
           {Object.keys(categories).map((category) => (
             <li
               key={category}
-              className={`border-b border-b-gray-400 cursor-pointer ${
+              className={`py-2 border-b border-b-gray-400 cursor-pointer ${
                 selectedCategory === category ? "" : ""
               }`}
               onClick={() => setSelectedCategory(category)}

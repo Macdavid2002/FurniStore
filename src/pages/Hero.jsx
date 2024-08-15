@@ -1,32 +1,21 @@
 // FurnitureCarousel.js
 
-const images = [
-  "https://cdn-cms-assets.article.com/53lavDM2OqsLONcoC1r0dw-dbf079177b45c8d70d15a642e114af1c?w=1300&q=80&fm=webp&fit=max",
-];
-
 export const Hero = () => {
   return (
-    <div className="">
-      {/* Image carousel */}
-      <div className=" ">
-        {images.map((image, index) => (
-          <div key={index} className=" w-full h-64 md:h-96 lg:h-120 ">
-            {/* <div className="absolute top-64 left-1/4 ">
-              <h1 className="relative text-white font-medium text-4xl pb-5 w-3/5 ml-16 uppercase">
-                Give Your Apartment A Unique Look With Simplicity And Style
-              </h1>
-              <p className="text-gray-400 font-light text-2xl pb-5  mx-44  ">
-                Keep things simple but exquisite
-              </p>
-            </div> */}
-            <img
-              src={image}
-              alt={"Furniture"}
-              className="w-full h-[500px] object-cover "
-            />
-          </div>
-        ))}
+    <div className="bg-[#F3F4F6] grid grid-cols-1 md:flex  items-center justify-center" id="h">
+      <div className="">
+        <h1 className="text-5xl md:text-8xl p-4">Luxury & Elegance</h1>
+        <p className="text-xl p-4 md:w-[70%]">
+          Give Your House A Look That Exude Style and Elegance. Explore Our
+          Curated Collection Of Furniture Designs
+        </p>
+        <button className="ml-4  px-4 py-2 border border-black rounded-md"> Shop Now</button>
       </div>
+      <img
+        src="https://cdn-cms-assets.article.com/1lSlOayxp3oQ9whTTfA7Nu-e636da49fd04422757fc0dc2839a9341?w=1300&q=80&fm=webp&fit=max"
+        alt={"Furniture"}
+        className="p-2 mt-4 md:p-4 w-[100%] md:w-[50%] object-cover h-[500px] "
+      />
     </div>
   );
 };

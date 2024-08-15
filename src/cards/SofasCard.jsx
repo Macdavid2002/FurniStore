@@ -1,24 +1,25 @@
-import { useState } from "react";
-import { SofasData } from "../data/SofasData";
+import { Link } from "react-router-dom";
+import data from "../api/data.json";
 import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
 export const SofasCard = () => {
-  const [sofasList, setSofasList] = useState(SofasData);
   return (
     <div className="md:mt-8">
       <div className=" relative p-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-        {sofasList.map((sofasList, id) => (
+        {data.data[6].map((sofas, id) => (
           <div key={id}>
             <div className="relative p-10 border border-gray-400">
               <HeartIcon className="absolute w-8 h-8 right-7 cursor-pointer hover:bg-gray-200 rounded-full p-1" />
-              <img src={sofasList.imgUrl} className="z-10" alt="Sofa pic" />
+              <Link to={`/sofa/${sofas.id}`}>
+                <img src={sofas.imgUrl} className="z-10" alt="Sofa pic" />
+              </Link>
               <span className="flex justify-between items-center">
                 <h1 className="py-4 text-md font-medium md:text-xl ">
-                  {sofasList.name}{" "}
+                  {sofas.name}{" "}
                 </h1>
                 <ShoppingBagIcon className="w-6 h-6 cursor-pointer hover:animate-bounce" />
               </span>
               <h2 className="font-medium text-lg text-gray-500">
-                $ {sofasList.price}{" "}
+                $ {sofas.price}{" "}
               </h2>
             </div>
           </div>

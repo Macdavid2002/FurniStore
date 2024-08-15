@@ -32,7 +32,7 @@ export const RoomDropdown = ({ title, items, isMobile }) => {
     >
       {/* Toggle Dropdown Button */}
       <div className="flex items-center cursor-pointer">
-        <button className="flex items-center text-md font-medium focus:text-black w-full">
+        <button className="flex items-center text-[18px]  focus:text-black w-full">
           {title}
           {isOpen ? (
             <ChevronUpIcon className="w-6 h-8 text-black  cursor-pointer" />
@@ -50,7 +50,7 @@ export const RoomDropdown = ({ title, items, isMobile }) => {
           <ul className="lg:p-4">
             {items.map((item, index) => (
               <Link to={item.link} key={index}>
-                <li className="p-2 text-black border-b border-b-gray-400 lg:hover:border-l-4 hover:border-l-gray-400">
+                <li className="p-2 text-[16px] text-black border-b border-b-gray-400 lg:hover:border-l-4 hover:border-l-gray-400">
                   {item.label}
                 </li>
               </Link>
