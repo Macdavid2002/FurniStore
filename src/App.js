@@ -4,7 +4,7 @@ import Home from "./pages/home/Home";
 import TopScrollButton from "./components/TopScrollButton";
 import SignIn from "./pages/Authentication/SignIn";
 import { Error } from "./pages/Error/Error-404";
-import { Account } from "./pages/Account";
+import { Account } from "./pages/account";
 import { Footer } from "./components/Footer";
 import { ChairDetails } from "./details/Chairddetails";
 import { BedDetails } from "./details/BedDetails";
@@ -16,6 +16,9 @@ import { SofaDetails } from "./details/SofaDetails";
 import { StorageDetails } from "./details/StorageDetails";
 import { TableDetails } from "./details/TableDetails";
 import { ScrollToTop } from "./components/ScrollTop";
+import { About } from "./pages/about";
+import { Chair } from "./pages/chair";
+import { Chat } from "./components/Chat";
 // import { Cart } from "./pages/Cart";
 
 function App() {
@@ -24,11 +27,14 @@ function App() {
       <Router>
         <Navbar />
         <ScrollToTop />
+        <Chat />
         <TopScrollButton />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/login" element={<SignIn />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/chair" element={<Chair />} />
           <Route path="/chair/:id" element={<ChairDetails />} />
           <Route path="/bed/:id" element={<BedDetails />} />
           <Route path="/bench/:id" element={<BenchDetails />} />
@@ -41,6 +47,7 @@ function App() {
           {/* <Route path="/cart" element={<Cart />} /> */}
           <Route path="*" element={<Error />} />
         </Routes>
+
         <Footer />
       </Router>
     </div>

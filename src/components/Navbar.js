@@ -29,17 +29,17 @@ const Navbar = () => {
   window.addEventListener("scroll", toggleSearchBar);
 
   return (
-    <div className="bg-gray-400 p-4 flex items-center justify-between h-14 sticky top-0 z-50">
+    <div className="bg-gray-400 p-4 flex items-center justify-between h-14 sticky top-0 z-50 shadow-md md:shadow-none">
       <h1 className=" uppercase text-2xl">
         <Link to="/">Meubles</Link>
       </h1>
 
       <ul className="hidden lg:flex items-center justify-center gap-4">
-        <li className="text-lg">
+        <li className="text-lg hover:text-white">
           <Link to="/">Home</Link>
         </li>
-        <li className="text-lg">
-          <Link to="/">About</Link>
+        <li className="text-lg hover:text-white">
+          <Link to="/about">About</Link>
         </li>
         <li>
           <ProductDropdown
@@ -56,7 +56,7 @@ const Navbar = () => {
             isMobile={isOpen}
           />
         </li>
-        <li className="text-lg">
+        <li className="text-lg hover:text-white">
           <RoomDropdown
             title="Rooms"
             items={[
@@ -70,19 +70,19 @@ const Navbar = () => {
             isMobile={isOpen}
           />
         </li>
-        <li className="text-lg">
+        <li className="text-lg hover:text-white">
           <Link to="/">Bulletin</Link>
         </li>
-        <li className="text-lg">
+        <li className="text-lg hover:text-white">
           <Link to="/">Contact</Link>
         </li>
       </ul>
 
       {/* Account, Cart, Wishlist  and Search Icons */}
       <div className="hidden lg:flex space-x-4">
-        <span className="text-black hover:text-black text-lg font-medium">
+        <span className="text-black hover:text-white text-lg font-medium">
           <MagnifyingGlassIcon
-            className="hidden lg:block w-6 text-black hover:text-black text-xl cursor-pointer"
+            className="hidden lg:block w-6 text-black hover:text-white text-xl cursor-pointer"
             onClick={() => {
               setSearchBar(!searchBar);
             }}
@@ -91,16 +91,16 @@ const Navbar = () => {
         <AccountDropdown user={user} />
         <Link
           to="/wishlist"
-          className="text-black hover:text-black text-lg font-medium"
+          className="text-black hover:text-white text-lg font-medium"
         >
           <HeartIcon
-            className="w-6 text-black hover:text-black text-xl"
+            className="w-6 text-black hover:text-white text-xl"
             title="Wishlist"
           />
         </Link>
         <Link to="/cart">
           <ShoppingBagIcon
-            className="w-6 text-black hover:text-black text-xl"
+            className="w-6 text-black hover:text-white text-xl"
             title="Cart"
           />
         </Link>

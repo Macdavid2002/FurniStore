@@ -28,13 +28,13 @@ const TopScrollButton = () => {
   };
 
   return (
-    <div className="fixed bottom-10 right-10 z-50 ">
+    <div className="fixed bottom-7 right-8 z-50 ">
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className=" bg-black bg-opacity-45  p-2  text-black shadow-black shadow-sm rounded-full "
+          className=" bg-white p-2  text-black  shadow-md rounded-br-md "
         >
-          <ChevronDoubleUpIcon className="w-5 text-gray-200" />
+          <ChevronDoubleUpIcon className="w-8 text-gray-500" />
         </button>
       )}
     </div>

@@ -38,7 +38,7 @@ export const Category = () => {
   return (
     <div className="mt-24">
       <div className="hidden px-4 md:px-8 md:block text-center">
-        <h1 className="text-xl md:text-3xl font-medium  text-gray-500">
+        <h1 className="text-xl md:text-3xl   text-gray-500">
           Shop By Category
           <div className="border border-black rounded-full border-t-1 w-14 md:w-60 my-4 mx-auto"></div>
         </h1>

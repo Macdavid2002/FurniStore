@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 export const RoomList = [
   {
@@ -9,7 +8,7 @@ export const RoomList = [
   {
     name: <Link to="/"> Bedroom</Link>,
     imgUrl:
-      "https://cdn-cms-assets.article.com/29OL2tPeFgYBL99556OOOU-21f8c9b53c7d9f54a49934a20cc9042a?w=320&q=80&fit=max",
+      "https://cdn-images.article.com/productbundles/457/HERO_DESKTOP/productbundle457-1713294088402.jpg?w=425&q=80&fm=webp&fit=max",
   },
   {
     name: <Link to="/">Dining Room</Link>,

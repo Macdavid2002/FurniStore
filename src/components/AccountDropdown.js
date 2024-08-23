@@ -44,11 +44,17 @@ const AccountDropdown = ({ isMobile }) => {
         {isMobile ? (
           <p className="text-md font-medium p-4 text-black">Account</p>
         ) : (
-          <UserCircleIcon className="w-6 text-white hover:text-black text-xl font-medium focus:text-black" />
+          <UserCircleIcon className="w-6 text-black hover:text-white text-xl font-medium focus:text-black" />
         )}
       </button>
       {dropdownOpen && (
-        <div className={`${isMobile ? "w-full mt-2":"absolute -left-28 w-56 bg-white shadow-md  p-2 z-50"}`}>
+        <div
+          className={`${
+            isMobile
+              ? "w-full mt-2"
+              : "absolute -left-28 w-56 bg-white shadow-md  p-2 z-50"
+          }`}
+        >
           {user ? (
             <div>
               <Link

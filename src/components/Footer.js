@@ -10,9 +10,7 @@ export const Footer = () => {
       <div className="md:flex p-4 bg-gray-400 ">
         <div className="">
           <Link to="/">
-            <h1 className="text-black font-medium text-3xl flex py-2 uppercase">
-              Meubles
-            </h1>
+            <h1 className="text-black text-3xl flex py-2 uppercase">Meubles</h1>
           </Link>
           <div className="mt-4 grid grid-cols-2 lg:flex md:grid-cols-3 pb-8 gap-20 text-black ">
             {/* Help Links */}
@@ -59,7 +57,7 @@ export const Footer = () => {
             </span>
             {/* newsletter */}
             <span className="grid grid-row-1 lg:block">
-              <p className="max-[320px]:text-[12px] md:text-sm pb-4 md:p-2">
+              <p className="max-[320px]:text-[12px] lg:text-sm pb-4 md:p-2">
                 Receive updates to new arrivals and sales on our exquisite
                 collection
               </p>
@@ -70,7 +68,7 @@ export const Footer = () => {
                   placeholder="Email address..."
                   className="max-[320px]:p-1 p-2 placeholder:text-xs"
                 />
-                <button className="bg-black max-[320px]:text-xs text-white p-2 hover:bg-[rgba(0,0,0,0.8)]">
+                <button className="bg-black max-[320px]:text-xs text-md text-white p-2 hover:bg-[rgba(0,0,0,0.8)]">
                   Subscribe
                 </button>
               </span>
