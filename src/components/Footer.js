@@ -27,9 +27,11 @@ export const Footer = () => {
             <span>
               <ul className="text-xs">
                 <h2 className="text-lg font-medium py-2">RESOURCES</h2>
-                <li className="py-1">ARTICLE</li>
+                <li className="py-1">BULLETIN</li>
+                <Link to="/about">
+                  <li className="py-1">ABOUT US</li>
+                </Link>
                 <li className="py-1">GIFT CARDS</li>
-                <li className="py-1">TRADE PROGRAMS</li>
                 <li className="py-1">REVIEWS</li>
               </ul>
             </span>
@@ -62,7 +64,7 @@ export const Footer = () => {
                 collection
               </p>
 
-              <span className="md:py-4 md:mx-2 flex items-center justify-center gap-2">
+              <div className="md:py-4 md:mx-2 flex items-center justify-start gap-2">
                 <input
                   type="text"
                   placeholder="Email address..."
@@ -71,7 +73,7 @@ export const Footer = () => {
                 <button className="bg-black max-[320px]:text-xs text-md text-white p-2 hover:bg-[rgba(0,0,0,0.8)]">
                   Subscribe
                 </button>
-              </span>
+              </div>
             </span>
           </div>
           <div className="border-t-[2px] border-black py-4"></div>
@@ -86,6 +88,7 @@ export const Footer = () => {
               <li className="cursor-pointer">
                 <EnvelopeIcon className="w-6" />
               </li>
+
               <li className="cursor-pointer">
                 <img src={fbIcon} className="h-8 md:h-6" alt="" />
               </li>

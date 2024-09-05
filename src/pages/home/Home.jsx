@@ -1,4 +1,4 @@
-import { Hero } from "../../pages/hero";
+import { Hero } from "./hero";
 import { Search } from "../search";
 import { Category } from "./Category";
 import { Rooms } from "./Room";

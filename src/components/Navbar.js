@@ -151,7 +151,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="p-4 border-b border-b-white font-medium">
-            <Link to="/">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li className="p-4 border-b border-b-white">
             <ProductDropdown

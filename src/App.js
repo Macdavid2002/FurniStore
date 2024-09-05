@@ -17,7 +17,7 @@ import { StorageDetails } from "./details/StorageDetails";
 import { TableDetails } from "./details/TableDetails";
 import { ScrollToTop } from "./components/ScrollTop";
 import { About } from "./pages/about";
-import { Chair } from "./pages/chair";
+import { Chair } from "./products/chair";
 import { Chat } from "./components/Chat";
 // import { Cart } from "./pages/Cart";
 

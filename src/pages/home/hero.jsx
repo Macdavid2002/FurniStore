@@ -7,15 +7,15 @@ export const Hero = () => {
       id="h"
     >
       <div className="">
-        <h1 className="text-5xl lg:text-8xl p-4">Luxury & Elegance</h1>
-        <p className="text-xl p-4 md:w-[70%] ">
-          Give Your House A Look That Exude Style and Elegance. Explore Our
-          Curated Collection Of Furniture Designs
-        </p>
-        <button className="ml-4  px-4 py-2 border border-black rounded-lg">
-          {" "}
-          Shop Now
-        </button>
+          <h1 className="text-5xl lg:text-8xl p-4">Luxury & Elegance</h1>
+          <p className="text-xl p-4 md:w-[70%] ">
+            Give Your House A Look That Exude Style and Elegance. Explore Our
+            Curated Collection Of Furniture Designs
+          </p>
+          <button className="ml-4  px-4 py-2 border border-black rounded-lg">
+            Shop Now
+          </button>
+       
       </div>
       <img
         src="https://cdn-cms-assets.article.com/1lSlOayxp3oQ9whTTfA7Nu-e636da49fd04422757fc0dc2839a9341?w=1300&q=80&fm=webp&fit=max"

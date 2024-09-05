@@ -54,7 +54,7 @@ export const Chat = () => {
       {toggleChat ? (
         <div>
           <form
-            className="fixed bottom-[8.5rem] right-7 z-50 grid grid-cols-1 p-4 rounded-md bg-gray-200 ease-in-out duration-500"
+            className="fixed bottom-[8.5rem] right-7 z-50 grid grid-cols-1 p-4 rounded-md bg-gray-400 shadow-md ease-in-out duration-500 w-72"
             onSubmit={handleSubmit(handleSendMessage)}
             ref={form}
           >
@@ -89,9 +89,9 @@ export const Chat = () => {
             </p>
             <button
               type="submit"
-              className="bg-gray-300 py-3 px-8 rounded-md w-[60%] m-2 mb-2"
+              className="bg-gray-300 py-3 px-2 rounded-md  m-2 mb-2"
             >
-              Send
+              SEND A MESSAGE
             </button>
           </form>
           <XMarkIcon
