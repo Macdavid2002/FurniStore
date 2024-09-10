@@ -5,13 +5,17 @@ import { Link } from "react-router-dom";
 export const ChairCard = () => {
   return (
     <div className="md:mt-8">
-      <div className="relative p-8 grid grid-cols-1 md:grid-cols-2 gap-12  ">
+      <div className="relative p-8 grid grid-cols-1 sm:grid-cols-2 gap-12  ">
         {data.data[0].slice(0, 4).map((chair) => (
           <div key={chair.id}>
             <div className="relative p-10 border border-gray-400 cursor-pointer">
               <HeartIcon className="absolute w-8 h-8 right-7 cursor-pointer hover:bg-gray-200 rounded-full p-1" />
-              <Link to={`/chair/${chair.id}`}>
-                <img src={chair.imgUrl} className=" z-10" alt={chair.name} />
+              <Link to={`/chair/${chair.name}`}>
+                <img
+                  src={chair.imgUrl}
+                  className=" z-10 transition-all hover:scale-105"
+                  alt={chair.name}
+                />
               </Link>
               <span className="flex justify-between items-center">
                 <h1 className="py-4 text-md  md:text-xl ">{chair.name}</h1>
@@ -25,9 +29,11 @@ export const ChairCard = () => {
         ))}
       </div>
       <span className="flex justify-center">
-        <button className="py-4 px-8 bg-gray-400  rounded-md text-white text-center">
-          <Link to="/chair"> Show More</Link>
-        </button>
+        <Link to="/chair">
+          <button className="py-4 px-8 bg-gray-400  rounded-md text-white text-center">
+            Show More
+          </button>
+        </Link>
       </span>
     </div>
   );

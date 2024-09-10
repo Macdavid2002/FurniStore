@@ -8,7 +8,7 @@ export const RoomCard = ({ roomArray }) => {
           <div className="border border-black rounded-full border-t-2  w-32 md:w-50 my-4 mx-auto"></div>
         </h1>
       </div>
-      <div className="p-4 md:p-8  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 ">
+      <div className="p-4 md:p-8  grid grid-cols-1  xs:grid-cols-2 lg:grid-cols-3 gap-12 ">
         {roomArray.map((roomItem) => (
           <div key={roomItem.id}>
             <div className="">

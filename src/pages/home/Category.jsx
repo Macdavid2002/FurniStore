@@ -61,9 +61,7 @@ export const Category = () => {
       </div>
       <div className="md:hidden">
         <div className="flex justify-between items-center px-3">
-          <h1 className="text-black text-xl font-bold italic">
-            Shop By Category
-          </h1>
+          <h1 className="text-black text-xl font-bold">Shop By Category</h1>
           {categoryNav ? (
             <XMarkIcon className="h-6 w-6" onClick={toggleCategoryNav} />
           ) : (

@@ -3,5 +3,5 @@ import { RoomList } from "../../data/RoomsData";
 import { useState } from "react";
 export const Rooms = () => {
   const [roomArray, setRoomArray] = useState(RoomList);
-  return <RoomCard roomArray={roomArray} />;
+  return <RoomCard roomArray={roomArray} setRoomArray={setRoomArray} />;
 };

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {
   Bars3Icon,
   XMarkIcon,
-  ShoppingBagIcon,
+  ShoppingCartIcon,
   HeartIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
@@ -16,20 +16,13 @@ import { useAuthState } from "react-firebase-hooks/auth";
 const Navbar = () => {
   const [user] = useAuthState(auth);
   const [isOpen, setIsOpen] = useState(false);
-  const [searchBar, setSearchBar] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
-  const toggleSearchBar = () => {
-    if (window.scrollY > 400) {
-      setSearchBar(false);
-    }
-  };
-  window.addEventListener("scroll", toggleSearchBar);
 
   return (
-    <div className="bg-gray-400 p-4 flex items-center justify-between h-14 sticky top-0 z-50 shadow-md md:shadow-none">
+    <div className="bg-gray-400 p-8  flex items-center justify-between h-14 sticky top-0 z-50 shadow-md md:shadow-none">
       <h1 className=" uppercase text-2xl">
         <Link to="/">Meubles</Link>
       </h1>
@@ -42,15 +35,18 @@ const Navbar = () => {
           <Link to="/about">About</Link>
         </li>
         <li>
+          {/* Dropdown Menus */}
           <ProductDropdown
             title="Products"
             items={[
               { label: "Beds", link: "/beds" },
+              { label: "Benches", link: "/benches" },
               { label: "Storage", link: "storage" },
               { label: "Sofas", link: "/sofa" },
               { label: "Chairs", link: "/chair" },
               { label: "Tables", link: "/table" },
-              { label: "Rugs", link: "/rugs" },
+              { label: "Rugs", link: "/rug" },
+              { label: "Dining", link: "/dining" },
               { label: "Lighting", link: "/lighting" },
             ]}
             isMobile={isOpen}
@@ -81,12 +77,9 @@ const Navbar = () => {
       {/* Account, Cart, Wishlist  and Search Icons */}
       <div className="hidden lg:flex space-x-4">
         <span className="text-black hover:text-white text-lg font-medium">
-          <MagnifyingGlassIcon
-            className="hidden lg:block w-6 text-black hover:text-white text-xl cursor-pointer"
-            onClick={() => {
-              setSearchBar(!searchBar);
-            }}
-          />
+          <Link to="/search">
+            <MagnifyingGlassIcon className="hidden lg:block w-6 text-black text-xl cursor-pointer" />
+          </Link>
         </span>
         <AccountDropdown user={user} />
         <Link
@@ -99,10 +92,13 @@ const Navbar = () => {
           />
         </Link>
         <Link to="/cart">
-          <ShoppingBagIcon
-            className="w-6 text-black hover:text-white text-xl"
+          <ShoppingCartIcon
+            className="w-6 text-black hover:text-white text-xl relative"
             title="Cart"
           />
+          <p className="bg-white text-xs rounded-full text-center px-1 absolute top-3 right-6">
+            0
+          </p>
         </Link>
       </div>
 
@@ -117,34 +113,23 @@ const Navbar = () => {
           <Bars3Icon className="w-10" />
         )}
       </div>
-      {/* <div> */}
-      {searchBar && (
-        <input
-          type="text "
-          className="absolute top-16 p-3 rounded-md bg-transparent border border-black outline-none right-1 placeholder:text-black 
-  "
-          placeholder="search items"
-        />
-      )}
-      {/* </div> */}
+
       {/* Responsive Navbar */}
       <div
         className={
           isOpen
             ? "fixed top-0 left-0 w-[60%] bg-gray-400 h-full ease-in-out duration-500"
-            : "fixed left-[-100%]  h-full ease-in-out duration-500"
+            : "fixed left-[-100%]  h-full"
         }
       >
         <h1 className="font-medium uppercase text-2xl m-4">
           <Link to="/">Meubles</Link>
         </h1>
-        <span className="relative">
-          <input
-            type="text"
-            className="mx-2 p-4 w-[90%] rounded-md mt-4 placeholder:p-6 placeholder:text-black z-10"
-            placeholder="Search Items"
-          />
-          <MagnifyingGlassIcon className="w-6 absolute top-0 left-4" />
+
+        <span className="lg:hidden text-black fixed right-20 top-5 z-50  text-lg font-medium">
+          <Link to="/search">
+            <MagnifyingGlassIcon className="lg:hidden w-8 text-black text-xl cursor-pointer" />
+          </Link>
         </span>
         <ul className="pt-4 text-md">
           <li className="p-4 border-b border-b-white font-medium">

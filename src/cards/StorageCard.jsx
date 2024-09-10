@@ -9,7 +9,7 @@ export const StorageCard = () => {
           <div key={storage.id}>
             <div className="relative p-10 border border-gray-400">
               <HeartIcon className="absolute w-8 h-8 right-7 cursor-pointer hover:bg-gray-200 rounded-full p-1" />
-              <Link to={`storage/${storage.id}`}>
+              <Link to={`storage/${storage.name}`}>
                 <img src={storage.imgUrl} className="z-10" alt={storage.name} />
               </Link>
 
@@ -17,7 +17,7 @@ export const StorageCard = () => {
                 <h1 className="py-4 text-md font-medium md:text-xl ">
                   {storage.name}{" "}
                 </h1>
-                <ShoppingBagIcon className="w-6 h-6 cursor-pointer hover:animate-bounce" />
+                <ShoppingBagIcon className="w-6 h-6 cursor-pointer " />
               </span>
               <h2 className="font-medium text-md text-gray-500">
                 $ {storage.price}{" "}
@@ -26,11 +26,13 @@ export const StorageCard = () => {
           </div>
         ))}
       </div>
-      <span className="flex justify-center">
-        <button className="py-4 px-8 bg-gray-400 font-bold rounded-md text-white text-center">
-          Show More
-        </button>
-      </span>
+      <Link to="/storage">
+        <span className="flex justify-center">
+          <button className="py-4 px-8 bg-gray-400 font-bold rounded-md text-white text-center">
+            Show More
+          </button>
+        </span>
+      </Link>
     </div>
   );
 };

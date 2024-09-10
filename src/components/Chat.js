@@ -6,6 +6,7 @@ import { useState, useRef } from "react";
 import { toast } from "react-toastify";
 import {
   ChatBubbleLeftEllipsisIcon,
+  PaperAirplaneIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
@@ -54,54 +55,57 @@ export const Chat = () => {
       {toggleChat ? (
         <div>
           <form
-            className="fixed bottom-[8.5rem] right-7 z-50 grid grid-cols-1 p-4 rounded-md bg-gray-400 shadow-md ease-in-out duration-500 w-72"
+            className="fixed bottom-[8.5rem] right-7 z-50 grid grid-cols-1 p-4 bg-[#fcfcf7] rounded-lg shadow-md ease-in-out duration-500 w-72"
             onSubmit={handleSubmit(handleSendMessage)}
             ref={form}
           >
+            {/* <h1 className="p-2">Send Us A Message</h1> */}
+
             {/* Name */}
-            <label className="text-sm mx-2">Your name*</label>
+            <label className="text-sm mx-2">Your Name*</label>
             <input
               type="text"
-              className="p-1 m-2 outline-none"
+              className="p-1 m-2 outline-none bg-transparent border-b border-black"
               {...register("name")}
             />
-            <p className="text-red-400 px-2 text-xs">{errors?.name?.message}</p>
+            <p className="text-red-400 px-2 py-1 text-xs">{errors?.name?.message}</p>
             {/* Email address */}
             <label className="text-sm mx-2">Your Email*</label>
             <input
               type="email"
-              className="p-1 m-2 outline-none"
+              className="p-1 m-2 outline-none bg-transparent border-b border-black"
               {...register("email")}
             />
-            <p className="text-red-400 px-2 text-xs">
+            <p className="text-red-400 px-2 py-1 text-xs">
               {errors?.email?.message}
             </p>
             {/* Text message */}
-            <label className="text-sm mx-2">Your Message*</label>
+            <label className="text-sm mx-2">How can we help? *</label>
             <textarea
-              className="m-2 p-2 outline-none"
-              rows={5}
-              cols={20}
+              // className="m-2 p-2 outline-none"
+              className="p-3 m-2 outline-none bg-transparent border border-black"
+              rows={4}
+              cols={18}
               {...register("message")}
             ></textarea>
-            <p className="text-red-400 px-2 text-xs">
+            <p className="text-red-400 px-2 py-1 text-xs">
               {errors?.message?.message}
             </p>
             <button
               type="submit"
-              className="bg-gray-300 py-3 px-2 rounded-md  m-2 mb-2"
+              className="bg-black py-3 px-2 rounded-md m-2 mb-2 text-white"
             >
-              SEND A MESSAGE
+              Send Message
             </button>
           </form>
           <XMarkIcon
-            className="fixed bottom-20 right-8 z-50 w-12 text-gray-500 bg-white rounded-tr-md p-2 shadow-md cursor-pointer"
+            className="fixed bottom-20 right-8 z-50 w-10 text-black bg-[#f1f4f8] rounded-tr-md p-2 shadow-md cursor-pointer"
             onClick={toggleChatFunction}
           />
         </div>
       ) : (
         <ChatBubbleLeftEllipsisIcon
-          className="fixed bottom-20 right-8 z-50 w-12 text-gray-500 bg-white rounded-tr-md p-2 shadow-md cursor-pointer"
+          className="fixed bottom-20 right-8 z-50 w-10 text-black bg-[#f1f4f8] rounded-tr-md p-2 shadow-md cursor-pointer "
           onClick={toggleChatFunction}
         />
       )}

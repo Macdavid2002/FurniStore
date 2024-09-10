@@ -9,12 +9,12 @@ export const BenchesCard = () => {
           <div key={bench.id}>
             <div className="relative p-10 border border-gray-400">
               <HeartIcon className="absolute w-8 h-8 right-7 cursor-pointer hover:bg-gray-200 rounded-full p-1" />
-              <Link to={`/bench/${bench.id}`}>
+              <Link to={`/bench/${bench.name}`}>
                 <img src={bench.imgUrl} className="" alt={bench.name} />
               </Link>
               <span className="flex justify-between items-center">
                 <h1 className="py-4 text-xl ">{bench.name} </h1>
-                <ShoppingBagIcon className="w-6 h-6 cursor-pointer hover:animate-bounce" />
+                <ShoppingBagIcon className="w-6 h-6 cursor-pointer " />
               </span>
               <h2 className="font-medium text-lg text-gray-500">
                 $ {bench.price}
@@ -23,11 +23,13 @@ export const BenchesCard = () => {
           </div>
         ))}
       </div>
-      <span className="flex justify-center">
-        <button className="py-4 px-8 bg-gray-400 rounded-md text-white text-center">
-          Show More
-        </button>
-      </span>
+      <Link to="/benches">
+        <span className="flex justify-center">
+          <button className="py-4 px-8 bg-gray-400 rounded-md text-white text-center">
+            Show More
+          </button>
+        </span>
+      </Link>
     </div>
   );
 };

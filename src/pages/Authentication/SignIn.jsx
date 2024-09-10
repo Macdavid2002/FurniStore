@@ -14,7 +14,7 @@ export default function SignIn() {
   const signInWithGoogle = async (data) => {
     try {
       await signInWithPopup(auth, googleProvider);
-      toast.success("Google Sign-In Successful");
+      toast.success("Google Login Successful");
       navigate("/account");
       console.log(data);
     } catch (error) {
@@ -26,7 +26,7 @@ export default function SignIn() {
   const signInWithTwitter = async (data) => {
     try {
       await signInWithPopup(auth, twitterProvider);
-      toast.success("Twitter Sign-In Successful");
+      toast.success("Twitter Login Successful");
       navigate("/");
       console.log(data);
     } catch (err) {

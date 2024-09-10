@@ -6,7 +6,9 @@ import quote from "../assets/quote-left.svg";
 export const ReviewCard = () => {
   return (
     <div>
-      <h1 className="text-2xl block text-center">Testimonial</h1>
+      <h1 className="text-2xl block text-center uppercase my-4">Testimonial</h1>
+      <h1 className="text-4xl block text-center">Our Customers Reviews</h1>
+
       <div className="">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -35,8 +37,8 @@ export const ReviewCard = () => {
               <div key={reviewItem.id}>
                 <div className="bg-[#F3F4F6]  p-4 m-8 rounded-md">
                   <img src={quote} className="h-10 ml-4" alt="" />
-                  <span className="grid grid-cols-1 md:flex items-center justify-between">
-                    <p className="p-4 text-md md:w-[50%] text-left">
+                  <span className="lg:flex items-center justify-between">
+                    <p className="p-4 text-sm lg:w-[50%] text-left">
                       {reviewItem.review}
                     </p>
                     <img
@@ -56,7 +58,7 @@ export const ReviewCard = () => {
                     </h2>
                   </span>
                 </div>
-                <div >  </div>
+                <div> </div>
               </div>
             </SwiperSlide>
           ))}

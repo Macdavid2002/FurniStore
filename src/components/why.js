@@ -1,36 +1,30 @@
 import {
   BanknotesIcon,
   TruckIcon,
-  PhoneIcon,
   CurrencyDollarIcon,
 } from "@heroicons/react/24/outline";
 
 export const Why = () => {
   return (
     <div>
-      <h1 className="text-3xl font-medium text-center">
+      <h1 className="text-2xl md:text-3xl font-medium text-center">
         Why Shop From MEUBLES
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:flex gap-2 p-8">
-        <span className="bg-gray-200 w-[20rem] lg:w-80 p-8 rounded-md text-center">
-          <BanknotesIcon className="w-16 mx-auto p-2" />
-          <h1 className="text-md font-medium">Money Back</h1>
-          <p className="text-md">30 Day guarantee</p>
+      <div className="grid grid-cols-1 xs:grid-cols-2 md:flex justify-between gap-4 p-8">
+        <span className="bg-gray-200 w-full md:w-full p-8 rounded-md text-center">
+          <BanknotesIcon className="w-24 mx-auto p-2" />
+          <h1 className="text-lg font-medium">Money Back</h1>
+          <p className="text-lg">30 Day guarantee</p>
         </span>
-        <span className="bg-gray-200 w-[20rem] lg:w-80 p-8 rounded-md text-center">
-          <TruckIcon className="w-16 mx-auto p-2" />
-          <h1 className="text-md font-medium">Express Delivery</h1>
-          <p className="text-md">Super fast delivery</p>
+        <span className="bg-gray-200 w-full md:w-full p-8 rounded-md text-center">
+          <TruckIcon className="w-24 mx-auto p-2" />
+          <h1 className="text-lg font-medium">Express Delivery</h1>
+          <p className="text-lg">Super fast delivery</p>
         </span>
-        <span className="bg-gray-200 w-[20rem] lg:w-80 p-8 rounded-md text-center">
-          <PhoneIcon className="w-16  mx-auto p-2" />
-          <h1 className="text-md font-medium">24/7 Support</h1>
-          <p className="text-md">Phone and email support </p>
-        </span>
-        <span className="bg-gray-200 w-[20rem] lg:w-80 p-8 rounded-md text-center">
-          <CurrencyDollarIcon className="w-16  mx-auto p-2" />
-          <h1 className="text-md font-medium">Fair Prices</h1>
-          <p className="text-md">High quality at low price </p>
+        <span className="bg-gray-200 w-full md:w-full p-8 rounded-md text-center">
+          <CurrencyDollarIcon className="w-24  mx-auto p-2" />
+          <h1 className="text-lg font-medium">Fair Prices</h1>
+          <p className="text-lg">High quality at low price </p>
         </span>
       </div>
     </div>

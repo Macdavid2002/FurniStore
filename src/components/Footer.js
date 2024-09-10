@@ -77,7 +77,7 @@ export const Footer = () => {
             </span>
           </div>
           <div className="border-t-[2px] border-black py-4"></div>
-          <div className="block md:flex items-center justify-between px-1">
+          <div className="block sm:flex items-center justify-between px-1">
             <h2 className="text-md md:text-lg font-medium">
               Copyright © 2024 Meubles. All rights reserved
             </h2>

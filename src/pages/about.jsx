@@ -1,5 +1,6 @@
 import { ReviewCard } from "../cards/ReviewCard";
 import { Why } from "../components/why";
+
 export const About = () => {
   return (
     <div className="bg-[#fdfdfd]">
@@ -16,6 +17,7 @@ export const About = () => {
       </div>
       <div className="py-10">
         <h1 className="text-3xl px-8 text-black">MEUBLES</h1>
+
         <p className="text-md text-black font-light w-full px-8 py-4">
           At Meubles, quality isn't just a buzzword—it's a promise. We
           meticulously select the finest materials, combining durability with
@@ -30,7 +32,7 @@ export const About = () => {
       <Why />
       <h1 className="text-2xl px-8">About Our Design</h1>
       <div className="bg-[#FDFDFD] grid grid-cols-1 lg:flex lg:items-center lg: justify-between">
-        <p className="text-md p-8 md:w-[50%]  ">
+        <p className="text-md p-8 md:[w-100%] lg:w-[50%] ">
           Design is at the heart of what we do at Meubles. Our team of talented
           designers draws inspiration from both classic and contemporary styles
           to create pieces that are both stylish and functional. We believe that
@@ -54,7 +56,7 @@ export const About = () => {
           alt={"Furniture"}
           className="p-2  lg:p-4 w-[100%] lg:w-[50%] object-cover h-[300px]"
         />
-        <p className="text-md p-8 md:w-[45%] ">
+        <p className="text-md p-8 md:[w-100%] lg:w-[45%] ">
           At Meubles, we believe that great furniture starts with great design
           and quality craftsmanship. Our design philosophy revolves around
           creating beautiful, timeless pieces that elevate your living space.

@@ -1,27 +1,49 @@
 import data from "../api/data.json";
 import { useParams } from "react-router-dom";
+import { ShoppingBagIcon } from "@heroicons/react/24/solid";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 export const SofaDetails = () => {
-  const { id } = useParams();
+  const { name } = useParams();
   const sofaData = data.data[6];
-  const sofas = sofaData.find((sofaItem) => sofaItem.id === parseInt(id));
-  if (!id) {
+  const sofas = sofaData.find(
+    (sofaItem) => sofaItem.name.toLowerCase() === name.toLowerCase()
+  );
+  if (!name) {
     return <h1 className="text-xl my-14">Card Not Found </h1>;
   }
 
   return (
-    <div className="p-24 flex  justify-between bg-[#F5F5F5]">
-      <div className="">
-        <img src={sofas.imgUrl} className="w-full" alt="" />
+    <div className="bg-[#F5F5F5]">
+      <div className="flex p-4 gap-2">
+        <Link to="/" className="text-sm flex items-center">
+          Home <ChevronRightIcon className="w-3" />
+        </Link>
+        <Link to="/sofa" className="text-sm flex items-center">
+          Sofa <ChevronRightIcon className="w-3" />
+        </Link>
+        <p className="text-sm">{sofas.name}</p>
       </div>
-      <div>
-        <h1 className="text-3xl font-medium"> {sofas.name}</h1>
-        <h2 className="font-bold text-lg py-4">${sofas.price}.00</h2>
-        <p className="text-md font-extralight w-98">{sofas.desc} </p>
-        <button className="rounded-full bg-gray-400 w-full my-5 p-4 text-md font-medium">
-          Add to cart
-        </button>
-      </div>
+
+      <>
+        <div className="w-96 mx-auto bg-[#d2cfd1] p-4 my-4 rounded-md">
+          <div className="">
+            <img src={sofas.imgUrl} className="rounded-lg" alt={sofas.name} />
+          </div>
+          <div>
+            <span className="flex items-center justify-between">
+              <h2 className="text-xl font-medium"> {sofas.name}</h2>
+              <h2 className="font-bold text-lg py-4"> ${sofas.price}.00</h2>
+            </span>
+            <p className="text-sm font-light w-full">{sofas.desc} </p>
+            <button className="flex gap-4 justify-center rounded-md bg-black mt-4 p-3 text-md font-medium w-full text-white">
+              <ShoppingBagIcon className="w-5 text-white" />
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </>
     </div>
   );
 };

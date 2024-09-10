@@ -49,6 +49,7 @@ export const SalesDealsCard = ({ salesDealsList }) => {
           }}
           autoplay={{ delay: 3000 }}
           breakpoints={{
+
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 4 },

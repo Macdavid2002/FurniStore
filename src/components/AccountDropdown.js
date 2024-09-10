@@ -86,7 +86,7 @@ const AccountDropdown = ({ isMobile }) => {
           ) : (
             <Link
               to="/login"
-              className="block p-4 text-gray-800   hover:border-l-4 hover:border-l-gray-400"
+             className="flex gap-2 items-center p-2 border-b border-b-gray-400  text-gray-800  hover:border-l-4 hover:border-l-gray-400 w-full"
             >
               Sign In
             </Link>

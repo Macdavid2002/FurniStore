@@ -1,5 +1,4 @@
 import { Hero } from "./hero";
-import { Search } from "../search";
 import { Category } from "./Category";
 import { Rooms } from "./Room";
 import { Services } from "./Services";
@@ -10,7 +9,6 @@ import { Newsletter } from "../../components/Newsletter";
 export default function Home() {
   return (
     <div>
-      <Search />
       <Hero />
       <Services />
       <Rooms />

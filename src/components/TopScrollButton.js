@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ChevronDoubleUpIcon } from "@heroicons/react/24/outline";
+import { ArrowUpIcon } from "@heroicons/react/24/outline";
 const TopScrollButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -32,9 +32,9 @@ const TopScrollButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className=" bg-white p-2  text-black  shadow-md rounded-br-md "
+          className=" bg-[#f1f4f8]  p-2  text-black  shadow-md rounded-br-md "
         >
-          <ChevronDoubleUpIcon className="w-8 text-gray-500" />
+          <ArrowUpIcon className="w-6 text-black " />
         </button>
       )}
     </div>
