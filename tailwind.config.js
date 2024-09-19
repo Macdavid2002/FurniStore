@@ -8,31 +8,19 @@ module.exports = {
         xs: "540px",
         // => @media (min-width: 360px) { ... }
         sm: "712px",
-        // md: "768px",
-        // // => @media (min-width: 768px) { ... }
-
-        // lg: "1024px",
-        // // => @media (min-width: 1024px) { ... }
-
-        // xl: "1280px",
-        // // => @media (min-width: 1280px) { ... }
-
-        // "2xl": "1536px",
-        // // => @media (min-width: 1536px) { ... }
-      },
-      colors: {
-        gold: "gold",
-        grey: "#F3F4F6",
-      },
-      fontSize: {
-        big: "20px",
-      },
-      margin: {
-        35: "35%",
-        98: "35rem",
-      },
-      width: {
-        98: "35rem",
+        // => @media (min-width: 712px) { ... }
+        360: "360px",
+        // => @media (min-width: 360px) { ... }
+        375: "375px",
+        // => @media (min-width: 375px) { ... }
+        320: "320px",
+        // => @media (min-width: 320px) { ... }
+        390: "390px",
+        // => @media (min-width: 390px) { ... }
+        400: "400px",
+        // => @media (min-width: 400px) { ... }
+        912: "912px",
+        // => @media (min-width: 912px) { ... }
       },
     },
   },

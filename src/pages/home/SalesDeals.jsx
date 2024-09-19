@@ -1,4 +1,4 @@
-import { SalesData } from "../../data/SalesDealsData";
+import { SalesData } from "../../constants/index";
 import { SalesDealsCard } from "../../cards/SalesDealsCard";
 import { useState } from "react";
 

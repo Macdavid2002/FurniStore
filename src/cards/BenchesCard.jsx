@@ -5,7 +5,7 @@ export const BenchesCard = () => {
   return (
     <div className="md:mt-8">
       <div className=" relative p-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-        {data.data[2].slice(0, 4).map((bench) => (
+        {data.benches.slice(0, 4).map((bench) => (
           <div key={bench.id}>
             <div className="relative p-10 border border-gray-400">
               <HeartIcon className="absolute w-8 h-8 right-7 cursor-pointer hover:bg-gray-200 rounded-full p-1" />
