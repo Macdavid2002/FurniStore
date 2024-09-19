@@ -29,7 +29,10 @@ import { Tables } from "./components/product-props/Table";
 import { Rug } from "./components/product-props/Rug";
 import { Light } from "./components/product-props/Lighting";
 import { Dinings } from "./components/product-props/Dining";
+import { useSelector } from "react-redux";
 function App() {
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  console.log(cartItems);
   return (
     <div className="App">
       <Router>
