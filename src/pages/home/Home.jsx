@@ -16,6 +16,7 @@ export default function Home() {
       <Category />
       <SalesDeals />
       <Newsletter />
+      
     </div>
   );
 }

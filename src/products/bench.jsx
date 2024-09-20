@@ -21,7 +21,7 @@ export const Bench = ({ id, name, price, imgUrl }) => {
               <ShoppingBagIcon className="w-5 h-6 cursor-pointer" />
             </span>
             <h2 className="font-medium text-md text-gray-500">
-              $ {Bench.price}
+              $ {price}
             </h2>
           </div>
         </div>

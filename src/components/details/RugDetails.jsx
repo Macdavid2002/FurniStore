@@ -15,7 +15,7 @@ export const RugDetails = () => {
   }
 
   return (
-    <div className="bg-[#F5F5F5]">
+    <div className="bg-[#F5F5F5] overflow-hidden">
       <div className="flex p-4 gap-2">
         <Link to="/" className="text-sm flex items-center">
           Home <ChevronRightIcon className="w-3" />
@@ -27,7 +27,7 @@ export const RugDetails = () => {
       </div>
 
       <>
-        <div className="w-96 mx-auto bg-[#d2cfd1] p-4 my-4 rounded-md">
+        <div className="w-96 mx-auto shadow-sm shadow-black p-4 my-4 rounded-md">
           <div className="">
             <img src={rug.imgUrl} className="rounded-lg" alt={rug.name} />
           </div>

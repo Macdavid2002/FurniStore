@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import {
   Bars3Icon,
   XMarkIcon,
@@ -16,7 +17,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 const Navbar = () => {
   const [user] = useAuthState(auth);
   const [isOpen, setIsOpen] = useState(false);
-
+  // Total cart quantity
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  // Toggle Responsive Navbar Function
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
@@ -72,9 +75,6 @@ const Navbar = () => {
         <li className="text-lg hover:text-white">
           <Link to="/">Contact</Link>
         </li>
-        <li className="text-lg hover:text-white">
-          <Link to="/layout">Layout</Link>
-        </li>
       </ul>
 
       {/* Account, Cart, Wishlist  and Search Icons */}
@@ -93,14 +93,17 @@ const Navbar = () => {
             className="w-6 text-black hover:text-white text-xl"
             title="Wishlist"
           />
+          <p className="bg-white text-xs font-semibold rounded-full text-center px-1 absolute top-4 right-16">
+            0
+          </p>
         </Link>
         <Link to="/cart">
           <ShoppingCartIcon
             className="w-6 text-black hover:text-white text-xl relative"
             title="Cart"
           />
-          <p className="bg-white text-xs rounded-full text-center px-1 absolute top-3 right-6">
-            0
+          <p className="bg-white text-xs font-semibold rounded-full text-center px-1 absolute top-3 right-6">
+            {totalQuantity}
           </p>
         </Link>
       </div>
@@ -119,6 +122,7 @@ const Navbar = () => {
       {/* <div className="fixed bg-gray-300 h-full w-[20%] top-16 -right-0.5">
         <h1 className="font-bold text-2xl text-center p-4 ">Cart</h1>
       </div> */}
+
       {/* Responsive Navbar */}
       <div
         className={
@@ -179,7 +183,9 @@ const Navbar = () => {
           <li className="p-4 border-b border-b-white font-medium">
             <Link to="/">Contact</Link>
           </li>
-          <li className="p-4 border-b border-b-white font-medium">Cart</li>
+          <Link to="/cart">
+            <li className="p-4 border-b border-b-white font-medium">Cart</li>
+          </Link>
           <li className="p-4 border-b border-b-white font-medium">Wishlist</li>
           <li className="p-4-border-b border-b-white font-medium">
             <AccountDropdown user={user} isMobile={isOpen} />

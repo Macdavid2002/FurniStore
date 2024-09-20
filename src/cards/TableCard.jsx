@@ -27,7 +27,7 @@ export const TableCard = () => {
       </div>
       <Link to="/table">
         <span className="flex justify-center">
-          <button className="py-4 px-8 bg-gray-400 rounded-md text-white text-center">
+          <button className="py-4 px-8 bg-gray-300 rounded-md text-black text-center">
             Show More
           </button>
         </span>

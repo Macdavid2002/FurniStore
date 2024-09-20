@@ -13,7 +13,7 @@ export const ChairDetails = () => {
 
   if (!chair) {
     return (
-      <div className="p-24 text-center bg-[#F5F5F5]">
+      <div className="bg-[#F5F5F5] overflow-hidden">
         <p className="p-4">Chair not found</p>
         <button className="rounded-full bg-gray-400 my-5 p-4 text-md font-medium">
           <Link to="/chair" className="text-sm">
@@ -25,7 +25,7 @@ export const ChairDetails = () => {
   }
 
   return (
-    <div className="bg-[#F5F5F5]">
+    <div className="bg-[#F5F5F5] overflow-hidden">
       <div className="flex p-4 gap-2">
         <Link to="/" className="text-sm flex items-center">
           Home <ChevronRightIcon className="w-3" />
@@ -37,7 +37,7 @@ export const ChairDetails = () => {
       </div>
 
       <>
-        <div className="w-96 mx-auto bg-[#d2cfd1] p-4 my-4 rounded-md">
+        <div className="w-96 mx-auto shadow-sm shadow-black p-4 my-4 rounded-md">
           <div className="">
             <img src={chair.imgUrl} className="rounded-lg" alt={chair.name} />
           </div>

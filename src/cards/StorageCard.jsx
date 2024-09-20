@@ -28,7 +28,7 @@ export const StorageCard = () => {
       </div>
       <Link to="/storage">
         <span className="flex justify-center">
-          <button className="py-4 px-8 bg-gray-400 font-bold rounded-md text-white text-center">
+          <button className="py-4 px-8 bg-gray-300 rounded-md text-black text-center">
             Show More
           </button>
         </span>

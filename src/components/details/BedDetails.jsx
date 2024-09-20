@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export const BedDetails = () => {
   const { name } = useParams();
-  const bedData = data.bed;
+  const bedData = data.beds;
   const bed = bedData.find(
     (bedItem) => bedItem.name.toLowerCase() === name.toLowerCase()
   );
@@ -14,7 +14,7 @@ export const BedDetails = () => {
     <div>Bed not found</div>;
   }
   return (
-    <div className="bg-[#F5F5F5]">
+    <div className="bg-[#F5F5F5] overflow-hidden">
       <div className="flex p-4 gap-2">
         <Link to="/" className="text-sm flex items-center">
           Home <ChevronRightIcon className="w-3" />
@@ -26,7 +26,7 @@ export const BedDetails = () => {
       </div>
 
       <>
-        <div className="w-96 mx-auto bg-[#d2cfd1] p-4 my-4 rounded-md">
+        <div className="w-96 mx-auto shadow-sm shadow-black p-4 my-4 rounded-md">
           <div className="">
             <img src={bed.imgUrl} className="rounded-lg" alt={bed.name} />
           </div>

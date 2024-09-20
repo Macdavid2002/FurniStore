@@ -35,11 +35,7 @@ export default function SignIn() {
   // Handle form submission for email/password sign up
   const submitHandler = async (data) => {
     try {
-     await signInWithEmailAndPassword(
-        auth,
-        data.email,
-        data.password
-      );
+      await signInWithEmailAndPassword(auth, data.email, data.password);
       toast.success("Login successful");
       navigate("/account");
     } catch (error) {
@@ -81,6 +77,7 @@ export default function SignIn() {
     <div className="my-16">
       <div className="shadow-lg rounded-md 320:w-[85%] xs:w-[60%] sm:w-[45%] md:w-[45%] lg:w-[35%] xl:w-[28%] 912:w-[40%] 320:p-6 mx-auto">
         <h1 className="font-medium text-3xl text-center text-black">Sign In</h1>
+        {/* Email sign in form */}
         <form
           onSubmit={handleSubmit(submitHandler)}
           className="grid grid-cols-1 py-4"
@@ -129,24 +126,32 @@ export default function SignIn() {
           </button>
         </form>
 
-        <p className="text-center">or</p>
+        <div className="flex justify-center gap-10 items-center my-2">
+          <div className="border-t-2 border-gray-300 w-24"></div>
+          <p className="text-center text-sm">or</p>
+          <div className="border-t-2 border-gray-300 w-24"></div>
+        </div>
 
-        <span className="grid grid-cols-1">
+        <span className="flex items-center justify-center gap-8">
           {/* Google Sign In Button */}
           <button
-            className="320:w-56 375:w-64 md:w-72 p-4 bg-white shadow-md text-gray-500 text-sm font-medium uppercase my-2 mx-auto flex items-center justify-center gap-2"
+            className="p-2 rounded-full bg-white shadow-md"
             onClick={signInWithGoogle}
           >
-            <img src={googleIcon} alt="Google Icon" />
-            Sign In With Google
+            <img src={googleIcon} className="h-5" alt="Google Icon" />
           </button>
           {/* Twitter Sign In Button */}
           <button
-            className="320:w-56 375:w-64 md:w-72 p-2 bg-[#03A9F4] shadow-md text-white text-sm font-normal uppercase my-2 mx-auto flex items-center justify-center gap-2"
+            className="p-2 rounded-full bg-[#03A9F4] shadow-md"
             onClick={signInWithTwitter}
           >
-            <img src={twitterIcon} className="h-10" alt="Twitter Icon" />
-            Sign In With Twitter
+            <img src={twitterIcon} className="h-5" alt="Twitter Icon" />
+          </button>
+          <button
+            className="p-2 rounded-full bg-[#03A9F4] shadow-md"
+            onClick={signInWithTwitter}
+          >
+            <img src={twitterIcon} className="h-5" alt="Twitter Icon" />
           </button>
         </span>
       </div>

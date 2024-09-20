@@ -5,7 +5,7 @@ import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
 export const Search = () => {
   const [searchInput, setSearchInput] = useState("");
 
-  // Helper function to filter items based on search input
+  // Function to filter items based on search input
   const filterItems = (dataArray) => {
     return dataArray
       .filter((item) => {
@@ -47,7 +47,7 @@ export const Search = () => {
         placeholder="Search Products..."
       />
       {filterItems(data.chairs)}
-      {filterItems(data.bed)}
+      {filterItems(data.beds)}
       {filterItems(data.benches)}
       {filterItems(data.dining)}
       {filterItems(data.lighting)}

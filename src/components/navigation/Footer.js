@@ -70,7 +70,7 @@ export const Footer = () => {
                   placeholder="Email address..."
                   className="max-[320px]:p-1 p-2 placeholder:text-xs"
                 />
-                <button className="bg-black max-[320px]:text-xs text-md text-white p-2 hover:bg-[rgba(0,0,0,0.8)]">
+                <button className="bg-black 320:text-xs text-md text-white p-2 hover:bg-[rgba(0,0,0,0.8)]">
                   Subscribe
                 </button>
               </div>

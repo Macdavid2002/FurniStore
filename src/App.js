@@ -18,7 +18,7 @@ import { TableDetails } from "./components/details/TableDetails";
 import { ScrollToTop } from "./components/misc/ScrollTop";
 import { About } from "./pages/about/about";
 import { Chat } from "./components/misc/Chat";
-// import { Cart } from "./pages/Cart";
+import { Cart } from "./features/cart/Cart";
 import { Search } from "./pages/search";
 import { Chairs } from "./components/product-props/Chair";
 import { Beds } from "./components/product-props/Bed";
@@ -68,7 +68,7 @@ function App() {
           <Route path="/storage/:name" element={<StorageDetails />} />
           <Route path="/table/:name" element={<TableDetails />} />
 
-          {/* <Route path="/cart" element={<Cart />} /> */}
+          <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
