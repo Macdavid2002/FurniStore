@@ -3,12 +3,14 @@
 export const Hero = () => {
   return (
     <div
-      className="bg-[#F3F4F6] grid grid-cols-1 lg:flex  items-center justify-center"
+      className="bg-[#F3F4F6] grid grid-cols-1 lg:flex items-center justify-center"
       id="h"
     >
       <div className="">
-        <h1 className="text-5xl lg:text-8xl p-4">Luxury & Elegance</h1>
-        <p className="text-xl p-4 md:w-[70%] ">
+        <h1 className="text-5xl lg:text-7xl p-4 font-light font-cinzel ">
+          Luxury & Elegance
+        </h1>
+        <p className="text-xl p-4 md:w-[75%] font-cinzel ">
           Give Your House A Look That Exude Style and Elegance. Explore Our
           Curated Collection Of Furniture Designs
         </p>

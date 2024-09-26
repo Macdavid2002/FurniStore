@@ -3,7 +3,6 @@ const initialState = {
   cartItems: [],
   totalQuantity: 0,
   cartVisibility: false,
-  totalPrice: 0,
 };
 export const cartSlice = createSlice({
   name: "cart",
@@ -41,8 +40,8 @@ export const cartSlice = createSlice({
       const id = action.payload;
       const existingItem = state.cartItems.find((item) => item.id === id);
       if (existingItem) {
-        state.totalQuantity -= existingItem.quantity;
         state.cartItems = state.cartItems.filter((item) => item.id !== id);
+        state.totalQuantity--;
       }
     },
   },

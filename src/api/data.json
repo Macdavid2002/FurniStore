@@ -71,6 +71,20 @@
       "imgUrl": "https://cdn-images.article.com/products/SKU11850/2890x1500/image133741.jpg?w=425&q=80&fm=webp&fit=max",
       "price": 250,
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
+    },
+    {
+      "id": 9,
+      "name": "Hess Sand Ivory Chair",
+      "price": 399,
+      "imgUrl": "https://cdn-images.article.com/products/SKU23402/2890x1500/image133434.jpg?w=425&q=80&fm=webp&fit=max",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
+    },
+    {
+      "id": 9,
+      "name": "Ivory Wool Bouclé Office Chair",
+      "price": 399,
+      "imgUrl": "https://cdn-images.article.com/products/SKU20086/2890x1500/image140261.jpg?w=425&q=80&fm=webp&fit=max",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     }
   ],
   "beds": [
@@ -92,14 +106,14 @@
     {
       "id": 3,
       "name": "Lenia Panel Walnut King Bed ",
-      "price": 120,
+      "price": 1200,
       "imgUrl": "https://cdn-images.article.com/products/SKU15352/2890x1500/image147488.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     },
     {
       "id": 4,
       "name": "Lenia Walnut Queen Bed",
-      "price": 100,
+      "price": 1100,
       "imgUrl": "https://cdn-images.article.com/products/SKU12922/2890x1500/image147456.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     },
@@ -130,12 +144,18 @@
       "price": 120,
       "imgUrl": "https://cdn-images.article.com/products/SKU15629/2890x1500/image139778.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
+    },
+    {
+      "id": 9,
+      "name": "Lenia Panel Queen Storage Bed ",
+      "price": 2100,
+      "imgUrl": "https://cdn-images.article.com/products/SKU23411/2890x1500/image138459.jpg?w=425&q=80&fm=webp&fit=max",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     }
   ],
 
   "benches": [
     {
-      "Type": "Bench",
       "id": 1,
       "name": "Gray Walnut Bench",
       "price": 500,
@@ -190,11 +210,17 @@
       "price": 400,
       "imgUrl": "https://cdn-images.article.com/products/SKU23382/2890x1500/image130224.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
+    },
+    {
+      "id": 9,
+      "name": "Rolph Sand Ivory Bench",
+      "price": 400,
+      "imgUrl": "https://cdn-images.article.com/products/SKU23469/2890x1500/image141708.jpg?w=425&q=80&fm=webp&fit=max",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     }
   ],
   "dining": [
     {
-      "Type": "Dining",
       "id": 1,
       "name": "Brown Dining Set",
       "price": 199,
@@ -249,11 +275,17 @@
       "price": 799,
       "imgUrl": "https://cdn-images.article.com/products/SKU45/2890x1500/image132070.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
+    },
+    {
+      "id": 9,
+      "name": "Dark Gray Table for 6",
+      "price": 1100,
+      "imgUrl": "https://cdn-images.article.com/products/SKU15537/2890x1500/image147030.jpg?w=425&q=80&fm=webp&fit=max",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     }
   ],
   "lighting": [
     {
-      "Type": "Lamp",
       "id": 1,
       "name": "Black Floor Lamp",
       "price": 249,
@@ -307,11 +339,17 @@
       "imgUrl": "https://cdn-images.article.com/products/SKU18937/2890x1500/image127452.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum.",
       "price": 119
+    },
+    {
+      "id": 9,
+      "name": "Bori Small Natural Lantern Set",
+      "imgUrl": "https://cdn-images.article.com/products/SKU14475/2890x1500/image130024.jpg?w=425&q=80&fm=webp&fit=max",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum.",
+      "price": 119
     }
   ],
   "rugs": [
     {
-      "Type": "Rug",
       "id": 1,
       "name": "Arch Cream Rug 8 x 10",
       "price": 700,
@@ -363,70 +401,82 @@
       "price": 800,
       "imgUrl": "https://cdn-images.article.com/products/SKU23134/2890x1500/image127697.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
+    },
+    {
+      "id": 9,
+      "name": "Performance Rug 8 x 10",
+      "price": 800,
+      "imgUrl": "https://cdn-images.article.com/products/SKU23267/2890x1500/image127423.jpg?w=425&q=80&fm=webp&fit=max",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     }
   ],
   "sofa": [
     {
-      "Type": "Sofa",
       "id": 1,
       "name": "Silver Modular Sofa",
-      "price": 210,
+      "price": 2100,
       "imgUrl": "https://cdn-images.article.com/products/SKU24528/2890x1500/image147568.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     },
     {
       "id": 2,
       "name": "Navy Blue Velvet Sofa",
-      "price": 180,
+      "price": 1800,
       "imgUrl": "https://cdn-images.article.com/products/SKU25121/2890x1500/image153657.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     },
     {
       "id": 3,
       "name": "Silver Grey Sofa",
-      "price": 130,
+      "price": 1530,
       "imgUrl": "https://cdn-images.article.com/products/SKU24531/2890x1500/image145587.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     },
     {
       "id": 4,
-      "name": "Tifted Pacific Ginger Sofa",
-      "price": 160,
-      "imgUrl": "https://cdn-images.article.com/products/SKU24752/2890x1500/image158199.jpg?w=425&q=80&fm=webp&fit=max",
+      "name": "Sandstone Reversible Sectional Sofa",
+      "price": 1500,
+      "imgUrl": "https://cdn-images.article.com/products/SKU24926/2890x1500/image159970.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     },
     {
       "id": 5,
       "name": "Tifted Cascadia Blue Sofa",
-      "price": 160,
+      "price": 2300,
       "imgUrl": "https://cdn-images.article.com/products/SKU338D/2890x1500/image150164.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     },
     {
       "id": 6,
       "name": "Silver Light Blue Sofa",
-      "price": 175,
+      "price": 1750,
       "imgUrl": "https://cdn-images.article.com/products/SKU24639/2890x1500/image152828.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     },
     {
       "id": 7,
       "name": "Ivory Sofa",
-      "price": 110,
+      "price": 1110,
       "imgUrl": "https://cdn-images.article.com/products/SKU15671/2890x1500/image151194.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     },
     {
       "id": 8,
       "name": "Napa Charcoal Sofa",
-      "price": 160,
+      "price": 1610,
       "imgUrl": "https://cdn-images.article.com/products/SKU24544/2890x1500/image152204.jpg?w=425&q=80&fm=webp&fit=max",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
+    },
+    {
+      "id": 9,
+      "name": "Right Corner Sectional Sofa",
+      "price": 1160,
+      "imgUrl": "https://cdn-images.article.com/products/SKU25523/2890x1500/image158458.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     }
   ],
   "storage": [
     {
-      "Type": "Storage",
       "id": 1,
       "name": "Oak 6-Drawer Double Dresser",
       "price": 139,
@@ -481,11 +531,17 @@
       "price": 190,
       "imgUrl": "https://cdn-images.article.com/products/SKU23432/2890x1500/image156007.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
+    },
+    {
+      "id": 9,
+      "name": "Deca Oak Cabinet",
+      "price": 500,
+      "imgUrl": "https://cdn-images.article.com/products/SKU18773/2890x1500/image148014.jpg?w=425&q=80&fm=webp&fit=max",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     }
   ],
   "tables": [
     {
-      "Type": "Table",
       "id": 1,
       "name": "Oak Coffee Table",
       "price": 400,
@@ -539,6 +595,13 @@
       "name": "Agotu Walnut Side Table",
       "price": 440,
       "imgUrl": "https://cdn-images.article.com/products/SKU19377/2890x1500/image128673.jpg?w=425&q=80&fm=webp&fit=max",
+      "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
+    },
+    {
+      "id": 8,
+      "name": "Baarlo Side Oak Table",
+      "price": 400,
+      "imgUrl": "https://cdn-images.article.com/products/SKU18106/2890x1500/image134998.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum."
     }
   ]

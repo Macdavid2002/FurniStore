@@ -6,7 +6,7 @@ import filter from "../../assets/filter.svg";
 // Parent Chair Component
 export const Chairs = () => {
   return (
-    <div className="md:mt-8">
+    <div className="mt-8">
       <div className="px-8 text-sm flex items-center gap-1">
         <Link to="/">Home</Link>
         <span>

@@ -1,13 +1,13 @@
 import { RoomCard } from "../../cards/RoomCard";
-// import { roomList } from "../../data/rooms-data";
 import { Link } from "react-router-dom";
 export const Rooms = () => {
   const roomList = [
     {
-      name: <Link to="/">Living Room</Link>,
+      name: "Living Room",
       imgUrl:
         "https://cdn-cms-assets.article.com/2wED57geKONRmNozTj2H7D-d537346f692af7412c81fa0ed510d4fa?w=640&q=40&fit=max",
       id: 1,
+      link: "/living-room",
     },
     {
       name: <Link to="/"> Bedroom</Link>,
@@ -44,7 +44,7 @@ export const Rooms = () => {
   return (
     <div>
       <div className="px-4 md:px-8 block text-center mt-14">
-        <h1 className="text-xl md:text-3xl text-gray-500">
+        <h1 className="text-xl md:text-3xl text-gray-500 font-cinzel">
           Shop By Room
           <div className="border border-black rounded-full border-t-2  w-32 md:w-50 my-4 mx-auto"></div>
         </h1>
@@ -52,7 +52,12 @@ export const Rooms = () => {
       <div className="p-4 md:p-8  grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-8">
         {roomList.map((rooms, index) => (
           <div key={index}>
-            <RoomCard name={rooms.name} id={rooms.id} imgUrl={rooms.imgUrl} />
+            <RoomCard
+              name={rooms.name}
+              id={rooms.id}
+              imgUrl={rooms.imgUrl}
+              link={rooms.link}
+            />
           </div>
         ))}
       </div>

@@ -5,7 +5,7 @@ import data from "../../api/data.json";
 import { Table } from "../../products/table";
 export const Tables = () => {
   return (
-    <div className="md:mt-8">
+    <div className="mt-8">
       <div className="px-8 text-sm flex items-center gap-1">
         <Link to="/">Home</Link>
         <span>
@@ -30,7 +30,7 @@ export const Tables = () => {
       </div>
       <div className="relative px-8 py-4 grid grid-cols-1 md:grid-cols-3 gap-12">
         {data.tables.map((table) => (
-          <div>
+          <div key={table.id}>
             <Table
               name={table.name}
               id={table.id}

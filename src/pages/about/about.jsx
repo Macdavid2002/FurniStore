@@ -3,7 +3,7 @@ import { Why } from "./why";
 
 export const About = () => {
   return (
-    <div className="bg-[#f8f7f4]">
+    <div className="">
       <div className="relative">
         <img
           src="https://cdn-cms-assets.article.com/4zIou4ravKGyqOkCCHehHe-4756b2bd81d0a540c4f452971a03dc92?w=1300&q=80&fm=webp&fit=max"
@@ -16,8 +16,6 @@ export const About = () => {
         </h1>
       </div>
       <div className="py-10">
-        <h1 className="text-3xl px-8 text-black">MEUBLES</h1>
-
         <p className="text-lg text-black w-full px-8 py-4 ">
           At Meubles, quality isn't just a buzzword—it's a promise. We
           meticulously select the finest materials, combining durability with
@@ -31,7 +29,7 @@ export const About = () => {
       </div>
       <Why />
       <h1 className="text-2xl px-8">About Our Design</h1>
-      <div className="bg-[#F8F7F4] grid grid-cols-1 lg:flex lg:items-center lg: justify-between">
+      <div className="grid grid-cols-1 lg:flex lg:items-center lg: justify-between">
         <p className="text-md p-8 md:[w-100%] lg:w-[50%] ">
           Design is at the heart of what we do at Meubles. Our team of talented
           designers draws inspiration from both classic and contemporary styles
@@ -50,7 +48,7 @@ export const About = () => {
         />
       </div>
       <h1 className="text-2xl p-8">Our Commitment to Quality and Design</h1>
-      <div className="bg-[#F8F7F4] grid grid-cols-1 lg:flex lg:items-center lg: justify-between">
+      <div className="grid grid-cols-1 lg:flex lg:items-center lg: justify-between">
         <img
           src="https://cdn-cms-assets.article.com/E1wp7AyJ6fHRLPSH7CJnP-2bbd85ff0917c5f054dfa1991a18d242?w=1300&q=80&fm=webp&fit=max"
           alt={"Furniture"}

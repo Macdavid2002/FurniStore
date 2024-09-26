@@ -1,4 +1,9 @@
-import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
+import {
+  ChevronDownIcon,
+  ChevronUpIcon,
+  PlusIcon,
+  MinusIcon,
+} from "@heroicons/react/20/solid";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -18,25 +23,38 @@ const ProductDropdown = ({ title, items, isMobile }) => {
       onMouseLeave={!isMobile ? () => setIsOpen(false) : undefined}
     >
       {/* Toggle Dropdown Button */}
-      <button className="flex items-center text-[18px]  focus:text-black w-full">
-        {title}
-        {isOpen ? (
-          <ChevronUpIcon className="w-6 h-8 text-black cursor-pointer ml-2" />
+      <div className="flex items-center cursor-pointer">
+        {isMobile ? (
+          <button className="flex items-center justify-between text-[16px] lg:text-[18px] focus:text-black w-full">
+            {title}
+            {isOpen ? (
+              <MinusIcon className="w-5 lg:w-6 text-black  cursor-pointer" />
+            ) : (
+              <PlusIcon className="w-5 lg:w-6 text-black  cursor-pointer" />
+            )}
+          </button>
         ) : (
-          <ChevronDownIcon className="w-6 h-8 text-black cursor-pointer ml-2" />
+          <button className="flex items-center text-[16px] lg:text-[18px]  focus:text-black w-full">
+            {title}
+            {isOpen ? (
+              <ChevronUpIcon className="w-5 lg:w-6 text-black  cursor-pointer" />
+            ) : (
+              <ChevronDownIcon className="w-5 lg:w-6 text-black  cursor-pointer" />
+            )}
+          </button>
         )}
-      </button>
+      </div>
 
       {isOpen && (
         <div
           className={`lg:bg-white lg:shadow-md ${
-            isMobile ? "w-full mt-2" : "absolute left-0 w-[200px]"
+            isMobile ? "w-full mt-2" : "absolute z-50 left-0 w-[200px]"
           }`}
         >
           <ul className="lg:p-4">
             {items.map((item, index) => (
-              <Link to={item.link} key={index}>
-                <li className="p-2 text-black border-b border-b-gray-400 lg:hover:border-l-4 hover:border-l-gray-400">
+              <Link to={item.link} key={index} onClick={toggleDropdown}>
+                <li className="py-2 lg:p-2 text-black border-b border-b-gray-400 lg:hover:border-l-4 hover:border-l-gray-400">
                   {item.label}
                 </li>
               </Link>

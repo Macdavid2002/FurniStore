@@ -19,8 +19,8 @@ export const Account = () => {
   };
 
   return (
-    <div className="bg-gray-300">
-      <div className="container my-auto px-4   ">
+    <div className="bg-gray-300 min-h-screen">
+      <div className="p-4">
         <div className="flex gap-4 justify-between items-center py-2 ">
           <h1 className="text-2xl font-bold">MY ACCOUNT</h1>
           <button

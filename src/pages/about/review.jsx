@@ -8,13 +8,14 @@ import lady from "../../assets/lady.jpg";
 import chair from "../../assets/Chair1.png";
 import chaise from "../../assets/chaise.png";
 import sofa from "../../assets/sofa.png";
+
 export const Review = () => {
   const ReviewData = [
     {
       id: 1,
       name: "Nicholas Smith",
       review:
-        "Meubles has truly transformed my home! I recently bought a sofa, and I’m incredibly impressed with the craftsmanship and attention to detail. The design strikes a perfect balance between modern and timeless, fitting seamlessly into my decor. The quality is evident in every aspect, from the materials to the finish, and I know these pieces will last for years. I'm so glad I chose Meubles for my new home—they’ve exceeded my expectations in both style and durability..",
+        "Meubles has truly transformed my home! I recently bought a sofa, and I’m incredibly impressed with the craftsmanship and attention to detail. The design strikes a perfect balance between modern and timeless, fitting seamlessly into my decor. The quality is evident in every aspect, from the materials to the finish, and I know these pieces will last for years. I'm so glad I chose Meubles for my new home—they’ve exceeded my expectations in both style and durability.",
       image: guy,
       furniturePic: sofa,
     },
@@ -38,8 +39,12 @@ export const Review = () => {
 
   return (
     <div>
-      <h1 className="text-2xl block text-center uppercase my-4">Testimonial</h1>
-      <h1 className="text-4xl block text-center">Our Customers Reviews</h1>
+      <h1 className="text-xl md:text-2xl block text-center uppercase my-8 font-cinzel font-semibold">
+        Testimonial
+      </h1>
+      <h1 className="text-2xl md:text-3xl block text-center font-cinzel font-bold">
+        Our Customers Reviews
+      </h1>
 
       <div className="">
         <Swiper
@@ -47,15 +52,11 @@ export const Review = () => {
           spaceBetween={10}
           slidesPerView={1}
           loop={true}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          }}
           pagination={{
             clickable: true,
-            el: ".swiper-pagination",
-            bulletClass: "swiper-pagination-bullet",
-            bulletActiveClass: "swiper-pagination-bullet-active",
+            renderBullet: (index, className) => {
+              return `<span class="${className}"></span>`;
+            },
           }}
           autoplay={{ delay: 3000 }}
           breakpoints={{
@@ -66,31 +67,28 @@ export const Review = () => {
         >
           {ReviewData.map((reviewItem) => (
             <SwiperSlide key={reviewItem.id}>
-              <div key={reviewItem.id}>
-                <div className="bg-[#F3F4F6]  p-4 m-8 rounded-md">
-                  <img src={quote} className="h-10 ml-4" alt="" />
-                  <span className="lg:flex items-center justify-between">
-                    <p className="p-4 text-sm lg:w-[50%] text-left">
-                      {reviewItem.review}
-                    </p>
-                    <img
-                      src={reviewItem.furniturePic}
-                      className="h-[200px]"
-                      alt=""
-                    />
-                  </span>
-                  <span className="p-4 flex gap-4">
-                    <img
-                      src={reviewItem.image}
-                      className="h-10 w-10 rounded-full"
-                      alt=""
-                    />
-                    <h2 className="text-md font-medium mt-3">
-                      {reviewItem.name}{" "}
-                    </h2>
-                  </span>
-                </div>
-                <div> </div>
+              <div className="bg-[#F3F4F6] p-4 m-8 rounded-md">
+                <img src={quote} className="h-10 ml-4" alt="" />
+                <span className="lg:flex items-center justify-between">
+                  <p className="p-4 text-xs md:text-sm lg:w-[50%] text-left">
+                    {reviewItem.review}
+                  </p>
+                  <img
+                    src={reviewItem.furniturePic}
+                    className="h-[200px]"
+                    alt=""
+                  />
+                </span>
+                <span className="p-4 flex gap-4">
+                  <img
+                    src={reviewItem.image}
+                    className="h-10 w-10 rounded-full"
+                    alt=""
+                  />
+                  <h2 className="text-md font-medium mt-3">
+                    {reviewItem.name}
+                  </h2>
+                </span>
               </div>
             </SwiperSlide>
           ))}

@@ -38,7 +38,7 @@ export const Category = () => {
   return (
     <div className="mt-24">
       <div className="hidden px-4 md:px-8 md:block text-center">
-        <h1 className="text-xl md:text-3xl text-gray-500">
+        <h1 className="text-xl md:text-3xl text-gray-500 font-cinzel">
           Shop By Category
           <div className="border border-black rounded-full border-t-1 w-14 md:w-60 my-4 mx-auto"></div>
         </h1>
@@ -60,8 +60,8 @@ export const Category = () => {
         </ul>
       </div>
       <div className="md:hidden">
-        <div className="flex justify-between items-center px-3">
-          <h1 className="text-black text-xl font-bold">Shop By Category</h1>
+        <div className="flex justify-between items-center px-8">
+          <h1 className="text-black text-xl font-bold font-cinzel">Shop By Category</h1>
           {categoryNav ? (
             <XMarkIcon className="h-6 w-6" onClick={toggleCategoryNav} />
           ) : (

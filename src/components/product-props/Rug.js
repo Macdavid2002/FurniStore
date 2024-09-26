@@ -5,7 +5,7 @@ import data from "../../api/data.json";
 import { Rugs } from "../../products/rugs";
 export const Rug = () => {
   return (
-    <div className="md:mt-8">
+    <div className="mt-8">
       <div className="px-8 text-sm flex items-center gap-1">
         <Link to="/">Home</Link>
         <span>

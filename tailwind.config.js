@@ -22,6 +22,9 @@ module.exports = {
         912: "912px",
         // => @media (min-width: 912px) { ... }
       },
+      fontFamily: {
+        cinzel: "Cinzel Decorative",
+      },
     },
   },
   plugins: [

@@ -2,10 +2,10 @@ import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import filter from "../../assets/filter.svg";
 import data from "../../api/data.json";
-import { Bench } from './../../products/bench';
+import { Bench } from "./../../products/bench";
 export const Benches = () => {
   return (
-    <div className="md:mt-8">
+    <div className="mt-8">
       <div className="px-8 text-sm flex items-center gap-1">
         <Link to="/">Home</Link>
         <span>
@@ -29,8 +29,8 @@ export const Benches = () => {
         </select>
       </div>
       <div className="relative px-8 py-4 grid grid-cols-1 md:grid-cols-3 gap-12  ">
-        {data.benches.map((bench, index) => (
-          <div key={index}>
+        {data.benches.map((bench) => (
+          <div key={bench.id}>
             <Bench
               name={bench.name}
               id={bench.id}

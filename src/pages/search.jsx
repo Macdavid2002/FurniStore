@@ -44,7 +44,7 @@ export const Search = () => {
         type="text"
         className="border-b border-black w-full p-4 outline-none"
         onChange={(e) => setSearchInput(e.target.value)}
-        placeholder="Search Products..."
+        placeholder="Search Here..."
       />
       {filterItems(data.chairs)}
       {filterItems(data.beds)}
@@ -55,6 +55,9 @@ export const Search = () => {
       {filterItems(data.sofa)}
       {filterItems(data.storage)}
       {filterItems(data.tables)}
+
+
+
     </div>
   );
 };

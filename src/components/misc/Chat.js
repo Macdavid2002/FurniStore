@@ -60,7 +60,7 @@ export const Chat = () => {
             <label className="text-sm px-2 pb-4 text-md flex items-center justify-between">
               How Can We Help Today
               <MinusIcon
-                className="w-8 text-black cursor-pointer"
+                className="w-6 text-black cursor-pointer"
                 onClick={toggleChatFunction}
               />
             </label>
@@ -106,7 +106,7 @@ export const Chat = () => {
         </div>
       ) : (
         <ChatBubbleLeftEllipsisIcon
-          className="fixed bottom-20 right-8 z-50 w-10 text-black bg-[#f1f4f8] rounded-tr-md p-2 shadow-md cursor-pointer "
+          className="fixed bottom-20 right-5 z-50 w-10 text-black bg-[#f1f4f8] rounded-tr-md p-2 shadow-md cursor-pointer "
           onClick={toggleChatFunction}
         />
       )}

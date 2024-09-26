@@ -15,9 +15,9 @@ export const SalesDealsCard = ({ salesDealsList }) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
       if (i <= rating) {
-        stars.push(<SolidStarIcon key={i} className="h-6 w-6 text-gray-400" />);
+        stars.push(<SolidStarIcon key={i} className="h-6 w-6 text-gray-300" />);
       } else {
-        stars.push(<StarIcon key={i} className="h-6 w-6 text-gray-400" />);
+        stars.push(<StarIcon key={i} className="h-6 w-6 text-gray-300" />);
       }
     }
     return stars;
@@ -57,18 +57,18 @@ export const SalesDealsCard = ({ salesDealsList }) => {
         >
           {salesDealsList.map((salesItem, index) => (
             <SwiperSlide key={salesItem.id}>
-              <ul className="border border-gray-400 rounded-md p-4 relative">
+              <ul className="border border-gray-300 rounded-md p-4 relative">
                 <div className="relative">
                   <img
                     src={salesItem.img}
                     className="relative rounded-md w-full"
                     alt={salesItem.alt}
                   />
-                  <span className="absolute top-2 left-0 bg-gray-400 w-24 h-9 text-white  p-2 clip-ribbon">
+                  <span className="absolute top-2 left-0 bg-gray-300 w-24 h-9 text-black  p-2 clip-ribbon">
                     {salesItem.off} off
                   </span>
                   <span className="absolute top-1 right-0 m-2">
-                    <HeartIcon className="w-9 h-9 text-white cursor-pointer bg-gray-400 p-2 rounded-full" />
+                    <HeartIcon className="w-9 h-9 text-black cursor-pointer bg-gray-300 p-2 rounded-full" />
                   </span>
                 </div>
                 <span className="flex gap-1 py-2">
@@ -78,12 +78,12 @@ export const SalesDealsCard = ({ salesDealsList }) => {
                 <li>
                   <ul className="flex justify-between py-2">
                     <li>${salesItem.price}</li>
-                    <li className="line-through text-gray-400">
+                    <li className="line-through text-gray-300">
                       ${salesItem.formerPrice}
                     </li>
                   </ul>
                   {/* Add to cart button */}
-                  <button className="w-[100%] p-2 bg-gray-400 rounded-md flex justify-center gap-4 ">
+                  <button className="w-[100%] p-2 bg-gray-300 rounded-md flex justify-center gap-4 ">
                     <ShoppingBagIcon className="w-6 text-black text-xl" />
                     Add to cart
                   </button>

@@ -1,11 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: "Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
+}
+.swiper-pagination-bullet {
+  background: gray; /* Gray color for inactive dots */
+  opacity: 0.7; /* Slight transparency */
+}
 
+.swiper-pagination-bullet-active {
+  background: darkgray; /* Darker gray for the active dot */
 }

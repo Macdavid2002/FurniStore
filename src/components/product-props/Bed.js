@@ -5,7 +5,7 @@ import filter from "../../assets/filter.svg";
 import { Bed } from './../../products/bed';
 export const Beds = () => {
   return (
-    <div className="md:mt-8">
+    <div className="mt-8">
       <div className="px-8 text-sm flex items-center gap-1">
         <Link to="/">Home</Link>
         <span>
@@ -29,8 +29,8 @@ export const Beds = () => {
         </select>
       </div>
       <div className=" relative p-8 grid grid-cols-1 md:grid-cols-3 gap-12">
-        {data.beds.map((bed, index) => (
-          <div>
+        {data.beds.map((bed) => (
+          <div key={bed.id}>
             <Bed
               name={bed.name}
               id={bed.id}

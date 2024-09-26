@@ -7,10 +7,10 @@ export const Collection = () => {
         className="w-full h-[400px] object-cover"
       />
       <div className="absolute block top-14 md:top-14 p-2 md:p-8">
-        <h1 className="text-3xl  mt-10 md:text-[50px] text-white text-left  ">
+        <h1 className="text-3xl  mt-10 md:text-[50px] text-white text-left font-cinzel">
           Your Furniture Says A Lot About You{" "}
         </h1>
-        <p className="my-4 md:my-8 text-2xl md:text-4xl text-white text-left">
+        <p className="my-4 md:my-8 text-2xl md:text-3xl text-white text-left font-cinzel">
           Pick from our variety of collections
         </p>
         <button className="my-4 p-3 rounded-md border border-gray-300 text-white block text-left text-xl">
