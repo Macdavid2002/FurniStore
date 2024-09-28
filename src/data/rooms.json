@@ -1,0 +1,149 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "name": "The Super Ceni",
+      "price": 1709,
+      "desc": "",
+      "imgUrl": "https://cdn-images.article.com/productbundles/506/HERO_DESKTOP/productbundle506-1713557499980.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "living-room"
+    },
+    {
+      "id": 2,
+      "name": "Lounging On Cloud Nine",
+      "desc": "",
+      "price": 1519,
+      "imgUrl": "https://cdn-images.article.com/productbundles/225/HERO_DESKTOP/productbundle225-1713326241332.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "living-room"
+    },
+    {
+      "id": 3,
+      "name": "The Leather on Leather",
+      "desc": "",
+      "price": 1994,
+      "imgUrl": "https://cdn-images.article.com/productbundles/284/HERO_DESKTOP/productbundle284-1718058730534.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "living-room"
+    },
+    {
+      "id": 4,
+      "name": "The Greatest Hits",
+      "desc": "",
+      "price": 1927,
+      "imgUrl": "https://cdn-images.article.com/productbundles/294/HERO_DESKTOP/productbundle294-1713326074751.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "living-room"
+    },
+    {
+      "id": 5,
+      "name": "The Lounge In Luxury",
+      "desc": "",
+      "price": 1654,
+      "imgUrl": "https://cdn-images.article.com/productbundles/268/HERO_DESKTOP/productbundle268-1713368821249.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "living-room"
+    },
+    {
+      "id": 6,
+      "name": "The Next Level Nap",
+      "desc": "",
+      "price": 2754,
+      "imgUrl": "https://cdn-images.article.com/productbundles/437/HERO_DESKTOP/productbundle437-1713326840658.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "living-room"
+    },
+    {
+      "id": 7,
+      "name": "The Dependable Duo",
+      "desc": "",
+      "price": 1329,
+      "imgUrl": "https://cdn-images.article.com/productbundles/454/HERO_DESKTOP/productbundle454-1713328454480.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "living-room"
+    },
+    {
+      "id": 8,
+      "name": "The Sophisticated",
+      "desc": "",
+      "price": 2045,
+      "imgUrl": "https://cdn-images.article.com/productbundles/459/HERO_DESKTOP/productbundle459-1713305588473.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "living-room"
+    },
+    {
+      "id": 9,
+      "name": "The Simple Solution",
+      "desc": "",
+      "price": 1022,
+      "imgUrl": "https://cdn-images.article.com/productbundles/463/HERO_DESKTOP/productbundle463-1713293256680.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "living-room"
+    },
+
+    {
+      "id": 10,
+      "name": "at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque",
+      "price": "lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem",
+      "desc": "accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae",
+      "imgUrl": "justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non",
+      "category": "bedroom"
+    },
+    {
+      "id": 11,
+      "name": "erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy",
+      "price": "nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper",
+      "desc": "lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie",
+      "imgUrl": "mauris morbi non lectus aliquam sit amet diam in magna bibendum",
+      "category": "bedroom"
+    },
+    {
+      "id": 12,
+      "name": "sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec",
+      "price": "suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean",
+      "desc": "quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida",
+      "imgUrl": "elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet",
+      "category": "bedroom"
+    },
+    {
+      "id": 13,
+      "name": "lectus pellentesque at nulla suspendisse potenti cras in purus eu magna",
+      "price": "semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum",
+      "desc": "libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla",
+      "imgUrl": "risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante",
+      "category": "bedroom"
+    },
+    {
+      "id": 14,
+      "name": "proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula",
+      "price": "mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit",
+      "desc": "etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut",
+      "imgUrl": "dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat",
+      "category": "bedroom"
+    },
+    {
+      "id": 15,
+      "name": "id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit",
+      "price": "sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor",
+      "desc": "cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus",
+      "imgUrl": "mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi",
+      "category": "bedroom"
+    },
+    {
+      "id": 16,
+      "name": "nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis",
+      "price": "consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede",
+      "desc": "ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in",
+      "imgUrl": "vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna",
+      "category": "bedroom"
+    },
+    {
+      "id": 17,
+      "name": "ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam",
+      "price": "vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor",
+      "desc": "dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at",
+      "imgUrl": "posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui",
+      "category": "bedroom"
+    },
+    {
+      "id": 18,
+      "name": "blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse",
+      "price": "fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus",
+      "desc": "quam nec dui luctus rutrum nulla tellus in sagittis dui vel",
+      "imgUrl": "et ultrices posuere cubilia curae nulla dapibus dolor vel est donec",
+      "category": "bedroom"
+    }
+  ]
+}

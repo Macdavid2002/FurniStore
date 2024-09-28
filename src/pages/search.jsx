@@ -1,4 +1,4 @@
-import data from "../api/data.json";
+import data from "../data/products.json";
 import { useState } from "react";
 import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
 
@@ -55,9 +55,6 @@ export const Search = () => {
       {filterItems(data.sofa)}
       {filterItems(data.storage)}
       {filterItems(data.tables)}
-
-
-
     </div>
   );
 };

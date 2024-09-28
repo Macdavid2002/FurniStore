@@ -72,7 +72,7 @@ export const Footer = () => {
                   placeholder="Email address..."
                   className="max-[320px]:p-1 p-2 placeholder:text-xs"
                 />
-                <button className="bg-black 320:text-xs text-md text-white p-2 hover:bg-[rgba(0,0,0,0.8)]">
+                <button className="bg-black 320:text-xs text-md md:text-sm text-white p-2 hover:bg-[rgba(0,0,0,0.8)]">
                   Subscribe
                 </button>
               </div>
@@ -80,7 +80,7 @@ export const Footer = () => {
           </div>
           <div className="border-t-[2px] border-black py-4"></div>
           <div className="block sm:flex items-center justify-between px-1">
-            <h2 className="text-md md:text-lg font-medium">
+            <h2 className="text-md md:text-lg font-bold font-cinzel">
               Copyright © 2024 Meubles. All rights reserved
             </h2>
             <ul className="flex items-center justify-center py-2 gap-6">

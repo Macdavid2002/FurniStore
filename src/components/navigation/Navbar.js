@@ -56,6 +56,7 @@ const Navbar = () => {
             <ProductDropdown
               title="Products"
               items={[
+                { label: "Products", link: "/products" },
                 { label: "Beds", link: "/beds" },
                 { label: "Benches", link: "/benches" },
                 { label: "Storage", link: "/storage" },
@@ -73,6 +74,7 @@ const Navbar = () => {
             <RoomDropdown
               title="Rooms"
               items={[
+                { label: "Rooms", link: "/rooms" },
                 { label: "Living Room", link: "/living-room" },
                 { label: "Bedroom", link: "/bedroom" },
                 { label: "Dining Room", link: "/dining-room" },

@@ -1,4 +1,4 @@
-import { Review } from "./review";
+import { ReviewCard } from "./ReviewCard";
 import { Why } from "./why";
 
 export const About = () => {
@@ -10,13 +10,13 @@ export const About = () => {
           alt=""
           className="w-full h-[350px] "
         />
-        <h1 className="text-lg md:text-4xl text-[#f8f7f4] font-bold absolute top-28 left-2 md:left-8">
+        <h1 className="text-md md:text-3xl text-black font-bold absolute top-28 block text-center font-cinzel">
           We are a Company with the vision of offering exquisite and high
           standard product to our customers we combine style and quality
         </h1>
       </div>
       <div className="py-10">
-        <p className="text-lg text-black w-full px-8 py-4 ">
+        <p className="text-xl text-black w-full px-8 py-4 font-cinzel">
           At Meubles, quality isn't just a buzzword—it's a promise. We
           meticulously select the finest materials, combining durability with
           sustainability, to create furniture that stands the test of time. Our
@@ -30,7 +30,7 @@ export const About = () => {
       <Why />
       <h1 className="text-2xl px-8">About Our Design</h1>
       <div className="grid grid-cols-1 lg:flex lg:items-center lg: justify-between">
-        <p className="text-md p-8 md:[w-100%] lg:w-[50%] ">
+        <p className="text-md p-8 md:[w-100%] lg:w-[50%] font-cinzel">
           Design is at the heart of what we do at Meubles. Our team of talented
           designers draws inspiration from both classic and contemporary styles
           to create pieces that are both stylish and functional. We believe that
@@ -54,7 +54,7 @@ export const About = () => {
           alt={"Furniture"}
           className="p-2  lg:p-4 w-[100%] lg:w-[50%] object-cover h-[300px]"
         />
-        <p className="text-md p-8 md:[w-100%] lg:w-[45%] ">
+        <p className="text-md p-8 md:[w-100%] lg:w-[50%] font-cinzel">
           At Meubles, we believe that great furniture starts with great design
           and quality craftsmanship. Our design philosophy revolves around
           creating beautiful, timeless pieces that elevate your living space.
@@ -67,7 +67,7 @@ export const About = () => {
           both style and durability.
         </p>
       </div>
-      <Review />
+      <ReviewCard />
     </div>
   );
 };

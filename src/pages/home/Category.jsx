@@ -1,23 +1,23 @@
 import { useState } from "react";
-import { ChairCard } from "./../../cards/ChairCard";
-import { BedCard } from "../../cards/BedsCard";
-import { BenchesCard } from "../../cards/BenchesCard";
-import { LightingCard } from "../../cards/LightingCard";
-import { DiningCard } from "../../cards/DiningCard";
-import { RugsCard } from "../../cards/RugsCard";
-import { SofasCard } from "../../cards/SofasCard";
-import { StorageCard } from "../../cards/StorageCard";
-import { TableCard } from "../../cards/TableCard";
+import { ChairCard } from "../../ui/cards-skeleton/ChairCard";
+import { BedCard } from "../../ui/cards-skeleton/BedCard";
+import { BenchCard } from "../../ui/cards-skeleton/BenchCard";
+import { LightingCard } from "../../ui/cards-skeleton/LightingCard";
+import { DiningCard } from "../../ui/cards-skeleton/DiningCard";
+import { RugCard } from "../../ui/cards-skeleton/RugCard";
+import { SofaCard } from "../../ui/cards-skeleton/SofaCard";
+import { StorageCard } from "../../ui/cards-skeleton/StorageCard";
+import { TableCard } from "../../ui/cards-skeleton/TableCard";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 
 const categories = {
   Chairs: <ChairCard />,
   Beds: <BedCard />,
-  Benches: <BenchesCard />,
+  Benches: <BenchCard />,
   Dining: <DiningCard />,
   Lighting: <LightingCard />,
-  Rugs: <RugsCard />,
-  Sofas: <SofasCard />,
+  Rugs: <RugCard />,
+  Sofas: <SofaCard />,
   Storage: <StorageCard />,
   Tables: <TableCard />,
 };
@@ -61,7 +61,9 @@ export const Category = () => {
       </div>
       <div className="md:hidden">
         <div className="flex justify-between items-center px-8">
-          <h1 className="text-black text-xl font-bold font-cinzel">Shop By Category</h1>
+          <h1 className="text-black text-xl font-bold font-cinzel">
+            Shop By Category
+          </h1>
           {categoryNav ? (
             <XMarkIcon className="h-6 w-6" onClick={toggleCategoryNav} />
           ) : (

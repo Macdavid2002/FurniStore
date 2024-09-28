@@ -13,7 +13,7 @@ export const Collection = () => {
         <p className="my-4 md:my-8 text-2xl md:text-3xl text-white text-left font-cinzel">
           Pick from our variety of collections
         </p>
-        <button className="my-4 p-3 rounded-md border border-gray-300 text-white block text-left text-xl">
+        <button className="my-4 p-3 rounded-md border border-gray-300 text-white block text-left text-xl font-cinzel">
           Explore Our Collection
         </button>
       </div>

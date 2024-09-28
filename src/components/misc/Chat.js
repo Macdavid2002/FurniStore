@@ -21,7 +21,7 @@ export const Chat = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset, 
+    reset,
   } = useForm({
     resolver: yupResolver(schema),
   });

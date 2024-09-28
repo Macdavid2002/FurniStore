@@ -1,4 +1,4 @@
-import { RoomCard } from "../../cards/RoomCard";
+import { RoomCard } from "../../ui/cards-skeleton/RoomCard";
 import { Link } from "react-router-dom";
 export const Rooms = () => {
   const roomList = [
