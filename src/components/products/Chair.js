@@ -6,7 +6,7 @@ import filter from "../../assets/filter.svg";
 // Parent Chair Component
 export const Chairs = () => {
   return (
-    <div className="mt-8">
+    <div className="mt-8 font-cinzel">
       <div className="px-8 text-sm flex items-center gap-1 font-cinzel">
         <Link to="/">Home</Link>
         <span>
@@ -18,12 +18,10 @@ export const Chairs = () => {
         </span>
         Chairs
       </div>
-      <h1 className="px-8 pt-12 py-4 text-xl font-bold font-cinzel">
-        Products: Chairs{" "}
-      </h1>
+      <h1 className="px-8 pt-12 text-xl font-bold ">Products: Chairs</h1>
 
       <div className="p-8 flex justify-between">
-        <h3 className="text-lg flex items-center gap-3 font-cinzel">
+        <h3 className="text-lg flex items-center gap-3">
           Filters <img src={filter} className="h-4" alt="" />
         </h3>
         <select className="border border-black p-2  text-gray-500 w-36 rounded-md  text-sm outline:none font-cinzel">

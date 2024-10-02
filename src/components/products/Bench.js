@@ -1,11 +1,11 @@
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import filter from "../../assets/filter.svg";
 import benches from "../../data/products.json";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { BenchLayout } from "./../../ui/product-layout/BenchLayout";
 export const Bench = () => {
   return (
-    <div className="mt-8">
+    <div className="mt-8 font-cinzel">
       <div className="px-8 text-sm flex items-center gap-1">
         <Link to="/">Home</Link>
         <span>
@@ -13,7 +13,7 @@ export const Bench = () => {
         </span>
         Benches
       </div>
-      <h1 className="px-8 py-4 text-xl font-medium">Products: Benches </h1>
+      <h1 className="px-8 pt-12 text-xl font-semibold">Products: Benches </h1>
 
       <div className="p-8 flex justify-between">
         <h3 className="text-xl flex items-center gap-3">

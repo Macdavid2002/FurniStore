@@ -10,7 +10,11 @@ export const RugCardLayout = ({ name, id, price, imgUrl }) => {
   const dispatch = useDispatch();
   const addToCart = () => {
     dispatch(cartActions.addToCart({ name, id, price, imgUrl }));
-    toast.success("Added to cart");
+    toast.success("Added to cart", {
+      autoClose: 500,
+      pauseOnFocusLoss: false,
+      pauseOnHover: false,
+    });
   };
   return (
     <div className="relative p-10 border border-gray-400">
@@ -19,7 +23,7 @@ export const RugCardLayout = ({ name, id, price, imgUrl }) => {
         <img src={imgUrl} className="" alt={name} />
       </Link>
       <span className="flex justify-between items-center">
-        <h1 className="py-4 text-xl ">{name} </h1>
+        <h1 className="py-4 text-xl font-cinzel font-semibold">{name} </h1>
         {!user ? (
           <Link to="/">
             {" "}
@@ -32,7 +36,7 @@ export const RugCardLayout = ({ name, id, price, imgUrl }) => {
           />
         )}
       </span>
-      <h2 className="font-medium text-lg text-gray-500">$ {price}</h2>
+      <h2 className="text-lg text-gray-500 font-cinzel font-semibold">$ {price}</h2>
     </div>
   );
 };

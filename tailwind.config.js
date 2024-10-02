@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-
   theme: {
     extend: {
       screens: {
@@ -25,6 +24,11 @@ module.exports = {
       fontFamily: {
         cinzel: "Cinzel Decorative",
       },
+    },
+    backgroundImage: {
+      linear: "linear-gradient(to bottom, #D1D5DB 50%, #ffffff 50%)",
+      secondLinear: "linear-gradient(to left, #b0b0b0 40%, #fff 40%)",
+      addLinear: "linear-gradient(to top, #b0b0b0 40%, #fff 40%)",
     },
   },
   plugins: [

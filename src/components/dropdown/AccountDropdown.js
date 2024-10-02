@@ -31,7 +31,7 @@ const AccountDropdown = ({ isMobile }) => {
 
   return (
     <div
-      className={`relative inline-block text-black ${isMobile ? "w-full" : ""}`}
+      className={`relative inline-block text-black font-cinzel ${isMobile ? "w-full" : ""}`}
       ref={accountDropdownRef}
       onClick={isMobile ? () => setDropdownOpen(true) : undefined}
       onMouseOver={!isMobile ? () => setDropdownOpen(true) : undefined}
@@ -44,7 +44,7 @@ const AccountDropdown = ({ isMobile }) => {
         {isMobile ? (
           <p className="text-md font-medium p-4 text-black">Account</p>
         ) : (
-          <UserCircleIcon className="w-6 text-black hover:text-white text-xl font-medium focus:text-black" />
+          <UserCircleIcon className="w-7 mt-2 text-black hover:text-white  focus:text-black" />
         )}
       </button>
       {dropdownOpen && (
@@ -59,24 +59,24 @@ const AccountDropdown = ({ isMobile }) => {
             <div>
               <Link
                 to="/account"
-                className="border-b border-b-gray-400 block p-2 text-gray-800  hover:border-l-4 hover:border-l-gray-400"
+                className="border-b border-b-gray-400 block p-2 text-gray-800  hover:border-l-4 hover:border-l-gray-400 text-sm"
               >
                 Account Information
               </Link>
               <Link
                 to="/account"
-                className="border-b border-b-gray-400 block p-2 text-gray-800  hover:border-l-4 hover:border-l-gray-400"
+                className="border-b border-b-gray-400 block p-2 text-gray-800  hover:border-l-4 hover:border-l-gray-400 text-sm"
               >
                 Wishlist
               </Link>
               <Link
                 to="/account"
-                className="border-b border-b-gray-400 block p-2 text-gray-800  hover:border-l-4 hover:border-l-gray-400"
+                className="border-b border-b-gray-400 block p-2 text-gray-800  hover:border-l-4 hover:border-l-gray-400 text-sm"
               >
                 Orders
               </Link>
               <button
-                className="flex gap-2 items-center p-2 border-b border-b-gray-400  text-gray-800  hover:border-l-4 hover:border-l-gray-400 w-full"
+                className="flex gap-2 items-center p-2 border-b border-b-gray-400  text-gray-800  hover:border-l-4 hover:border-l-gray-400 w-full text-sm"
                 onClick={signOutFunction}
               >
                 Logout

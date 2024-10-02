@@ -9,7 +9,6 @@ import { ScrollToTop } from "./components/misc/ScrollTop";
 import { About } from "./pages/about/About";
 import { Chat } from "./components/misc/Chat";
 import { Cart } from "./pages/cart/Cart";
-import { Search } from "./pages/search";
 import { Chairs } from "./components/products/Chair";
 import { Bed } from "./components/products/Bed";
 import { Bench } from "./components/products/Bench";
@@ -20,39 +19,23 @@ import { Rug } from "./components/products/Rug";
 import { Lighting } from "./components/products/Lighting";
 import { Dining } from "./components/products/Dining";
 import { SignIn } from "./pages/auth/SignIn";
+import { Contact } from "./pages/Contact";
 import { SignUp } from "./pages/auth/SignUp";
-import { LivingRoom } from "./components/rooms/LivingRoom";
-import { Products } from "./components/products/Products";
+// Products
+import { Products } from "./components/products/all-products/Products";
+import { ProductTwo } from "./components/products/all-products/ProductsTwo";
+import { ProductThree } from "./components/products/all-products/ProductThree";
 import { ProductDetails } from "./components/details/ProductDetails";
-import { Rooms } from "./components/rooms/Rooms";
-// import { useSelector } from "react-redux";
-// import { useEffect } from "react";
+import { ProductFour } from "./components/products/all-products/ProductFour";
+import { ProductFive } from "./components/products/all-products/ProductFive";
+import { ProductSix } from "./components/products/all-products/ProductSix";
+import { ProductSeven } from "./components/products/all-products/ProductSeven";
+// Rooms
+import { LivingRoom } from "./components/rooms/LivingRoom";
+import { BedRoom } from "./components/rooms/BedRoom";
+import { DiningRoom } from "./components/rooms/DiningRoom";
+import { HomeOffice } from "./components/rooms/HomeOffice";
 function App() {
-  // const cart = useSelector((state) => state.cart);
-  // useEffect(() => {
-  //   const updateCart = async () => {
-  //     try {
-  //       const res = await fetch(
-  //         "https://meubles-63663-default-rtdb.europe-west1.firebasedatabase.app/cartItems.json",
-  //         {
-  //           method: "PUT",
-  //           body: JSON.stringify(cart),
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //         }
-  //       );
-
-  //       const data = await res.json();
-  //       console.log("Cart updated:", data);
-  //     } catch (error) {
-  //       console.error("Error updating cart:", error);
-  //     }
-  //   };
-
-  //   updateCart();
-  // }, [cart]);
-
   return (
     <div className="App">
       <Router>
@@ -67,9 +50,16 @@ function App() {
           <Route path="/login" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/account" element={<Account />} />
-          {/* <Route path="/search" element={<Search />} /> */}
+          <Route path="/contact" element={<Contact />} />
           {/* Products Routes */}
           <Route path="/products" element={<Products />} />
+          <Route path="/products/2" element={<ProductTwo />} />
+          <Route path="/products/3" element={<ProductThree />} />
+          <Route path="/products/4" element={<ProductFour />} />
+          <Route path="/products/5" element={<ProductFive />} />
+          <Route path="/products/6" element={<ProductSix />} />
+          <Route path="/products/7" element={<ProductSeven />} />
+          {/* Product Category Routes*/}
           <Route path="/chair" element={<Chairs />} />
           <Route path="/beds" element={<Bed />} />
           <Route path="/benches" element={<Bench />} />
@@ -79,11 +69,12 @@ function App() {
           <Route path="/sofa" element={<Sofa />} />
           <Route path="/storage" element={<Storage />} />
           <Route path="/table" element={<Table />} />
-          {/* Details Route */}
+          {/* Product Details Route */}
           <Route path="/products/:name" element={<ProductDetails />} /> */
-          {/* Room Route */}
-          <Route path="/rooms" element={<Rooms />} />
+          {/* Rooms Route */}
           <Route path="/living-room" element={<LivingRoom />} />
+          <Route path="/bedroom" element={<BedRoom />} />
+          <Route path="/dining-room" element={<DiningRoom />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Error />} />
         </Routes>

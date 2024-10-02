@@ -91,7 +91,7 @@
     },
     {
       "id": 12,
-      "name": "Ivory Wool Bouclé Office Chair",
+      "name": "Wool Bouclé Office Chair",
       "price": 399,
       "imgUrl": "https://cdn-images.article.com/products/SKU20086/2890x1500/image140261.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum.",
@@ -106,7 +106,7 @@
       "category": "beds"
     },
     {
-      "id": 4,
+      "id": 14,
       "name": "Walnut King Bed Frame",
       "price": 500,
       "imgUrl": "https://cdn-images.article.com/products/SKU11572/2890x1500/image147531.jpg?w=425&q=80&fm=webp&fit=max",
@@ -115,7 +115,7 @@
     },
     {
       "id": 15,
-      "name": "Lenia Panel Walnut King Bed ",
+      "name": "Lenia Panel King Bed ",
       "price": 1200,
       "imgUrl": "https://cdn-images.article.com/products/SKU15352/2890x1500/image147488.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum.",
@@ -139,8 +139,8 @@
     },
     {
       "id": 18,
-      "name": "Queen Bed With Nightstands",
-      "price": 150,
+      "name": "Queen Bed & Nightstands",
+      "price": 1050,
       "imgUrl": "https://cdn-images.article.com/products/SKU12862/2890x1500/image147524.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum.",
       "category": "beds"
@@ -163,7 +163,7 @@
     },
     {
       "id": 21,
-      "name": "Lenia Panel Queen Storage Bed ",
+      "name": "Lenia Queen Storage Bed ",
       "price": 2100,
       "imgUrl": "https://cdn-images.article.com/products/SKU23411/2890x1500/image138459.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum.",
@@ -378,8 +378,8 @@
       "category": "lighting"
     },
     {
-      "id": 47,
-      "name": "Bori Small Natural Lantern Set",
+      "id": 48,
+      "name": "Bori Natural Lantern",
       "price": 119,
       "imgUrl": "https://cdn-images.article.com/products/SKU14475/2890x1500/image130024.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum.",
@@ -480,7 +480,7 @@
     },
     {
       "id": 61,
-      "name": "Sandstone Reversible Sectional Sofa",
+      "name": "Reversible Sectional Sofa",
       "price": 1500,
       "imgUrl": "https://cdn-images.article.com/products/SKU24926/2890x1500/image159970.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum.",
@@ -520,7 +520,7 @@
     },
     {
       "id": 66,
-      "name": "Right Corner Sectional Sofa",
+      "name": "Right Sectional Sofa",
       "price": 1160,
       "imgUrl": "https://cdn-images.article.com/products/SKU25523/2890x1500/image158458.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum.",
@@ -528,7 +528,7 @@
     },
     {
       "id": 67,
-      "name": "Oak 6-Drawer Double Dresser",
+      "name": "6 Drawer Double Dresser",
       "price": 139,
       "imgUrl": "https://cdn-images.article.com/products/SKU16797/2890x1500/image149090.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum.",
@@ -616,7 +616,7 @@
     },
     {
       "id": 78,
-      "name": "White Walnut Coffee Table",
+      "name": "White Top Coffee Table",
       "price": 350,
       "imgUrl": "https://cdn-images.article.com/products/SKU13361V1/2890x1500/image128091.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum.",
@@ -624,7 +624,7 @@
     },
     {
       "id": 79,
-      "name": "White Oak Storage Side Table",
+      "name": "Oak Storage Side Table",
       "price": 450,
       "imgUrl": "https://cdn-images.article.com/products/SKU23365/2890x1500/image145147.jpg?w=425&q=80&fm=webp&fit=max",
       "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus voluptate, voluptates dignissimos reprehenderit qui libero tempora iste totam ad doloremque voluptatum.",

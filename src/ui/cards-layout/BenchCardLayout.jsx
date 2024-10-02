@@ -12,7 +12,9 @@ export const BenchCardLayout = ({ name, id, price, imgUrl }) => {
   const addToCart = () => {
     dispatch(cartActions.addToCart({ name, id, price, imgUrl }));
     toast.success("Added to cart", {
-      autoClose: 1000,
+      autoClose: 500,
+      pauseOnFocusLoss: false,
+      pauseOnHover: false,
     });
   };
   return (
@@ -22,7 +24,7 @@ export const BenchCardLayout = ({ name, id, price, imgUrl }) => {
         <img src={imgUrl} className="" alt={name} />
       </Link>
       <span className="flex justify-between items-center">
-        <h1 className="py-4 text-xl ">{name} </h1>
+        <h1 className="py-4 text-xl font-cinzel font-semibold">{name} </h1>
         {!user ? (
           <Link to="/login">
             <ShoppingBagIcon className="w-6 h-6 cursor-pointer " />
@@ -34,7 +36,7 @@ export const BenchCardLayout = ({ name, id, price, imgUrl }) => {
           />
         )}
       </span>
-      <h2 className="font-medium text-lg text-gray-500">$ {price}</h2>
+      <h2 className="text-lg text-gray-500 font-cinzel font-semibold">$ {price}</h2>
     </div>
   );
 };

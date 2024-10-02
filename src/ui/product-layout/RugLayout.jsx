@@ -9,12 +9,12 @@ export const RugLayout = ({ id, name, price, imgUrl }) => {
     try {
       dispatch(cartActions.addToCart({ name, id, price, imgUrl }));
       toast.success("Added to cart", {
-        autoClose: 1000,
+        autoClose: 500,
       });
     } catch (error) {
       console.error("Error adding to cart", error);
       toast.error("Error adding to cart", {
-        autoClose: 1000,
+        autoClose: 500,
       });
     }
   };
@@ -30,7 +30,7 @@ export const RugLayout = ({ id, name, price, imgUrl }) => {
         />
       </Link>
       <span className="flex justify-between items-center">
-        <h1 className="py-4 text-md  md:text-md ">{name}</h1>
+        <h1 className="py-4 text-md  md:text-md font-semibold">{name}</h1>
         <ShoppingBagIcon
           className="w-5 h-6 cursor-pointer"
           onClick={addToCart}

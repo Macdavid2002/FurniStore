@@ -1,4 +1,4 @@
-import data from "../data/products.json";
+import product from "../data/products.json";
 import { useState } from "react";
 import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
 
@@ -46,15 +46,7 @@ export const Search = () => {
         onChange={(e) => setSearchInput(e.target.value)}
         placeholder="Search Here..."
       />
-      {filterItems(data.chairs)}
-      {filterItems(data.beds)}
-      {filterItems(data.benches)}
-      {filterItems(data.dining)}
-      {filterItems(data.lighting)}
-      {filterItems(data.rugs)}
-      {filterItems(data.sofa)}
-      {filterItems(data.storage)}
-      {filterItems(data.tables)}
+      {filterItems(product.products)}
     </div>
   );
 };

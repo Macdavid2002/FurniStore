@@ -10,11 +10,11 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/20/solid";
 import { useNavigate, Link } from "react-router-dom";
-// import "react-toastify/dist/ReactToastify.css";
 
 export const SignIn = () => {
-  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+
+  const [showPassword, setShowPassword] = useState(false);
 
   // Email Form Validation
   const schema = yup.object().shape({
@@ -38,13 +38,17 @@ export const SignIn = () => {
     try {
       await signInWithEmailAndPassword(auth, data.email, data.password);
       toast.success("Login successful", {
-        autoClose: 1000,
+        autoClose: 500,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
       });
       navigate("/account");
     } catch (error) {
       console.error("Error logging in", error);
       toast.error("Error logging in", {
-        autoClose: 1000,
+        autoClose: 500,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
       });
     }
   };
@@ -54,13 +58,17 @@ export const SignIn = () => {
     try {
       await signInWithPopup(auth, googleProvider);
       toast.success("Google Login Successful", {
-        autoClose: 1000,
+        autoClose: 500,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
       });
       navigate("/account");
     } catch (error) {
       console.error("Error signing in with Google:", error.message);
       toast.error("Error Signing In with Google", {
-        autoClose: 1000,
+        autoClose: 500,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
       });
     }
   };
@@ -70,13 +78,17 @@ export const SignIn = () => {
     try {
       await signInWithPopup(auth, twitterProvider);
       toast.success("Twitter Login Successful", {
-        autoClose: 1000,
+        autoClose: 500,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
       });
       navigate("/account");
     } catch (err) {
       console.error("Error signing in with Twitter:", err.message);
       toast.error("Error signing in with Twitter", {
-        autoClose: 1000,
+        autoClose: 500,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
       });
     }
   };
@@ -112,6 +124,7 @@ export const SignIn = () => {
               placeholder="Password"
               {...register("password")}
             />
+
             {/* Icons For Toggling password visibility */}
             <div className="absolute top-8 md:right-4 360:right-5 390:right-4 400:right-8 320:right-2 912:right-4">
               {showPassword ? (
@@ -130,6 +143,7 @@ export const SignIn = () => {
           <p className="pt-2 px-3 md:px-5 text-xs capitalize text-red-500">
             {errors?.password?.message}
           </p>
+          {/* Login Button */}
 
           <button
             type="submit"

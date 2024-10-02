@@ -23,11 +23,7 @@ export const SignUp = () => {
   const schema = yup.object().shape({
     username: yup.string().max(20).required("Please input your username"),
     email: yup.string().email().required("Email address required"),
-    password: yup
-      .string()
-      .min(8)
-      .required("Password required"),
-
+    password: yup.string().min(8).required("Password required"),
   });
 
   const {
@@ -42,11 +38,19 @@ export const SignUp = () => {
   const submitHandler = async (data) => {
     try {
       await createUserWithEmailAndPassword(auth, data.email, data.password);
-      toast.success("Sign up successful");
+      toast.success("Sign up successful", {
+        autoClose: 500,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
+      });
       navigate("/account");
     } catch (error) {
       console.error("Error signing up", error);
-      toast.error("Error signing up");
+      toast.error("Error signing up", {
+        autoClose: 500,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
+      });
     }
   };
 
@@ -54,11 +58,19 @@ export const SignUp = () => {
   const signInWithGoogle = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
-      toast.success("Google Login Successful");
+      toast.success("Google Login Successful", {
+        autoClose: 500,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
+      });
       navigate("/account");
     } catch (error) {
       console.error("Error signing in with Google:", error.message);
-      toast.error("Error Signing In with Google");
+      toast.error("Error Signing In with Google", {
+        autoClose: 500,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
+      });
     }
   };
 
@@ -66,12 +78,20 @@ export const SignUp = () => {
   const signInWithTwitter = async () => {
     try {
       await signInWithPopup(auth, twitterProvider);
-      toast.success("Twitter Login Successful");
+      toast.success("Twitter Login Successful", {
+        autoClose: 500,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
+      });
 
       navigate("/account");
     } catch (err) {
       console.error("Error signing in with Twitter:", err.message);
-      toast.error("Error signing in with Twitter");
+      toast.error("Error signing in with Twitter", {
+        autoClose: 500,
+        pauseOnFocusLoss: false,
+        pauseOnHover: false,
+      });
     }
   };
 
@@ -125,7 +145,7 @@ export const SignUp = () => {
           <p className="pt-2 px-3 md:px-5 text-xs capitalize text-red-500">
             {errors?.password?.message}
           </p>
-  
+
           <div className="px-6 py-2 flex gap-2 items-center">
             <input type="checkbox" onClick={handlePasswordToggle} />
             <label>Show Password</label>

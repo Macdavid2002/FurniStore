@@ -1,4 +1,5 @@
 {
+  "roomsNames": { "roomName": "Living Room" },
   "rooms": [
     {
       "id": 1,
@@ -75,75 +76,138 @@
 
     {
       "id": 10,
-      "name": "at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque",
-      "price": "lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem",
-      "desc": "accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae",
-      "imgUrl": "justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non",
+      "name": "Nocturnal Bliss",
+      "price": 2913,
+      "desc": "",
+      "imgUrl": "https://cdn-images.article.com/productbundles/529/HERO_DESKTOP/productbundle529-1717017432607.jpg?w=425&q=80&fm=webp&fit=max",
       "category": "bedroom"
     },
     {
       "id": 11,
-      "name": "erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy",
-      "price": "nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper",
-      "desc": "lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie",
-      "imgUrl": "mauris morbi non lectus aliquam sit amet diam in magna bibendum",
+      "name": "Euphoria Sleep Kit",
+      "price": 1566,
+      "desc": "",
+      "imgUrl": "https://cdn-images.article.com/productbundles/520/HERO_DESKTOP/productbundle520-1717017073478.jpg?w=425&q=80&fm=webp&fit=max",
       "category": "bedroom"
     },
     {
       "id": 12,
-      "name": "sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec",
-      "price": "suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean",
-      "desc": "quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida",
-      "imgUrl": "elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet",
+      "name": "Celestial Comfort",
+      "price": 1329,
+      "desc": "",
+      "imgUrl": "https://cdn-images.article.com/productbundles/331/HERO_DESKTOP/productbundle331-1713295128596.jpg?w=425&q=80&fm=webp&fit=max",
       "category": "bedroom"
     },
     {
       "id": 13,
-      "name": "lectus pellentesque at nulla suspendisse potenti cras in purus eu magna",
-      "price": "semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum",
-      "desc": "libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla",
-      "imgUrl": "risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante",
+      "name": "Cozy Escape",
+      "price": 1500,
+      "desc": "",
+      "imgUrl": "https://cdn-images.article.com/productbundles/519/HERO_DESKTOP/productbundle519-1717017005292.jpg?w=425&q=80&fm=webp&fit=max",
       "category": "bedroom"
     },
     {
       "id": 14,
-      "name": "proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula",
-      "price": "mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit",
-      "desc": "etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut",
-      "imgUrl": "dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat",
+      "name": "Cloud Nine Comfort",
+      "price": 1305,
+      "desc": "",
+      "imgUrl": "https://cdn-images.article.com/productbundles/458/HERO_DESKTOP/productbundle458-1713292770620.jpg?w=425&q=80&fm=webp&fit=max",
       "category": "bedroom"
     },
     {
       "id": 15,
-      "name": "id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit",
-      "price": "sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor",
-      "desc": "cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus",
-      "imgUrl": "mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi",
+      "name": "Elysian Slumber",
+      "price": 989,
+      "desc": "",
+      "imgUrl": "https://cdn-images.article.com/productbundles/471/HERO_DESKTOP/productbundle471-1713369119041.jpg?w=425&q=80&fm=webp&fit=max",
       "category": "bedroom"
     },
     {
       "id": 16,
-      "name": "nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis",
-      "price": "consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede",
-      "desc": "ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in",
-      "imgUrl": "vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna",
+      "name": "Peaceful Dreams",
+      "price": 1398,
+      "desc": "",
+      "imgUrl": "https://cdn-images.article.com/productbundles/530/HERO_DESKTOP/productbundle530-1717017660700.jpg?w=425&q=80&fm=webp&fit=max",
       "category": "bedroom"
     },
     {
       "id": 17,
-      "name": "ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam",
-      "price": "vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor",
-      "desc": "dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at",
-      "imgUrl": "posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui",
+      "name": "Tranquil Retreat",
+      "price": 2715,
+      "desc": "",
+      "imgUrl": "https://cdn-images.article.com/productbundles/518/HERO_DESKTOP/productbundle518-1717016936159.jpg?w=425&q=80&fm=webp&fit=max",
       "category": "bedroom"
     },
     {
       "id": 18,
-      "name": "blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse",
-      "price": "fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus",
-      "desc": "quam nec dui luctus rutrum nulla tellus in sagittis dui vel",
-      "imgUrl": "et ultrices posuere cubilia curae nulla dapibus dolor vel est donec",
+      "name": "Dream Haven",
+      "price": 1853,
+      "desc": "",
+      "imgUrl": "https://cdn-images.article.com/productbundles/274/HERO_DESKTOP/productbundle274-1713295258110.jpg?w=425&q=80&fm=webp&fit=max",
       "category": "bedroom"
+    },
+    {
+      "id": 19,
+      "name": "The Feast Ensemble",
+      "price": 2180,
+      "imgUrl": "https://cdn-images.article.com/productbundles/371/HERO_DESKTOP/productbundle371-1713558735407.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "dining-room"
+    },
+    {
+      "id": 20,
+      "name": "Epicurean Bliss Set",
+      "price": 1598,
+      "imgUrl": "https://cdn-images.article.com/productbundles/276/HERO_DESKTOP/productbundle276-1714418252732.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "dining-room"
+    },
+    {
+      "id": 21,
+      "name": "Opulent Dining-room Oasis",
+      "price": 2710,
+      "imgUrl": "https://cdn-images.article.com/productbundles/269/HERO_DESKTOP/productbundle269-1713561420629.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "dining-room"
+    },
+    {
+      "id": 22,
+      "name": "Culinary Comfort",
+      "price": 811,
+      "imgUrl": "https://cdn-images.article.com/productbundles/203/HERO_DESKTOP/productbundle203-1713327067549.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "dining-room"
+    },
+    {
+      "id": 23,
+      "name": "Savory Retreat",
+      "price": 1650,
+      "imgUrl": "https://cdn-images.article.com/productbundles/445/HERO_DESKTOP/productbundle445-1713327258616.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "dining-room"
+    },
+    {
+      "id": 24,
+      "name": "Timeless Dining-room Elegance",
+      "price": 1700,
+      "imgUrl": "https://cdn-images.article.com/productbundles/443/HERO_DESKTOP/productbundle443-1716505213049.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "dining-room"
+    },
+    {
+      "id": 25,
+      "name": "Elegant Feast",
+      "price": 1600,
+      "imgUrl": "https://cdn-images.article.com/productbundles/534/HERO_DESKTOP/productbundle534-1723834072090.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "dining-room"
+    },
+    {
+      "id": 26,
+      "name": "Harvest Harmony",
+      "price": 1180,
+      "imgUrl": "https://cdn-images.article.com/productbundles/467/HERO_DESKTOP/productbundle467-1713305836043.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "dining-room"
+    },
+    {
+      "id": 27,
+      "name": "Chic Culinary Collection",
+      "price": 1259,
+      "imgUrl": "https://cdn-images.article.com/productbundles/270/HERO_DESKTOP/productbundle270-1713382772309.jpg?w=425&q=80&fm=webp&fit=max",
+      "category": "dining-room"
     }
   ]
 }

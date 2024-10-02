@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import storage from "../../data/products.json";
-import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
+import { StorageCardLayout } from "../cards-layout/StorageCardLayout";
 export const StorageCard = () => {
   return (
     <div className="mt-8">
@@ -10,26 +10,12 @@ export const StorageCard = () => {
           .slice(0, 4)
           .map((storage) => (
             <div key={storage.id}>
-              <div className="relative p-10 border border-gray-400">
-                <HeartIcon className="absolute w-8 h-8 right-7 cursor-pointer hover:bg-gray-200 rounded-full p-1" />
-                <Link to={`storage/${storage.name}`}>
-                  <img
-                    src={storage.imgUrl}
-                    className="z-10"
-                    alt={storage.name}
-                  />
-                </Link>
-
-                <span className="flex justify-between items-center">
-                  <h1 className="py-4 text-md font-medium md:text-xl ">
-                    {storage.name}{" "}
-                  </h1>
-                  <ShoppingBagIcon className="w-6 h-6 cursor-pointer " />
-                </span>
-                <h2 className="font-medium text-md text-gray-500">
-                  $ {storage.price}{" "}
-                </h2>
-              </div>
+              <StorageCardLayout
+                name={storage.name}
+                id={storage.id}
+                price={storage.price}
+                imgUrl={storage.imgUrl}
+              />
             </div>
           ))}
       </div>

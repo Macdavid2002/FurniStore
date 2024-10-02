@@ -1,3 +1,4 @@
+import products from "../../data/products.json";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -7,10 +8,10 @@ import {
   ShoppingCartIcon,
   HeartIcon,
   MagnifyingGlassIcon,
+  UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import ProductDropdown from "../dropdown/ProductDropdown";
 import { RoomDropdown } from "../dropdown/RoomDropdown";
-import AccountDropdown from "../dropdown/AccountDropdown";
 import { auth } from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
@@ -18,6 +19,8 @@ const Navbar = () => {
   const [user] = useAuthState(auth);
   const [isOpen, setIsOpen] = useState(false);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  // Search Input
+  const [search, setSearch] = useState("");
 
   // Toggle Responsive Navbar Function
   const toggleNavbar = () => {
@@ -34,9 +37,27 @@ const Navbar = () => {
       document.body.classList.remove("overflow-hidden");
     };
   }, [isOpen]);
+  const handleSearch = (productArray) => {
+    return productArray
+      .filter((product) => {
+        return search.toLowerCase() === ""
+          ? false
+          : product.name.toLowerCase().includes(search.toLowerCase());
+      })
+      .slice(0, 4)
+      .map((product) => (
+        <div key={product.id} className="flex gap-8 px-10">
+          <img src={product.imgUrl} alt="" className="h-24" />
+          <span>
+            <p className="p-2"> {product.name} </p>
+            <p className="p-2"> ${product.price}</p>
+          </span>
+        </div>
+      ));
+  };
 
   return (
-    <div className="relative z-50">
+    <div className="relative z-50 ">
       <div className="bg-gray-400 p-4 lg:p-8 flex items-center justify-between h-14 z-50 shadow-md md:shadow-none">
         <span className="flex items-center gap-4">
           <Bars3Icon className="lg:hidden w-8" onClick={toggleNavbar} />
@@ -45,11 +66,11 @@ const Navbar = () => {
           </h1>
         </span>
 
-        <ul className="hidden lg:flex items-center justify-center gap-4">
-          <li className="text-lg hover:text-white">
+        <ul className="hidden lg:flex items-center justify-center gap-4 font-cinzel text-md">
+          <li className="text-md hover:text-white">
             <Link to="/">Home</Link>
           </li>
-          <li className="text-lg hover:text-white">
+          <li className="text-md hover:text-white">
             <Link to="/about">About</Link>
           </li>
           <li>
@@ -74,30 +95,31 @@ const Navbar = () => {
             <RoomDropdown
               title="Rooms"
               items={[
-                { label: "Rooms", link: "/rooms" },
                 { label: "Living Room", link: "/living-room" },
                 { label: "Bedroom", link: "/bedroom" },
                 { label: "Dining Room", link: "/dining-room" },
-                { label: "Office", link: "/office" },
-                { label: "Outdoor", link: "/outdoor" },
-                { label: "Entryway", link: "/entryway" },
               ]}
               isMobile={isOpen}
             />
           </li>
-          <li className="text-lg hover:text-white">
+          <li className="text-md hover:text-white">
             <Link to="/">Bulletin</Link>
           </li>
-          <li className="text-lg hover:text-white">
-            <Link to="/">Contact</Link>
+          <li className="text-md hover:text-white">
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
 
-        <div className="flex space-x-4">
-          <Link to="/search">
-            <MagnifyingGlassIcon className="w-6 text-black hover:text-white text-xl" />
-          </Link>
-          <AccountDropdown user={user} />
+        <div className="flex space-x-4 items-center">
+          {/* Search Bar */}
+          <input
+            type="text"
+            className="rounded-full p-2 px-3 outline-none bg-blue-100 placeholder:px-4"
+            placeholder="Search Here..."
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          {/* Icons */}
+          <UserCircleIcon className="w-6 text-black hover:text-white  focus:text-black" />
           <Link
             to="/wishlist"
             className="text-black hover:text-white text-lg font-medium"
@@ -115,19 +137,19 @@ const Navbar = () => {
               className="w-6 text-black hover:text-white text-xl relative"
               title="Cart"
             />
-            <p className="bg-white text-xs font-semibold rounded-full text-center px-1 absolute top-3 right-6">
+            <p className="bg-white text-xs font-semibold rounded-full text-center px-1 absolute top-4 right-6">
               {totalQuantity}
             </p>
           </Link>
         </div>
-
+        {/* Black Opacity When Navbar is opened */}
         <div
           className={`fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40 ${
             isOpen ? "block" : "hidden"
           }`}
           onClick={toggleNavbar}
         ></div>
-
+        {/* Responsive Navbar */}
         <div
           className={`fixed top-0 left-0 w-[68%] md:w-[50%] bg-gray-400 z-50 h-full ease-in-out duration-500 ${
             isOpen ? "translate-x-0" : "-translate-x-full"
@@ -197,9 +219,6 @@ const Navbar = () => {
                   { label: "Living Room", link: "/living-room" },
                   { label: "Bedroom", link: "/bedroom" },
                   { label: "Dining Room", link: "/dining-room" },
-                  { label: "Office", link: "/office" },
-                  { label: "Outdoor", link: "/outdoor" },
-                  { label: "Entryway", link: "/entryway" },
                 ]}
                 isMobile={isOpen}
               />
@@ -221,6 +240,10 @@ const Navbar = () => {
             )}
           </ul>
         </div>
+      </div>
+
+      <div className="absolute w-[30%] mt-2 py-8 shadow-md rounded-br-lg rounded-bl-lg bg-white top-14 right-2">
+        {handleSearch(products.products)}{" "}
       </div>
     </div>
   );

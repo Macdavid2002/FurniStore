@@ -1,6 +1,7 @@
 import dining from "../../data/products.json";
 import { Link } from "react-router-dom";
 import { DiningCardLayout } from "../cards-layout/DiningCardLayout";
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const DiningCard = () => {
   return (
@@ -22,8 +23,9 @@ export const DiningCard = () => {
       </div>
       <Link to="/dining">
         <span className="flex justify-center">
-          <button className="py-4 px-8 bg-gray-300 rounded-md text-black text-center">
+          <button className="py-4 px-8 bg-gray-300 rounded-md text-black flex items-center gap-3">
             Show More
+            <ArrowRightIcon className="w-4" />
           </button>
         </span>
       </Link>

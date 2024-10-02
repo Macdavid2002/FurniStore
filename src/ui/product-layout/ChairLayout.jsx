@@ -12,7 +12,7 @@ export const ChairLayout = ({ name, id, price, imgUrl }) => {
     dispatch(cartActions.addToCart({ name, id, price, imgUrl }));
 
     toast.success("Added To Cart", {
-      autoClose: 1000,
+      autoClose: 500,
     });
   };
   const [user] = useAuthState(auth);
@@ -29,19 +29,19 @@ export const ChairLayout = ({ name, id, price, imgUrl }) => {
             />
           </Link>
           <span className="flex justify-between items-center">
-            <h1 className="py-4 text-md  md:text-sm font-cinzel">{name}</h1>
-            {/* {!user ? (
+            <h1 className="py-4 text-md md:text-sm font-semibold">{name}</h1>
+            {!user ? (
               <Link to="/login">
                 <ShoppingBagIcon className="w-5 cursor-pointer" />
               </Link>
-            ) : ( */}
+            ) : (
               <ShoppingBagIcon
                 className="w-5 cursor-pointer"
                 onClick={addToCart}
               />
-            {/* )} */}
+            )}
           </span>
-          <h2 className="font-bold text-md text-gray-500 font-cinzel ">
+          <h2 className="font-bold text-md text-gray-500 ">
             $ {price}
           </h2>
         </div>

@@ -34,7 +34,7 @@ export const RoomDropdown = ({ title, items, isMobile }) => {
             )}
           </button>
         ) : (
-          <button className="flex items-center text-[16px] lg:text-[18px]  focus:text-black w-full">
+          <button className="flex items-center text-[16px] lg:text-[16px]  focus:text-black w-full">
             {title}
             {isOpen ? (
               <ChevronUpIcon className="w-5 lg:w-6 text-black  cursor-pointer" />
@@ -54,7 +54,7 @@ export const RoomDropdown = ({ title, items, isMobile }) => {
           <ul className="lg:p-4">
             {items.map((item, index) => (
               <Link to={item.link} key={index}>
-                <li className="py-2 lg:p-2 text-black border-b border-b-gray-400 lg:hover:border-l-4 hover:border-l-gray-400">
+                <li className="py-2 lg:p-2 text-black border-b border-b-gray-400 lg:hover:border-l-4 text-sm hover:border-l-gray-400">
                   {item.label}
                 </li>
               </Link>

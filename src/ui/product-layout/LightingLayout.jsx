@@ -9,12 +9,12 @@ export const LightingLayout = ({ name, id, price, imgUrl }) => {
     try {
       dispatch(cartActions.addToCart({ name, id, price, imgUrl }));
       toast.success("Added to cart", {
-        autoClose: 1000,
+        autoClose: 500,
       });
     } catch (error) {
       console.error("Error adding to cart", error);
       toast.error("Error adding to cart", {
-        autoClose: 1000,
+        autoClose: 500,
       });
     }
   };
@@ -30,13 +30,13 @@ export const LightingLayout = ({ name, id, price, imgUrl }) => {
         />
       </Link>
       <span className="flex justify-between items-center">
-        <h1 className="py-4 text-md  md:text-md ">{name}</h1>
+        <h1 className="py-4 text-md  md:text-md font-semibold">{name}</h1>
         <ShoppingBagIcon
           className="w-5 h-6 cursor-pointer"
           onClick={addToCart}
         />
       </span>
-      <h2 className="font-medium text-md text-gray-500">$ {price}</h2>
+      <h2 className="font-semibold text-md text-gray-500">$ {price}</h2>
     </div>
   );
 };

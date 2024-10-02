@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import table from "../../data/products.json";
-import { HeartIcon, ShoppingBagIcon } from "@heroicons/react/24/outline";
+
+import { TableCardLayout } from "../cards-layout/TableCardLayout";
 export const TableCard = () => {
   return (
     <div className="mt-8">
@@ -10,21 +11,12 @@ export const TableCard = () => {
           .slice(0, 4)
           .map((table) => (
             <div key={table.id}>
-              <div className="relative p-10 border border-gray-400">
-                <HeartIcon className="absolute w-8 h-8 right-7 cursor-pointer hover:bg-gray-200 rounded-full p-1" />
-                <Link to={`/table/${table.name}`}>
-                  <img src={table.imgUrl} className="z-10" alt="Table pic" />
-                </Link>
-                <span className="flex justify-between items-center">
-                  <h1 className="py-4 text-md font-medium md:text-xl ">
-                    {table.name}
-                  </h1>
-                  <ShoppingBagIcon className="w-6 h-6 cursor-pointer " />
-                </span>
-                <h2 className="font-medium text-lg text-gray-500">
-                  $ {table.price}
-                </h2>
-              </div>
+              <TableCardLayout
+                name={table.name}
+                id={table.id}
+                price={table.price}
+                imgUrl={table.imgUrl}
+              />
             </div>
           ))}
       </div>

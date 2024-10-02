@@ -11,12 +11,14 @@ export const ChairCard = () => {
           .filter((chair) => chair.category === "chair")
           .slice(8, 12)
           .map((chair) => (
-            <ChairCardLayout
-              name={chair.name}
-              id={chair.id}
-              price={chair.price}
-              imgUrl={chair.imgUrl}
-            />
+            <div key={chair.id} >
+              <ChairCardLayout
+                name={chair.name}
+                id={chair.id}
+                price={chair.price}
+                imgUrl={chair.imgUrl}
+              />
+            </div>
           ))}
       </div>
       <Link to="/chair">

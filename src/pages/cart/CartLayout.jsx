@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../redux/slices/cart-slice";
 import { MinusIcon, PlusIcon, TrashIcon } from "@heroicons/react/24/outline";
@@ -22,6 +23,11 @@ export const CartLayout = ({
   // Product delete Function
   const deleteItemFromCart = () => {
     dispatch(cartActions.deleteItem(id));
+    toast.success("Item deleted from cart", {
+      autoClose: 500,
+      pauseOnFocusLoss: false,
+      pauseOnHover: false,
+    });
   };
 
   return (
