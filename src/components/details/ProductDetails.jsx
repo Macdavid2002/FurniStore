@@ -44,15 +44,10 @@ export const ProductDetails = () => {
         </Link>
         <p className="text-sm">{product.name}</p>
       </div>
-      <div className="min-h-screen flex flex-col justify-center items-center">
-        <div className="w-96 mx-auto shadow-sm shadow-black p-4 my-4 rounded-md">
-          <div className="">
-            <img
-              src={product.imgUrl}
-              className="rounded-lg"
-              alt={product.name}
-            />
-          </div>
+      <div className="min-h-screen">
+        <div>
+          <img src={product.imgUrl} alt={product.name} />
+
           <div>
             <span className="flex items-center justify-between">
               <h2 className="text-xl font-medium"> {product.name}</h2>

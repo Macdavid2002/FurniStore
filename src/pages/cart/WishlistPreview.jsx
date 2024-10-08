@@ -1,58 +1,55 @@
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { cartActions } from "../../redux/slices/cart-slice";
-export const CartPreview = () => {
-  const cartItems = useSelector((state) => state.cart.cartItems);
-  let subTotal = 0;
-  cartItems.forEach(function (total) {
-    subTotal += total.totalPrice;
-  });
-  const isCartOpen = useSelector((state) => state.cart.showCartPreview);
+import { wishlistActions } from "../../redux/slices/wishlist-slice";
+export const WishlistPreview = () => {
+  const wishlistItems = useSelector((state) => state.wishlist.wishlist);
+  const iswishlistOpen = useSelector(
+    (state) => state.wishlist.showWishlistPreview
+  );
   const dispatch = useDispatch();
-  const closeCartHandler = () => {
-    dispatch(cartActions.hideCart());
+  const closeWishlistHandler = () => {
+    dispatch(wishlistActions.hideWishlist());
   };
   return (
     <div
       className={`fixed top-0 right-0 w-[30%] h-full z-50 bg-white shadow-md transition-opacity duration-300 ease-in-out ${
-        isCartOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        iswishlistOpen ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
       <span className="flex justify-between items-center p-4">
         <span>
           <h1 className="text-md font-semibold text-gray-500 py-3">
-            Shopping Cart
+            Shopping wishlist
           </h1>
           <Link
-            to="/cart"
+            to="/wishlist"
             className="text-sm text-gray-400 underline"
-            onClick={closeCartHandler}
+            onClick={closeWishlistHandler}
           >
-            View Full Cart
+            View Full wishlist
           </Link>
         </span>
-        <XMarkIcon className="w-8" onClick={closeCartHandler} />
+        <XMarkIcon className="w-8" onClick={closeWishlistHandler} />
       </span>
       <div className="overflow-y-auto h-[calc(90vh-200px)] px-4">
-        {cartItems.map((cartItem) => (
+        {wishlistItems.map((wishlistItem) => (
           <div className="flex items-center p-4 justify-between">
             <span className="flex items-center gap-8">
-              <img src={cartItem.imgUrl} className="h-24" alt="" />
+              <img src={wishlistItem.imgUrl} className="h-24" alt="" />
               <span>
-                <h2>{cartItem.name}</h2>
+                <h2>{wishlistItem.name}</h2>
                 <h2 className="py-2 font-semibold text-sm">
-                  Quantity: {cartItem.quantity}{" "}
+                  Quantity: {wishlistItem.quantity}{" "}
                 </h2>
               </span>
             </span>
-            <h2>${cartItem.price} </h2>
+            <h2>${wishlistItem.price} </h2>
           </div>
         ))}
       </div>
       <span className="flex px-8 py-4 justify-between">
         <h1 className="font-bold">Subtotal:</h1>
-        <h2> ${subTotal} </h2>
       </span>
       <button className="p-4 w-[90%] block font-bold text-md text-center mx-auto bg-gray-400 rounded-full">
         Checkout

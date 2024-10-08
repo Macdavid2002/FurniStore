@@ -4,7 +4,7 @@ import { Rooms } from "./Room";
 import { Services } from "./Services";
 import { SalesDeals } from "./SalesDeals";
 import { Collection } from "./Collection";
-import { Newsletter } from "../../components/misc/Newsletter";
+import { Newsletter } from "./Newsletter";
 
 export default function Home() {
   return (

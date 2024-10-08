@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   cartItems: [],
   totalQuantity: 0,
-  cartVisibility: false,
+  showCartPreview: false,
 };
 export const cartSlice = createSlice({
   name: "cart",
@@ -44,6 +44,12 @@ export const cartSlice = createSlice({
         state.cartItems = state.cartItems.filter((item) => item.id !== id);
         state.totalQuantity--;
       }
+    },
+    showCart(state, action) {
+      state.showCartPreview = true;
+    },
+    hideCart(state, action) {
+      state.showCartPreview = false;
     },
   },
 });

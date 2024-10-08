@@ -58,7 +58,7 @@ export const About = () => {
       </div>
       {/* <Why /> */}
       <AboutWriteUp />
-      {/* <ReviewCard /> */}
+      <ReviewCard />
     </div>
   );
 };

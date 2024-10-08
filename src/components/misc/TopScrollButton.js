@@ -32,9 +32,9 @@ const TopScrollButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className=" bg-[#f1f4f8]  p-2  text-black  shadow-md rounded-br-md "
+          className=" bg-black bg-opacity-45  p-2  text-black  shadow-md rounded-full "
         >
-          <ArrowUpIcon className="w-6 text-black " />
+          <ArrowUpIcon className="w-6 text-white " />
         </button>
       )}
     </div>

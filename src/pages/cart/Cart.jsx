@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { CartLayout } from "./CartLayout";
-import { Link } from "react-router-dom";
 export const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   let subTotal = 0;
@@ -48,6 +48,7 @@ export const Cart = () => {
                     totalPrice={cartItem.totalPrice}
                     quantity={cartItem.quantity}
                   />
+
                 </div>
               ))}
             </div>

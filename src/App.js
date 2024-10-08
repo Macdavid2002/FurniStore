@@ -1,47 +1,44 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Bed } from "./components/products/Bed";
+import { Rug } from "./components/products/Rug";
+import { Sofa } from "./components/products/Sofa";
+import { Bench } from "./components/products/Bench";
+import { Table } from "./components/products/Table";
+import { Chairs } from "./components/products/Chair";
+import { Dining } from "./components/products/Dining";
+import { Storage } from "./components/products/Storage";
+import { Footer } from "./components/navigation/Footer";
+import { Lighting } from "./components/products/Lighting";
+import { ScrollToTop } from "./components/misc/ScrollTop";
+import TopScrollButton from "./components/misc/TopScrollButton";
 import Navbar from "./components/navigation/Navbar";
 import Home from "./pages/home/Home";
-import TopScrollButton from "./components/misc/TopScrollButton";
-import { Error } from "./pages/Error/Error-404";
-import { Account } from "./pages/account";
-import { Footer } from "./components/navigation/Footer";
-import { ScrollToTop } from "./components/misc/ScrollTop";
-import { About } from "./pages/about/About";
-import { Chat } from "./components/misc/Chat";
 import { Cart } from "./pages/cart/Cart";
-import { Chairs } from "./components/products/Chair";
-import { Bed } from "./components/products/Bed";
-import { Bench } from "./components/products/Bench";
-import { Storage } from "./components/products/Storage";
-import { Sofa } from "./components/products/Sofa";
-import { Table } from "./components/products/Table";
-import { Rug } from "./components/products/Rug";
-import { Lighting } from "./components/products/Lighting";
-import { Dining } from "./components/products/Dining";
-import { SignIn } from "./pages/auth/SignIn";
+import { Account } from "./pages/account";
 import { Contact } from "./pages/Contact";
+import { About } from "./pages/about/About";
+import { SignIn } from "./pages/auth/SignIn";
 import { SignUp } from "./pages/auth/SignUp";
+import { Error } from "./pages/Error/Error-404";
 // Products
 import { Products } from "./components/products/all-products/Products";
 import { ProductTwo } from "./components/products/all-products/ProductsTwo";
 import { ProductThree } from "./components/products/all-products/ProductThree";
-import { ProductDetails } from "./components/details/ProductDetails";
 import { ProductFour } from "./components/products/all-products/ProductFour";
 import { ProductFive } from "./components/products/all-products/ProductFive";
 import { ProductSix } from "./components/products/all-products/ProductSix";
 import { ProductSeven } from "./components/products/all-products/ProductSeven";
+import { ProductDetails } from "./components/details/ProductDetails";
 // Rooms
 import { LivingRoom } from "./components/rooms/LivingRoom";
 import { BedRoom } from "./components/rooms/BedRoom";
 import { DiningRoom } from "./components/rooms/DiningRoom";
-import { HomeOffice } from "./components/rooms/HomeOffice";
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
         <ScrollToTop />
-        <Chat />
         <TopScrollButton />
         <Routes>
           {/* Pages Routes */}
