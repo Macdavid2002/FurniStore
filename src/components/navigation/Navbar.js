@@ -17,6 +17,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { CartPreview } from "../../pages/cart/CartPreview";
 import { cartActions } from "../../redux/slices/cart-slice";
 import { WishlistPreview } from "../../pages/cart/WishlistPreview";
+import { wishlistActions } from "../../redux/slices/wishlist-slice";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -74,6 +75,7 @@ const Navbar = () => {
       );
     }
   };
+
   // Function to handle search input value
   const handleSearchInput = (e) => {
     const searchInput = e.target.value;
@@ -82,14 +84,18 @@ const Navbar = () => {
       setShowClearButton(true);
     }
   };
+
   // Function to clear input
   const clearInput = () => {
     setSearch("");
     setShowClearButton(false);
   };
-
+  // FunctionTo Toggle Cart Preview Side Bar
   const toggleCartPreview = () => {
     dispatch(cartActions.showCart());
+  };
+  const toggleWishlistPreview = () => {
+    dispatch(wishlistActions.showWishlist());
   };
   return (
     <div className="relative z-50 ">
@@ -163,18 +169,15 @@ const Navbar = () => {
           {/* Icons */}
           <div className="flex items-center gap-4">
             <UserCircleIcon className="w-6 text-black hover:text-white  focus:text-black" />
-            <Link
-              to="/wishlist"
-              className="text-black hover:text-white text-lg font-medium"
-            >
-              <HeartIcon
-                className="w-6 text-black hover:text-white text-xl"
-                title="Wishlist"
-              />
-              <p className="bg-white text-xs text-black font-semibold rounded-full text-center px-1 absolute top-4 right-16">
-                {quantity}
-              </p>
-            </Link>
+
+            <HeartIcon
+              className="w-6 text-black hover:text-white text-xl"
+              title="Wishlist"
+              onClick={toggleWishlistPreview}
+            />
+            <p className="bg-white text-xs text-black font-semibold rounded-full text-center px-1 absolute top-4 right-16">
+              {quantity}
+            </p>
 
             <ShoppingCartIcon
               className="w-6 text-black hover:text-white text-xl relative"

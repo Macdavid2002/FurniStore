@@ -5,6 +5,8 @@ import lady from "../../assets/lady.jpg";
 import female from "../../assets/female.jpeg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { StarIcon as SolidStarIcon } from "@heroicons/react/24/solid";
+import { StarIcon } from "@heroicons/react/24/outline";
 
 export const ReviewCard = () => {
   const ReviewData = [
@@ -14,6 +16,7 @@ export const ReviewCard = () => {
       review:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam esse libero alias repellendus voluptatibus cumque? Sunt dolorem pariatur reprehenderit laboriosam voluptatibus, provident vel harum fugit optio. Quidem dolores inventore explicabo ea!",
       image: guy,
+      rating: 4,
     },
     {
       id: 2,
@@ -21,6 +24,7 @@ export const ReviewCard = () => {
       review:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam esse libero alias repellendus voluptatibus cumque? Sunt dolorem pariatur reprehenderit laboriosam voluptatibus, provident vel harum fugit optio. Quidem dolores inventore explicabo ea!",
       image: lady,
+      rating: 5,
     },
     {
       id: 3,
@@ -28,6 +32,7 @@ export const ReviewCard = () => {
       review:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam esse libero alias repellendus voluptatibus cumque? Sunt dolorem pariatur reprehenderit laboriosam voluptatibus, provident vel harum fugit optio. Quidem dolores inventore explicabo ea!",
       image: man,
+      rating: 3,
     },
     {
       id: 4,
@@ -35,9 +40,21 @@ export const ReviewCard = () => {
       review:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam esse libero alias repellendus voluptatibus cumque? Sunt dolorem pariatur reprehenderit laboriosam voluptatibus, provident vel harum fugit optio. Quidem dolores inventore explicabo ea!",
       image: female,
+      rating: 4,
     },
   ];
-
+  // Function to display star icons based on rating
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        stars.push(<SolidStarIcon key={i} className="w-4 text-black" />);
+      } else {
+        stars.push(<StarIcon key={i} className="w-4 text-black" />);
+      }
+    }
+    return stars;
+  };
   return (
     <div>
       <h1 className="text-xl md:text-2xl block text-center uppercase my-8 font-semibold">
@@ -84,9 +101,14 @@ export const ReviewCard = () => {
                 <p className="p-4 text-sm md:text-md w-full text-center">
                   {reviewItem.review}
                 </p>
-                <h2 className="text-lg font-medium mt-3 text-center">
-                  {reviewItem.name}
-                </h2>
+                <div className="flex justify-between items-center">
+                  <h2 className="text-lg font-medium mt-3 text-center">
+                    {reviewItem.name}
+                  </h2>
+                  <p className="flex items-center gap-2">
+                    {renderStars(reviewItem.rating)}
+                  </p>
+                </div>
               </div>
             </SwiperSlide>
           ))}

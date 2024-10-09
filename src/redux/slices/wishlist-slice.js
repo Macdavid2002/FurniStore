@@ -2,32 +2,29 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   wishlist: [],
   totalQuantity: 0,
-  showWishlistPreview: true,
+  itemExists: false,
+  showWishlistPreview: false,
 };
 export const wishlistSlice = createSlice({
   name: "wishlist",
   initialState,
   reducers: {
-    addToWishlist(state, action) {
+    toggleWishlist(state, action) {
       const newItem = action.payload;
-      const oldItem = state.wishlist.find((item) => item.id === newItem.id);
-      if (oldItem) {
-        oldItem.quantity++;
+      const existingItem = state.wishlist.find((item) => item.id === newItem.id);
+      if (existingItem) {
+        state.wishlist = state.wishlist.filter(
+          (item) => item.id !== newItem.id
+        );
+        state.totalQuantity--;
+        state.itemExists = false;
       } else {
         state.wishlist.push({
-          ...oldItem,
-          id: newItem.id,
+          ...newItem,
           quantity: 1,
         });
         state.totalQuantity++;
-      }
-    },
-    deleteItemFromWishlist(state, action) {
-      const id = action.payload;
-      const oldItem = state.wishlist.find((item) => item.id === id);
-      if (oldItem) {
-        state.wishlist = state.wishlist.filter((item) => item.id !== id);
-        state.totalQuantity--;
+        state.itemExists = true;
       }
     },
     showWishlist(state, action) {

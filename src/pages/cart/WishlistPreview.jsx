@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { ShoppingBagIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { wishlistActions } from "../../redux/slices/wishlist-slice";
 export const WishlistPreview = () => {
+  const dispatch = useDispatch();
+
   const wishlistItems = useSelector((state) => state.wishlist.wishlist);
   const iswishlistOpen = useSelector(
     (state) => state.wishlist.showWishlistPreview
   );
-  const dispatch = useDispatch();
+
   const closeWishlistHandler = () => {
     dispatch(wishlistActions.hideWishlist());
   };
@@ -19,9 +21,7 @@ export const WishlistPreview = () => {
     >
       <span className="flex justify-between items-center p-4">
         <span>
-          <h1 className="text-md font-semibold text-gray-500 py-3">
-            Shopping wishlist
-          </h1>
+          <h1 className="text-md font-semibold text-gray-500 py-3">Wishlist</h1>
           <Link
             to="/wishlist"
             className="text-sm text-gray-400 underline"
@@ -38,13 +38,16 @@ export const WishlistPreview = () => {
             <span className="flex items-center gap-8">
               <img src={wishlistItem.imgUrl} className="h-24" alt="" />
               <span>
-                <h2>{wishlistItem.name}</h2>
+                <h2 className="text-sm">{wishlistItem.name}</h2>
                 <h2 className="py-2 font-semibold text-sm">
                   Quantity: {wishlistItem.quantity}{" "}
                 </h2>
               </span>
             </span>
-            <h2>${wishlistItem.price} </h2>
+            <span className="flex flex-col items-end">
+              <h2>${wishlistItem.price} </h2>
+              <ShoppingBagIcon className="w-4" />
+            </span>
           </div>
         ))}
       </div>

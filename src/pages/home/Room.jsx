@@ -1,5 +1,4 @@
 import { RoomCard } from "../../ui/cards-skeleton/RoomCard";
-import { Link } from "react-router-dom";
 export const Rooms = () => {
   const roomList = [
     {
@@ -10,14 +9,14 @@ export const Rooms = () => {
       link: "/living-room",
     },
     {
-      name: <Link to="/"> Bedroom</Link>,
+      name: "Bedroom",
       imgUrl:
         "https://cdn-images.article.com/productbundles/457/HERO_DESKTOP/productbundle457-1713294088402.jpg?w=425&q=80&fm=webp&fit=max",
       id: 2,
       link: "/bedroom",
     },
     {
-      name: <Link to="/">Dining Room</Link>,
+      name: "Dining Room",
       imgUrl:
         "https://cdn-cms-assets.article.com/5RhufExdQYdr67nCC2RIHF-59657f4b588dc894a04bb12396c87b69?w=640&q=40&fit=max",
       id: 3,
